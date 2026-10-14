@@ -1,0 +1,245 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 430,
+  "padding": {
+    "left": 5,
+    "right": 5,
+    "top": 20,
+    "bottom": 5
+  },
+  "projection": {
+    "type": "conicEqualArea",
+    "rotate": [-132, 0, 0],
+    "parallels": [-18, -36]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/geo/au_states.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#C8C1B7",
+        "stroke": "#F7F2E9",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon1": 147.2,
+            "lat1": -18.6,
+            "lon2": 145.4833,
+            "lat2": -17.2667
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#8A7B6D",
+        "strokeWidth": 0.75
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon1",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat1",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "lon2"
+        },
+        "latitude2": {
+          "field": "lat2"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon1": 139.8,
+            "lat1": -31.6,
+            "lon2": 146.0536,
+            "lat2": -34.2887
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#8A7B6D",
+        "strokeWidth": 0.75
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon1",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat1",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "lon2"
+        },
+        "latitude2": {
+          "field": "lat2"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/clean/growing_regions.csv",
+        "format": {
+          "parse": {
+            "lat": "number",
+            "lon": "number",
+            "lat_offset": "number",
+            "lon_offset": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.lat + datum.lat_offset",
+          "as": "display_lat"
+        },
+        {
+          "calculate": "datum.lon + datum.lon_offset",
+          "as": "display_lon"
+        }
+      ],
+      "params": [
+        {
+          "name": "nut_select",
+          "select": {
+            "type": "point",
+            "fields": ["nut_type"]
+          },
+          "bind": "legend"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 95,
+        "stroke": "#F7F2E9",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "display_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "display_lat",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "nut_type",
+          "type": "nominal",
+          "title": [
+            "Nut type",
+            "(click to highlight)"
+          ],
+          "scale": {
+            "domain": [
+              "Almond",
+              "Chestnut",
+              "Hazelnut",
+              "Macadamia",
+              "Pecan",
+              "Pistachio",
+              "Walnut"
+            ],
+            "range": [
+              "#0072B2",
+              "#D55E00",
+              "#882255",
+              "#009E73",
+              "#A0522D",
+              "#6B8E23",
+              "#CC79A7"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "nut_select",
+            "value": 0.9
+          },
+          "value": 0.15
+        },
+        "tooltip": [
+          {
+            "field": "nut_type",
+            "type": "nominal",
+            "title": "Nut"
+          },
+          {
+            "field": "region_name",
+            "type": "nominal",
+            "title": "Growing region"
+          },
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 148,
+            "lat": -19.8,
+            "text": "Macadamia growing regions\nextend furthest north"
+          },
+          {
+            "lon": 134,
+            "lat": -31,
+            "text": "The greatest variety appears\nacross southern NSW and Victoria"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "#493B33",
+        "align": "center",
+        "lineBreak": "\n",
+        "lineHeight": 13
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "background": "transparent",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

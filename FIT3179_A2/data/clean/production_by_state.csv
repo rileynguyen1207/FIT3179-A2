@@ -1,0 +1,30 @@
+nut_type,state,state_code,production_tonnes,unit_basis,year,national_total_tonnes,state_share_percent,note
+Almond,Victoria,VIC,69833,KWE,2025,155531,44.9,
+Almond,South Australia,SA,46659,KWE,2025,155531,30.0,
+Almond,New South Wales,NSW,38261,KWE,2025,155531,24.6,
+Almond,Western Australia,WA,778,KWE,2025,155531,0.5,
+Macadamia,Queensland,QLD,34602,In-Shell,2025,43800,79.0,
+Macadamia,New South Wales,NSW,9198,In-Shell,2025,43800,21.0,
+Walnut,New South Wales,NSW,6500,In-Shell,2025,10000,65.0,
+Walnut,Tasmania,TAS,2200,In-Shell,2025,10000,22.0,
+Walnut,Victoria,VIC,900,In-Shell,2025,10000,9.0,
+Walnut,Western Australia,WA,300,In-Shell,2025,10000,3.0,
+Walnut,South Australia,SA,100,In-Shell,2025,10000,1.0,
+Pistachio,New South Wales,NSW,1253,In-Shell,2025,3000,41.8,
+Pistachio,Victoria,VIC,1103,In-Shell,2025,3000,36.8,
+Pistachio,South Australia,SA,615,In-Shell,2025,3000,20.5,
+Pistachio,Western Australia,WA,30,In-Shell,2025,3000,1.0,
+Pecan,New South Wales,NSW,1587,KWE,2025,1841,84.0,"state_share_percent as printed in source pie chart; state figures sum to 1,890t, ~2.7% above the reported national_total_tonnes of 1,841t - unexplained in source, not corrected here"
+Pecan,Queensland,QLD,227,KWE,2025,1841,12.0,"state_share_percent as printed in source pie chart; state figures sum to 1,890t, ~2.7% above the reported national_total_tonnes of 1,841t - unexplained in source, not corrected here"
+Pecan,Western Australia,WA,57,KWE,2025,1841,3.0,"state_share_percent as printed in source pie chart; state figures sum to 1,890t, ~2.7% above the reported national_total_tonnes of 1,841t - unexplained in source, not corrected here"
+Pecan,South Australia,SA,19,KWE,2025,1841,1.0,"state_share_percent as printed in source pie chart; state figures sum to 1,890t, ~2.7% above the reported national_total_tonnes of 1,841t - unexplained in source, not corrected here"
+Hazelnut,Victoria,VIC,309,KWE,2025,617,50.0,
+Hazelnut,New South Wales,NSW,210,KWE,2025,617,34.0,
+Hazelnut,Tasmania,TAS,74,KWE,2025,617,12.0,
+Hazelnut,South Australia,SA,12,KWE,2025,617,2.0,
+Hazelnut,Western Australia,WA,12,KWE,2025,617,2.0,
+Chestnut,Victoria,VIC,671,KWE,2025,952,70.5,
+Chestnut,New South Wales,NSW,148,KWE,2025,952,15.5,
+Chestnut,South Australia,SA,48,KWE,2025,952,5.0,
+Chestnut,Tasmania,TAS,48,KWE,2025,952,5.0,
+Chestnut,Western Australia,WA,38,KWE,2025,952,4.0,

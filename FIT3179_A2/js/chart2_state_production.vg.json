@@ -1,0 +1,1415 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "params": [
+    {
+      "name": "state_pick",
+      "value": null,
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "New South Wales",
+          "Queensland",
+          "South Australia",
+          "Tasmania",
+          "Victoria",
+          "Western Australia"
+        ],
+        "labels": [
+          "All states",
+          "New South Wales",
+          "Queensland",
+          "South Australia",
+          "Tasmania",
+          "Victoria",
+          "Western Australia"
+        ],
+        "name": "Highlight state: "
+      }
+    }
+  ],
+  "vconcat": [
+    {
+      "hconcat": [
+        {
+          "title": {
+            "text": "Almond",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 5
+          },
+          "width": 150,
+          "height": 155,
+          "projection": {
+            "type": "conicEqualArea",
+            "rotate": [
+              -132,
+              0,
+              0
+            ],
+            "parallels": [
+              -18,
+              -36
+            ]
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/geo/au_states.topojson",
+                "format": {
+                  "type": "topojson",
+                  "feature": "states"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#D3D3D3",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Almond'"
+                },
+                {
+                  "lookup": "state",
+                  "from": {
+                    "data": {
+                      "url": "data/geo/au_states.topojson",
+                      "format": {
+                        "type": "topojson",
+                        "feature": "states"
+                      }
+                    },
+                    "key": "properties.STATE_NAME"
+                  },
+                  "as": "geo"
+                }
+              ],
+              "mark": {
+                "type": "geoshape",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              },
+              "encoding": {
+                "shape": {
+                  "field": "geo",
+                  "type": "geojson"
+                },
+                "color": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "scale": {
+                    "scheme": "blues",
+                    "domain": [
+                      0,
+                      100
+                    ],
+                    "rangeMin": 0.18,
+                    "rangeMax": 0.95
+                  },
+                  "legend": {
+                    "title": [
+                      "Share of national",
+                      "production (%)"
+                    ],
+                    "values": [
+                      0,
+                      50,
+                      100
+                    ],
+                    "gradientLength": 120,
+                    "gradientThickness": 14,
+                    "titleFontSize": 11,
+                    "labelFontSize": 10,
+                    "titleLimit": 140
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "nut_type",
+                    "type": "nominal",
+                    "title": "Nut"
+                  },
+                  {
+                    "field": "state",
+                    "type": "nominal",
+                    "title": "State"
+                  },
+                  {
+                    "field": "state_share_percent",
+                    "type": "quantitative",
+                    "title": "Share",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "production_tonnes",
+                    "type": "quantitative",
+                    "title": "Production (t)",
+                    "format": ",.0f"
+                  }
+                ],
+                "stroke": {
+                  "value": "#FFFFFF"
+                },
+                "strokeWidth": {
+                  "value": 0.6
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Almond'"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? 147.02 : datum.state === 'Victoria' ? 144.28 : datum.state === 'Queensland' ? 144.46 : datum.state === 'South Australia' ? 135.76 : datum.state === 'Western Australia' ? 122.28 : datum.state === 'Tasmania' ? 146.59 : null",
+                  "as": "lon"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? -32.16 : datum.state === 'Victoria' ? -36.86 : datum.state === 'Queensland' ? -22.5 : datum.state === 'South Australia' ? -30.08 : datum.state === 'Western Australia' ? -25.33 : datum.state === 'Tasmania' ? -41.93 : null",
+                  "as": "lat"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "fontSize": 9,
+                "fontWeight": "bold"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "lon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "lat",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "format": ".1f"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.state_share_percent > 55",
+                    "value": "#ffffff"
+                  },
+                  "value": "#1a1a1a"
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "Pistachio",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 5
+          },
+          "width": 150,
+          "height": 155,
+          "projection": {
+            "type": "conicEqualArea",
+            "rotate": [
+              -132,
+              0,
+              0
+            ],
+            "parallels": [
+              -18,
+              -36
+            ]
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/geo/au_states.topojson",
+                "format": {
+                  "type": "topojson",
+                  "feature": "states"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#D3D3D3",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Pistachio'"
+                },
+                {
+                  "lookup": "state",
+                  "from": {
+                    "data": {
+                      "url": "data/geo/au_states.topojson",
+                      "format": {
+                        "type": "topojson",
+                        "feature": "states"
+                      }
+                    },
+                    "key": "properties.STATE_NAME"
+                  },
+                  "as": "geo"
+                }
+              ],
+              "mark": {
+                "type": "geoshape",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              },
+              "encoding": {
+                "shape": {
+                  "field": "geo",
+                  "type": "geojson"
+                },
+                "color": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "scale": {
+                    "scheme": "blues",
+                    "domain": [
+                      0,
+                      100
+                    ],
+                    "rangeMin": 0.18,
+                    "rangeMax": 0.95
+                  },
+                  "legend": {
+                    "title": [
+                      "Share of national",
+                      "production (%)"
+                    ],
+                    "values": [
+                      0,
+                      50,
+                      100
+                    ],
+                    "gradientLength": 120,
+                    "gradientThickness": 14,
+                    "titleFontSize": 11,
+                    "labelFontSize": 10,
+                    "titleLimit": 140
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "nut_type",
+                    "type": "nominal",
+                    "title": "Nut"
+                  },
+                  {
+                    "field": "state",
+                    "type": "nominal",
+                    "title": "State"
+                  },
+                  {
+                    "field": "state_share_percent",
+                    "type": "quantitative",
+                    "title": "Share",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "production_tonnes",
+                    "type": "quantitative",
+                    "title": "Production (t)",
+                    "format": ",.0f"
+                  }
+                ],
+                "stroke": {
+                  "value": "#FFFFFF"
+                },
+                "strokeWidth": {
+                  "value": 0.6
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Pistachio'"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? 147.02 : datum.state === 'Victoria' ? 144.28 : datum.state === 'Queensland' ? 144.46 : datum.state === 'South Australia' ? 135.76 : datum.state === 'Western Australia' ? 122.28 : datum.state === 'Tasmania' ? 146.59 : null",
+                  "as": "lon"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? -32.16 : datum.state === 'Victoria' ? -36.86 : datum.state === 'Queensland' ? -22.5 : datum.state === 'South Australia' ? -30.08 : datum.state === 'Western Australia' ? -25.33 : datum.state === 'Tasmania' ? -41.93 : null",
+                  "as": "lat"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "fontSize": 9,
+                "fontWeight": "bold"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "lon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "lat",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "format": ".1f"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.state_share_percent > 55",
+                    "value": "#ffffff"
+                  },
+                  "value": "#1a1a1a"
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "Walnut",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 5
+          },
+          "width": 150,
+          "height": 155,
+          "projection": {
+            "type": "conicEqualArea",
+            "rotate": [
+              -132,
+              0,
+              0
+            ],
+            "parallels": [
+              -18,
+              -36
+            ]
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/geo/au_states.topojson",
+                "format": {
+                  "type": "topojson",
+                  "feature": "states"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#D3D3D3",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Walnut'"
+                },
+                {
+                  "lookup": "state",
+                  "from": {
+                    "data": {
+                      "url": "data/geo/au_states.topojson",
+                      "format": {
+                        "type": "topojson",
+                        "feature": "states"
+                      }
+                    },
+                    "key": "properties.STATE_NAME"
+                  },
+                  "as": "geo"
+                }
+              ],
+              "mark": {
+                "type": "geoshape",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              },
+              "encoding": {
+                "shape": {
+                  "field": "geo",
+                  "type": "geojson"
+                },
+                "color": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "scale": {
+                    "scheme": "blues",
+                    "domain": [
+                      0,
+                      100
+                    ],
+                    "rangeMin": 0.18,
+                    "rangeMax": 0.95
+                  },
+                  "legend": {
+                    "title": [
+                      "Share of national",
+                      "production (%)"
+                    ],
+                    "values": [
+                      0,
+                      50,
+                      100
+                    ],
+                    "gradientLength": 120,
+                    "gradientThickness": 14,
+                    "titleFontSize": 11,
+                    "labelFontSize": 10,
+                    "titleLimit": 140
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "nut_type",
+                    "type": "nominal",
+                    "title": "Nut"
+                  },
+                  {
+                    "field": "state",
+                    "type": "nominal",
+                    "title": "State"
+                  },
+                  {
+                    "field": "state_share_percent",
+                    "type": "quantitative",
+                    "title": "Share",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "production_tonnes",
+                    "type": "quantitative",
+                    "title": "Production (t)",
+                    "format": ",.0f"
+                  }
+                ],
+                "stroke": {
+                  "value": "#FFFFFF"
+                },
+                "strokeWidth": {
+                  "value": 0.6
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Walnut'"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? 147.02 : datum.state === 'Victoria' ? 144.28 : datum.state === 'Queensland' ? 144.46 : datum.state === 'South Australia' ? 135.76 : datum.state === 'Western Australia' ? 122.28 : datum.state === 'Tasmania' ? 146.59 : null",
+                  "as": "lon"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? -32.16 : datum.state === 'Victoria' ? -36.86 : datum.state === 'Queensland' ? -22.5 : datum.state === 'South Australia' ? -30.08 : datum.state === 'Western Australia' ? -25.33 : datum.state === 'Tasmania' ? -41.93 : null",
+                  "as": "lat"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "fontSize": 9,
+                "fontWeight": "bold"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "lon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "lat",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "format": ".1f"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.state_share_percent > 55",
+                    "value": "#ffffff"
+                  },
+                  "value": "#1a1a1a"
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "Hazelnut",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 5
+          },
+          "width": 150,
+          "height": 155,
+          "projection": {
+            "type": "conicEqualArea",
+            "rotate": [
+              -132,
+              0,
+              0
+            ],
+            "parallels": [
+              -18,
+              -36
+            ]
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/geo/au_states.topojson",
+                "format": {
+                  "type": "topojson",
+                  "feature": "states"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#D3D3D3",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Hazelnut'"
+                },
+                {
+                  "lookup": "state",
+                  "from": {
+                    "data": {
+                      "url": "data/geo/au_states.topojson",
+                      "format": {
+                        "type": "topojson",
+                        "feature": "states"
+                      }
+                    },
+                    "key": "properties.STATE_NAME"
+                  },
+                  "as": "geo"
+                }
+              ],
+              "mark": {
+                "type": "geoshape",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              },
+              "encoding": {
+                "shape": {
+                  "field": "geo",
+                  "type": "geojson"
+                },
+                "color": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "scale": {
+                    "scheme": "blues",
+                    "domain": [
+                      0,
+                      100
+                    ],
+                    "rangeMin": 0.18,
+                    "rangeMax": 0.95
+                  },
+                  "legend": {
+                    "title": [
+                      "Share of national",
+                      "production (%)"
+                    ],
+                    "values": [
+                      0,
+                      50,
+                      100
+                    ],
+                    "gradientLength": 120,
+                    "gradientThickness": 14,
+                    "titleFontSize": 11,
+                    "labelFontSize": 10,
+                    "titleLimit": 140
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "nut_type",
+                    "type": "nominal",
+                    "title": "Nut"
+                  },
+                  {
+                    "field": "state",
+                    "type": "nominal",
+                    "title": "State"
+                  },
+                  {
+                    "field": "state_share_percent",
+                    "type": "quantitative",
+                    "title": "Share",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "production_tonnes",
+                    "type": "quantitative",
+                    "title": "Production (t)",
+                    "format": ",.0f"
+                  }
+                ],
+                "stroke": {
+                  "value": "#FFFFFF"
+                },
+                "strokeWidth": {
+                  "value": 0.6
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Hazelnut'"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? 147.02 : datum.state === 'Victoria' ? 144.28 : datum.state === 'Queensland' ? 144.46 : datum.state === 'South Australia' ? 135.76 : datum.state === 'Western Australia' ? 122.28 : datum.state === 'Tasmania' ? 146.59 : null",
+                  "as": "lon"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? -32.16 : datum.state === 'Victoria' ? -36.86 : datum.state === 'Queensland' ? -22.5 : datum.state === 'South Australia' ? -30.08 : datum.state === 'Western Australia' ? -25.33 : datum.state === 'Tasmania' ? -41.93 : null",
+                  "as": "lat"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "fontSize": 9,
+                "fontWeight": "bold"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "lon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "lat",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "format": ".1f"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.state_share_percent > 55",
+                    "value": "#ffffff"
+                  },
+                  "value": "#1a1a1a"
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "spacing": 12
+    },
+    {
+      "hconcat": [
+        {
+          "title": {
+            "text": "Macadamia",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 5
+          },
+          "width": 150,
+          "height": 155,
+          "projection": {
+            "type": "conicEqualArea",
+            "rotate": [
+              -132,
+              0,
+              0
+            ],
+            "parallels": [
+              -18,
+              -36
+            ]
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/geo/au_states.topojson",
+                "format": {
+                  "type": "topojson",
+                  "feature": "states"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#D3D3D3",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Macadamia'"
+                },
+                {
+                  "lookup": "state",
+                  "from": {
+                    "data": {
+                      "url": "data/geo/au_states.topojson",
+                      "format": {
+                        "type": "topojson",
+                        "feature": "states"
+                      }
+                    },
+                    "key": "properties.STATE_NAME"
+                  },
+                  "as": "geo"
+                }
+              ],
+              "mark": {
+                "type": "geoshape",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              },
+              "encoding": {
+                "shape": {
+                  "field": "geo",
+                  "type": "geojson"
+                },
+                "color": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "scale": {
+                    "scheme": "blues",
+                    "domain": [
+                      0,
+                      100
+                    ],
+                    "rangeMin": 0.18,
+                    "rangeMax": 0.95
+                  },
+                  "legend": {
+                    "title": [
+                      "Share of national",
+                      "production (%)"
+                    ],
+                    "values": [
+                      0,
+                      50,
+                      100
+                    ],
+                    "gradientLength": 120,
+                    "gradientThickness": 14,
+                    "titleFontSize": 11,
+                    "labelFontSize": 10,
+                    "titleLimit": 140
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "nut_type",
+                    "type": "nominal",
+                    "title": "Nut"
+                  },
+                  {
+                    "field": "state",
+                    "type": "nominal",
+                    "title": "State"
+                  },
+                  {
+                    "field": "state_share_percent",
+                    "type": "quantitative",
+                    "title": "Share",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "production_tonnes",
+                    "type": "quantitative",
+                    "title": "Production (t)",
+                    "format": ",.0f"
+                  }
+                ],
+                "stroke": {
+                  "value": "#FFFFFF"
+                },
+                "strokeWidth": {
+                  "value": 0.6
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Macadamia'"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? 147.02 : datum.state === 'Victoria' ? 144.28 : datum.state === 'Queensland' ? 144.46 : datum.state === 'South Australia' ? 135.76 : datum.state === 'Western Australia' ? 122.28 : datum.state === 'Tasmania' ? 146.59 : null",
+                  "as": "lon"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? -32.16 : datum.state === 'Victoria' ? -36.86 : datum.state === 'Queensland' ? -22.5 : datum.state === 'South Australia' ? -30.08 : datum.state === 'Western Australia' ? -25.33 : datum.state === 'Tasmania' ? -41.93 : null",
+                  "as": "lat"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "fontSize": 9,
+                "fontWeight": "bold"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "lon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "lat",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "format": ".1f"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.state_share_percent > 55",
+                    "value": "#ffffff"
+                  },
+                  "value": "#1a1a1a"
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "Chestnut",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 5
+          },
+          "width": 150,
+          "height": 155,
+          "projection": {
+            "type": "conicEqualArea",
+            "rotate": [
+              -132,
+              0,
+              0
+            ],
+            "parallels": [
+              -18,
+              -36
+            ]
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/geo/au_states.topojson",
+                "format": {
+                  "type": "topojson",
+                  "feature": "states"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#D3D3D3",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Chestnut'"
+                },
+                {
+                  "lookup": "state",
+                  "from": {
+                    "data": {
+                      "url": "data/geo/au_states.topojson",
+                      "format": {
+                        "type": "topojson",
+                        "feature": "states"
+                      }
+                    },
+                    "key": "properties.STATE_NAME"
+                  },
+                  "as": "geo"
+                }
+              ],
+              "mark": {
+                "type": "geoshape",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              },
+              "encoding": {
+                "shape": {
+                  "field": "geo",
+                  "type": "geojson"
+                },
+                "color": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "scale": {
+                    "scheme": "blues",
+                    "domain": [
+                      0,
+                      100
+                    ],
+                    "rangeMin": 0.18,
+                    "rangeMax": 0.95
+                  },
+                  "legend": {
+                    "title": [
+                      "Share of national",
+                      "production (%)"
+                    ],
+                    "values": [
+                      0,
+                      50,
+                      100
+                    ],
+                    "gradientLength": 120,
+                    "gradientThickness": 14,
+                    "titleFontSize": 11,
+                    "labelFontSize": 10,
+                    "titleLimit": 140
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "nut_type",
+                    "type": "nominal",
+                    "title": "Nut"
+                  },
+                  {
+                    "field": "state",
+                    "type": "nominal",
+                    "title": "State"
+                  },
+                  {
+                    "field": "state_share_percent",
+                    "type": "quantitative",
+                    "title": "Share",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "production_tonnes",
+                    "type": "quantitative",
+                    "title": "Production (t)",
+                    "format": ",.0f"
+                  }
+                ],
+                "stroke": {
+                  "value": "#FFFFFF"
+                },
+                "strokeWidth": {
+                  "value": 0.6
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Chestnut'"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? 147.02 : datum.state === 'Victoria' ? 144.28 : datum.state === 'Queensland' ? 144.46 : datum.state === 'South Australia' ? 135.76 : datum.state === 'Western Australia' ? 122.28 : datum.state === 'Tasmania' ? 146.59 : null",
+                  "as": "lon"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? -32.16 : datum.state === 'Victoria' ? -36.86 : datum.state === 'Queensland' ? -22.5 : datum.state === 'South Australia' ? -30.08 : datum.state === 'Western Australia' ? -25.33 : datum.state === 'Tasmania' ? -41.93 : null",
+                  "as": "lat"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "fontSize": 9,
+                "fontWeight": "bold"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "lon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "lat",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "format": ".1f"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.state_share_percent > 55",
+                    "value": "#ffffff"
+                  },
+                  "value": "#1a1a1a"
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "Pecan",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "anchor": "middle",
+            "offset": 5
+          },
+          "width": 150,
+          "height": 155,
+          "projection": {
+            "type": "conicEqualArea",
+            "rotate": [
+              -132,
+              0,
+              0
+            ],
+            "parallels": [
+              -18,
+              -36
+            ]
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/geo/au_states.topojson",
+                "format": {
+                  "type": "topojson",
+                  "feature": "states"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#D3D3D3",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Pecan'"
+                },
+                {
+                  "lookup": "state",
+                  "from": {
+                    "data": {
+                      "url": "data/geo/au_states.topojson",
+                      "format": {
+                        "type": "topojson",
+                        "feature": "states"
+                      }
+                    },
+                    "key": "properties.STATE_NAME"
+                  },
+                  "as": "geo"
+                }
+              ],
+              "mark": {
+                "type": "geoshape",
+                "stroke": "#FFFFFF",
+                "strokeWidth": 0.6
+              },
+              "encoding": {
+                "shape": {
+                  "field": "geo",
+                  "type": "geojson"
+                },
+                "color": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "scale": {
+                    "scheme": "blues",
+                    "domain": [
+                      0,
+                      100
+                    ],
+                    "rangeMin": 0.18,
+                    "rangeMax": 0.95
+                  },
+                  "legend": {
+                    "title": [
+                      "Share of national",
+                      "production (%)"
+                    ],
+                    "values": [
+                      0,
+                      50,
+                      100
+                    ],
+                    "gradientLength": 120,
+                    "gradientThickness": 14,
+                    "titleFontSize": 11,
+                    "labelFontSize": 10,
+                    "titleLimit": 140
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "nut_type",
+                    "type": "nominal",
+                    "title": "Nut"
+                  },
+                  {
+                    "field": "state",
+                    "type": "nominal",
+                    "title": "State"
+                  },
+                  {
+                    "field": "state_share_percent",
+                    "type": "quantitative",
+                    "title": "Share",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "production_tonnes",
+                    "type": "quantitative",
+                    "title": "Production (t)",
+                    "format": ",.0f"
+                  }
+                ],
+                "stroke": {
+                  "value": "#FFFFFF"
+                },
+                "strokeWidth": {
+                  "value": 0.6
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/clean/production_by_state.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.nut_type === 'Pecan'"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? 147.02 : datum.state === 'Victoria' ? 144.28 : datum.state === 'Queensland' ? 144.46 : datum.state === 'South Australia' ? 135.76 : datum.state === 'Western Australia' ? 122.28 : datum.state === 'Tasmania' ? 146.59 : null",
+                  "as": "lon"
+                },
+                {
+                  "calculate": "datum.state === 'New South Wales' ? -32.16 : datum.state === 'Victoria' ? -36.86 : datum.state === 'Queensland' ? -22.5 : datum.state === 'South Australia' ? -30.08 : datum.state === 'Western Australia' ? -25.33 : datum.state === 'Tasmania' ? -41.93 : null",
+                  "as": "lat"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "fontSize": 9,
+                "fontWeight": "bold"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "lon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "lat",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "state_share_percent",
+                  "type": "quantitative",
+                  "format": ".1f"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.state_share_percent > 55",
+                    "value": "#ffffff"
+                  },
+                  "value": "#1a1a1a"
+                },
+                "opacity": {
+                  "condition": {
+                    "test": "state_pick === null || datum.state === state_pick",
+                    "value": 1
+                  },
+                  "value": 0.15
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "spacing": 12
+    }
+  ],
+  "spacing": 14,
+  "resolve": {
+    "scale": {
+      "color": "shared"
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "orient": "bottom"
+    }
+  },
+  "padding": {
+    "left": 5,
+    "right": 5,
+    "top": 5,
+    "bottom": 10
+  },
+  "background": "transparent"
+}

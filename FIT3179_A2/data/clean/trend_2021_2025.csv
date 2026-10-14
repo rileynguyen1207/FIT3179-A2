@@ -1,0 +1,41 @@
+nut_type,year,production_tonnes,production_unit,production_value_m,export_tonnes,export_unit,export_tonnes_display,export_value_m,export_value_display,import_tonnes,import_unit,import_tonnes_display,import_value_m,import_value_display,supply_tonnes,supply_unit,supply_wholesale_value_m,per_capita_supply_kg
+All Nuts (Industry Total),2021,256102,ISWE,1195.0,136357,Mixed,136357,982.9,982.9,46659,Mixed,46659,401.8,401.8,89757,Mixed,935.7,3.49
+All Nuts (Industry Total),2022,282869,ISWE,1229.8,140527,Mixed,140527,1127.4,1127.4,45560,Mixed,45560,383.2,383.2,87267,Mixed,873.0,3.36
+All Nuts (Industry Total),2023,226208,ISWE,742.6,146253,Mixed,146253,834.7,834.7,42402,Mixed,42402,354.7,354.7,77611,Mixed,670.2,2.95
+All Nuts (Industry Total),2024,313859,ISWE,1468.2,180540,Mixed,180540,1379.1,1379.1,50376,Mixed,50376,405.3,405.3,92984,Mixed,881.1,3.42
+All Nuts (Industry Total),2025,290179,ISWE,1655.7,176197,Mixed,176197,1676.1,1676.1,45681,Mixed,45681,419.0,419.0,80060,Mixed,855.7,2.92
+Almond,2021,124439,KWE,760.5,86584,KWE,86584,609.1,609.1,,KWE,-,,-,26463,KWE,224.6,1.03
+Almond,2022,140963,KWE,866.1,105263,KWE,105263,765.1,765.1,1139,KWE,1139,7.8,7.8,24463,KWE,208.7,0.94
+Almond,2023,110707,KWE,533.1,106599,KWE,106599,570.3,570.3,2069,KWE,2069,11.1,11.1,24697,KWE,165.2,0.94
+Almond,2024,163148,KWE,1110.0,143333,KWE,143333,1083.6,1083.6,2949,KWE,2949,22.3,22.3,26029,KWE,246.0,0.96
+Almond,2025,155531,KWE,1327.9,140503,KWE,140503,1332.8,1332.8,1245,KWE,1245,11.8,11.8,24962,KWE,296.0,0.91
+Macadamia,2021,51336,In-Shell,299.0,14784,KWE,14784,321.2,321.2,,KWE,-,,-,3450,KWE,95.6,0.13
+Macadamia,2022,52824,In-Shell,203.0,16093,KWE,16093,296.6,296.6,,KWE,-,,-,3200,KWE,74.5,0.12
+Macadamia,2023,48400,In-Shell,104.0,16712,KWE,16712,214.3,214.3,,KWE,-,,-,3751,KWE,64.1,0.14
+Macadamia,2024,53950,In-Shell,201.9,15391,KWE,15391,244.5,244.5,,KWE,-,,-,3993,KWE,85.8,0.15
+Macadamia,2025,43800,In-Shell,181.8,12918,KWE,12918,246.6,246.6,,KWE,-,,-,4062,KWE,98.1,0.15
+Walnut,2021,13658,In-Shell,41.6,5699,Mixed,5699,19.2,19.2,4785,Mixed,4785,38.3,38.3,8570,Mixed,71.2,0.33
+Walnut,2022,14341,In-Shell,49.4,4359,Mixed,4359,17.2,17.2,4969,Mixed,4969,39.8,39.8,10639,Mixed,97.0,0.41
+Walnut,2023,8000,In-Shell,20.3,4373,Mixed,4373,11.9,11.9,4245,Mixed,4245,31.5,31.5,5576,Mixed,28.9,0.21
+Walnut,2024,12000,In-Shell,40.9,992,Mixed,992,3.8,3.8,5417,Mixed,5417,37.1,37.1,12981,Mixed,95.3,0.48
+Walnut,2025,10000,In-Shell,35.5,5086,Mixed,5086,23.3,23.3,5529,Mixed,5529,46.2,46.2,7572,Mixed,87.6,0.28
+Pistachio,2021,2200,In-Shell,24.0,504,Not stated in source,504,5.8,5.8,2306,Not stated in source,2306,36.4,36.4,5539,Not stated in source,81.6,0.22
+Pistachio,2022,3600,In-Shell,37.5,328,Not stated in source,328,4.1,4.1,1555,Not stated in source,1555,24.6,24.6,6326,Not stated in source,93.5,0.24
+Pistachio,2023,1400,In-Shell,15.9,77,Not stated in source,77,1.5,1.5,1746,Not stated in source,1746,32.9,32.9,4606,Not stated in source,70.1,0.18
+Pistachio,2024,4600,In-Shell,49.9,597,Not stated in source,597,7.4,7.4,2585,Not stated in source,2585,39.3,39.3,6577,Not stated in source,92.3,0.24
+Pistachio,2025,3000,In-Shell,33.5,2969,Not stated in source,2969,32.6,32.6,2554,Not stated in source,2554,42.8,42.8,2577,Not stated in source,34.4,0.09
+Hazelnut,2021,380,KWE,4.4,6,KWE,6,,<0.1,3172,KWE,3172,37.3,37.3,3546,KWE,47.1,0.16
+Hazelnut,2022,494,KWE,5.2,2,KWE,2,,<0.1,3170,KWE,3170,32.5,32.5,3662,KWE,44.2,0.16
+Hazelnut,2023,580,KWE,6.4,38,KWE,38,0.5,0.5,2773,KWE,2773,30.1,30.1,3315,KWE,41.7,0.15
+Hazelnut,2024,544,KWE,5.5,2,KWE,2,,<0.1,3466,KWE,3466,34.3,34.3,4008,KWE,46.0,0.17
+Hazelnut,2025,617,KWE,8.4,75,KWE,75,0.6,0.6,2969,KWE,2969,41.6,41.6,3511,KWE,54.3,0.15
+Pecan,2021,2404,KWE,24.1,446,KWE,446,5.0,5.0,,KWE,-,,-,1958,KWE,23.7,0.1
+Pecan,2022,1620,KWE,28.5,712,KWE,712,11.4,11.4,,KWE,-,,-,908,KWE,18.6,0.04
+Pecan,2023,1425,KWE,24.9,372,KWE,372,4.9,4.9,,KWE,-,,-,1053,KWE,17.7,0.04
+Pecan,2024,1397,KWE,23.1,347,KWE,347,4.6,4.6,,KWE,-,,-,1050,KWE,16.7,0.04
+Pecan,2025,1841,KWE,35.7,160,KWE,160,2.5,2.5,,KWE,-,,-,1681,KWE,36.1,0.06
+Chestnut,2021,1221,KWE,9.3,1,KWE,1,,-,7,KWE,7,,<0.1,1226,KWE,11.0,0.05
+Chestnut,2022,1339,KWE,10.1,,KWE,<1,,-,23,KWE,23,,<0.1,1359,KWE,12.0,0.05
+Chestnut,2023,1255,KWE,9.6,1,KWE,1,,-,2,KWE,2,,<0.1,1256,KWE,11.3,0.05
+Chestnut,2024,1078,KWE,8.2,6,KWE,6,,<0.1,3,KWE,3,,<0.1,1076,KWE,9.7,0.04
+Chestnut,2025,952,KWE,7.2,,KWE,<1,,-,11,KWE,11,,<0.1,962,KWE,8.6,0.04

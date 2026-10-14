@@ -1,0 +1,9 @@
+nut_type,year,production_tonnes,production_unit,production_value_m,export_tonnes,export_unit,export_tonnes_display,export_value_m,export_value_display,per_capita_supply_kg,yoy_production_value_pct
+Almond,2025,155531,KWE,1327.9,140503,KWE,"140,503",1332.8,1332.8,0.91,20
+Macadamia,2025,43800,In-Shell,181.8,12918,KWE,"12,918",246.6,246.6,0.15,-10
+Walnut,2025,10000,In-Shell,35.5,5086,Mixed (Kernel + In-Shell),"5,086",23.3,23.3,0.28,-13
+Pistachio,2025,3000,In-Shell,33.5,2969,Not stated in source,"2,969",32.6,32.6,0.09,-33
+Pecan,2025,1841,KWE,35.7,160,KWE,160,2.5,2.5,0.06,54
+Hazelnut,2025,617,KWE,8.4,75,KWE,75,0.6,0.6,0.15,53
+Chestnut,2025,952,KWE,7.2,,KWE,<1,,-,0.04,-12
+Industry Total (All Nuts),2025,290179,ISWE,1655.7,176197,Mixed (Kernel + In-Shell),"176,197",1676.1,1676.1,2.92,13

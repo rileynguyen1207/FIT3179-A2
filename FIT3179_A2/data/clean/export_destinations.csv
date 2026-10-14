@@ -1,0 +1,37 @@
+nut_type,year,country,export_tonnes,export_tonnes_display,note
+Almond,2024,China,76132,"76,132","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Almond,2024,India,19803,"19,803","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Almond,2024,Turkey,12284,"12,284","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Almond,2024,Vietnam,8514,"8,514","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Almond,2024,Germany,4685,"4,685","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Almond,2024,Other,21915,"21,915","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Macadamia,2024,China,7638,"7,638","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Macadamia,2024,Vietnam,2609,"2,609","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Macadamia,2024,South Korea,1465,"1,465","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Macadamia,2024,Japan,1253,"1,253","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Macadamia,2024,United States,690,690,"2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown."
+Macadamia,2024,Other,1737,"1,737","2025 country-level export breakdown is reported as ""-"" (not yet published) in the source; 2024 is the latest year with a full breakdown. Source's own 2024 Total (15,391t) is 1t less than the sum of these 6 country rows (15,392t) - a rounding discrepancy in the source itself; component values kept as printed, not forced to sum exactly."
+Walnut,2025,India,1585,"1,585",
+Walnut,2025,Germany,1424,"1,424",
+Walnut,2025,Turkey,538,538,
+Walnut,2025,France,472,472,
+Walnut,2025,Belgium,362,362,
+Walnut,2025,Other,705,705,
+Pistachio,2025,China,2740,"2,740",
+Pistachio,2025,Vietnam,126,126,
+Pistachio,2025,Spain,88,88,
+Pistachio,2025,New Zealand,7,7,
+Pistachio,2025,Qatar,3,3,
+Pistachio,2025,Other,5,5,
+Hazelnut,2025,China,71,71,
+Hazelnut,2025,New Zealand,3,3,
+Hazelnut,2025,Philippines,,<1,"source reports this as ""<1"" tonnes (a real, positive amount below the table's rounding threshold), not exactly 1."
+Hazelnut,2025,Papua New Guinea,,<1,"source reports this as ""<1"" tonnes (a real, positive amount below the table's rounding threshold), not exactly 1."
+Hazelnut,2025,Singapore,,<1,"source reports this as ""<1"" tonnes (a real, positive amount below the table's rounding threshold), not exactly 1."
+Pecan,2025,New Zealand,53,53,
+Pecan,2025,Belgium,47,47,
+Pecan,2025,United States,46,46,
+Pecan,2025,Thailand,8,8,
+Pecan,2025,Singapore,3,3,
+Pecan,2025,Other,2,2,"Source's own 2025 Total (160t) is 1t more than the sum of these 6 country rows (159t) - a rounding discrepancy in the source itself; component values kept as printed, not forced to sum exactly."
+Chestnut,2025,Papua New Guinea,,<1,"source reports this as ""<1"" tonnes (a real, positive amount below the table's rounding threshold), not exactly 1."
