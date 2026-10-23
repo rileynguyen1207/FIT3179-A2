@@ -1,1 +1,3660 @@
-{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","hconcat":[{"width":620,"height":350,"projection":{"type":"equalEarth"},"layer":[{"data":{"url":"https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson","format":{"type":"topojson","feature":"ne_110m_admin_0_countries"}},"transform":[{"filter":"datum.properties.NAME !== 'Antarctica'"}],"mark":{"type":"geoshape","fill":"#D4CEC5","stroke":"#F7F2E9","strokeWidth":0.5,"opacity":0.9}},{"data":{"values":[{"nut":"Almond","country":"China","lon":116.4,"lat":39.9,"render_tonnes":76132.0,"tooltip_text":"Almond \u2192 China: 76,132 t (2024)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Macadamia","country":"China","lon":116.4,"lat":39.9,"render_tonnes":7638.0,"tooltip_text":"Macadamia \u2192 China: 7,638 t (2024)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Pistachio","country":"China","lon":116.4,"lat":39.9,"render_tonnes":2740.0,"tooltip_text":"Pistachio \u2192 China: 2,740 t (2025)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Hazelnut","country":"China","lon":116.4,"lat":39.9,"render_tonnes":71.0,"tooltip_text":"Hazelnut \u2192 China: 71 t (2025)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"All","country":"China","lon":116.4,"lat":39.9,"render_tonnes":86581,"tooltip_text":"86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Almond","country":"India","lon":77.2,"lat":28.6,"render_tonnes":19803.0,"tooltip_text":"Almond \u2192 India: 19,803 t (2024)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"Walnut","country":"India","lon":77.2,"lat":28.6,"render_tonnes":1585.0,"tooltip_text":"Walnut \u2192 India: 1,585 t (2025)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"All","country":"India","lon":77.2,"lat":28.6,"render_tonnes":21388,"tooltip_text":"21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"Almond","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12284.0,"tooltip_text":"Almond \u2192 Turkey: 12,284 t (2024)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"Walnut","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":538.0,"tooltip_text":"Walnut \u2192 Turkey: 538 t (2025)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"All","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12822,"tooltip_text":"12,822 t total (Almond 12,284t '24, Walnut 538t '25)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"Almond","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":8514.0,"tooltip_text":"Almond \u2192 Vietnam: 8,514 t (2024)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Macadamia","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":2609.0,"tooltip_text":"Macadamia \u2192 Vietnam: 2,609 t (2024)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Pistachio","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":126.0,"tooltip_text":"Pistachio \u2192 Vietnam: 126 t (2025)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"All","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":11249,"tooltip_text":"11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Almond","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":4685.0,"tooltip_text":"Almond \u2192 Germany: 4,685 t (2024)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"Walnut","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":1424.0,"tooltip_text":"Walnut \u2192 Germany: 1,424 t (2025)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"All","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":6109,"tooltip_text":"6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"Macadamia","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465.0,"tooltip_text":"Macadamia \u2192 South Korea: 1,465 t (2024)","label_lon":136.98000000000002,"label_lat":43.57,"align":"left"},{"nut":"All","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465,"tooltip_text":"1,465 t total (Macadamia 1,465t '24)","label_lon":136.98000000000002,"label_lat":43.57,"align":"left"},{"nut":"Macadamia","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253.0,"tooltip_text":"Macadamia \u2192 Japan: 1,253 t (2024)","label_lon":149.69,"label_lat":29.689999999999998,"align":"left"},{"nut":"All","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253,"tooltip_text":"1,253 t total (Macadamia 1,253t '24)","label_lon":149.69,"label_lat":29.689999999999998,"align":"left"},{"nut":"Macadamia","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":690.0,"tooltip_text":"Macadamia \u2192 United States: 690 t (2024)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"Pecan","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":46.0,"tooltip_text":"Pecan \u2192 United States: 46 t (2025)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"All","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":736,"tooltip_text":"736 t total (Macadamia 690t '24, Pecan 46t '25)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"Walnut","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472.0,"tooltip_text":"Walnut \u2192 France: 472 t (2025)","label_lon":-7.65,"label_lat":41.86,"align":"right"},{"nut":"All","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472,"tooltip_text":"472 t total (Walnut 472t '25)","label_lon":-7.65,"label_lat":41.86,"align":"right"},{"nut":"Walnut","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":362.0,"tooltip_text":"Walnut \u2192 Belgium: 362 t (2025)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"Pecan","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":47.0,"tooltip_text":"Pecan \u2192 Belgium: 47 t (2025)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"All","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":409,"tooltip_text":"409 t total (Walnut 362t '25, Pecan 47t '25)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"Pistachio","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88.0,"tooltip_text":"Pistachio \u2192 Spain: 88 t (2025)","label_lon":-13.7,"label_lat":34.42,"align":"right"},{"nut":"All","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88,"tooltip_text":"88 t total (Pistachio 88t '25)","label_lon":-13.7,"label_lat":34.42,"align":"right"},{"nut":"Pecan","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":53.0,"tooltip_text":"Pecan \u2192 New Zealand: 53 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pistachio","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":7.0,"tooltip_text":"Pistachio \u2192 New Zealand: 7 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Hazelnut","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":3.0,"tooltip_text":"Hazelnut \u2192 New Zealand: 3 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"All","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":63,"tooltip_text":"63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pecan","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8.0,"tooltip_text":"Pecan \u2192 Thailand: 8 t (2025)","label_lon":88.49,"label_lat":10.76,"align":"right"},{"nut":"All","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8,"tooltip_text":"8 t total (Pecan 8t '25)","label_lon":88.49,"label_lat":10.76,"align":"right"},{"nut":"Pistachio","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3.0,"tooltip_text":"Pistachio \u2192 Qatar: 3 t (2025)","label_lon":51.53,"label_lat":17.29,"align":"center"},{"nut":"All","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3,"tooltip_text":"3 t total (Pistachio 3t '25)","label_lon":51.53,"label_lat":17.29,"align":"center"},{"nut":"Pecan","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3.0,"tooltip_text":"Pecan \u2192 Singapore: 3 t (2025)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"Hazelnut","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Singapore: reported as <1 t (2025, exact amount not stated)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"All","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3,"tooltip_text":"3 t total (Pecan 3t '25, Hazelnut <1t '25)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"Hazelnut","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Philippines: reported as <1 t (2025, exact amount not stated)","label_lon":132.98000000000002,"label_lat":16.6,"align":"left"},{"nut":"All","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25)","label_lon":132.98000000000002,"label_lat":16.6,"align":"left"},{"nut":"Hazelnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)","label_lon":157.18,"label_lat":-15.48,"align":"left"},{"nut":"Chestnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Chestnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)","label_lon":157.18,"label_lat":-15.48,"align":"left"},{"nut":"All","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)","label_lon":157.18,"label_lat":-15.48,"align":"left"}]},"transform":[{"filter":"nut_pick === null ? datum.nut === 'All' : datum.nut === nut_pick"}],"mark":{"type":"rule","color":"#287DA8","opacity":0.55},"encoding":{"longitude":{"datum":149.13,"type":"quantitative"},"latitude":{"datum":-35.28,"type":"quantitative"},"longitude2":{"field":"lon","type":"quantitative"},"latitude2":{"field":"lat","type":"quantitative"},"strokeWidth":{"field":"render_tonnes","type":"quantitative","scale":{"type":"sqrt","domain":[0,86581],"range":[0.6,13]},"legend":null},"tooltip":[{"field":"country","type":"nominal","title":"Destination"},{"field":"tooltip_text","type":"nominal","title":"Export volume"}]}},{"data":{"values":[{"nut":"Almond","country":"China","lon":116.4,"lat":39.9,"render_tonnes":76132.0,"tooltip_text":"Almond \u2192 China: 76,132 t (2024)"},{"nut":"Macadamia","country":"China","lon":116.4,"lat":39.9,"render_tonnes":7638.0,"tooltip_text":"Macadamia \u2192 China: 7,638 t (2024)"},{"nut":"Pistachio","country":"China","lon":116.4,"lat":39.9,"render_tonnes":2740.0,"tooltip_text":"Pistachio \u2192 China: 2,740 t (2025)"},{"nut":"Hazelnut","country":"China","lon":116.4,"lat":39.9,"render_tonnes":71.0,"tooltip_text":"Hazelnut \u2192 China: 71 t (2025)"},{"nut":"All","country":"China","lon":116.4,"lat":39.9,"render_tonnes":86581,"tooltip_text":"86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)"},{"nut":"Almond","country":"India","lon":77.2,"lat":28.6,"render_tonnes":19803.0,"tooltip_text":"Almond \u2192 India: 19,803 t (2024)"},{"nut":"Walnut","country":"India","lon":77.2,"lat":28.6,"render_tonnes":1585.0,"tooltip_text":"Walnut \u2192 India: 1,585 t (2025)"},{"nut":"All","country":"India","lon":77.2,"lat":28.6,"render_tonnes":21388,"tooltip_text":"21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)"},{"nut":"Almond","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12284.0,"tooltip_text":"Almond \u2192 Turkey: 12,284 t (2024)"},{"nut":"Walnut","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":538.0,"tooltip_text":"Walnut \u2192 Turkey: 538 t (2025)"},{"nut":"All","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12822,"tooltip_text":"12,822 t total (Almond 12,284t '24, Walnut 538t '25)"},{"nut":"Almond","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":8514.0,"tooltip_text":"Almond \u2192 Vietnam: 8,514 t (2024)"},{"nut":"Macadamia","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":2609.0,"tooltip_text":"Macadamia \u2192 Vietnam: 2,609 t (2024)"},{"nut":"Pistachio","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":126.0,"tooltip_text":"Pistachio \u2192 Vietnam: 126 t (2025)"},{"nut":"All","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":11249,"tooltip_text":"11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)"},{"nut":"Almond","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":4685.0,"tooltip_text":"Almond \u2192 Germany: 4,685 t (2024)"},{"nut":"Walnut","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":1424.0,"tooltip_text":"Walnut \u2192 Germany: 1,424 t (2025)"},{"nut":"All","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":6109,"tooltip_text":"6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)"},{"nut":"Macadamia","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465.0,"tooltip_text":"Macadamia \u2192 South Korea: 1,465 t (2024)"},{"nut":"All","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465,"tooltip_text":"1,465 t total (Macadamia 1,465t '24)"},{"nut":"Macadamia","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253.0,"tooltip_text":"Macadamia \u2192 Japan: 1,253 t (2024)"},{"nut":"All","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253,"tooltip_text":"1,253 t total (Macadamia 1,253t '24)"},{"nut":"Macadamia","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":690.0,"tooltip_text":"Macadamia \u2192 United States: 690 t (2024)"},{"nut":"Pecan","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":46.0,"tooltip_text":"Pecan \u2192 United States: 46 t (2025)"},{"nut":"All","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":736,"tooltip_text":"736 t total (Macadamia 690t '24, Pecan 46t '25)"},{"nut":"Walnut","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472.0,"tooltip_text":"Walnut \u2192 France: 472 t (2025)"},{"nut":"All","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472,"tooltip_text":"472 t total (Walnut 472t '25)"},{"nut":"Walnut","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":362.0,"tooltip_text":"Walnut \u2192 Belgium: 362 t (2025)"},{"nut":"Pecan","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":47.0,"tooltip_text":"Pecan \u2192 Belgium: 47 t (2025)"},{"nut":"All","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":409,"tooltip_text":"409 t total (Walnut 362t '25, Pecan 47t '25)"},{"nut":"Pistachio","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88.0,"tooltip_text":"Pistachio \u2192 Spain: 88 t (2025)"},{"nut":"All","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88,"tooltip_text":"88 t total (Pistachio 88t '25)"},{"nut":"Pecan","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":53.0,"tooltip_text":"Pecan \u2192 New Zealand: 53 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pistachio","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":7.0,"tooltip_text":"Pistachio \u2192 New Zealand: 7 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Hazelnut","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":3.0,"tooltip_text":"Hazelnut \u2192 New Zealand: 3 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"All","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":63,"tooltip_text":"63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pecan","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8.0,"tooltip_text":"Pecan \u2192 Thailand: 8 t (2025)"},{"nut":"All","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8,"tooltip_text":"8 t total (Pecan 8t '25)"},{"nut":"Pistachio","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3.0,"tooltip_text":"Pistachio \u2192 Qatar: 3 t (2025)"},{"nut":"All","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3,"tooltip_text":"3 t total (Pistachio 3t '25)"},{"nut":"Pecan","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3.0,"tooltip_text":"Pecan \u2192 Singapore: 3 t (2025)"},{"nut":"Hazelnut","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Singapore: reported as <1 t (2025, exact amount not stated)"},{"nut":"All","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3,"tooltip_text":"3 t total (Pecan 3t '25, Hazelnut <1t '25)"},{"nut":"Hazelnut","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Philippines: reported as <1 t (2025, exact amount not stated)"},{"nut":"All","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25)"},{"nut":"Hazelnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)"},{"nut":"Chestnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Chestnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)"},{"nut":"All","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)"}]},"transform":[{"filter":"nut_pick === null ? datum.nut === 'All' : datum.nut === nut_pick"}],"mark":{"type":"circle","filled":true,"size":45,"color":"#0072B2"},"encoding":{"longitude":{"field":"lon","type":"quantitative"},"latitude":{"field":"lat","type":"quantitative"},"tooltip":[{"field":"country","type":"nominal","title":"Destination"},{"field":"tooltip_text","type":"nominal","title":"Export volume"}]}},{"data":{"values":[{"nut":"Almond","country":"China","lon":116.4,"lat":39.9,"render_tonnes":76132.0,"tooltip_text":"Almond \u2192 China: 76,132 t (2024)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Macadamia","country":"China","lon":116.4,"lat":39.9,"render_tonnes":7638.0,"tooltip_text":"Macadamia \u2192 China: 7,638 t (2024)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Pistachio","country":"China","lon":116.4,"lat":39.9,"render_tonnes":2740.0,"tooltip_text":"Pistachio \u2192 China: 2,740 t (2025)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Hazelnut","country":"China","lon":116.4,"lat":39.9,"render_tonnes":71.0,"tooltip_text":"Hazelnut \u2192 China: 71 t (2025)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"All","country":"China","lon":116.4,"lat":39.9,"render_tonnes":86581,"tooltip_text":"86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Almond","country":"India","lon":77.2,"lat":28.6,"render_tonnes":19803.0,"tooltip_text":"Almond \u2192 India: 19,803 t (2024)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"Walnut","country":"India","lon":77.2,"lat":28.6,"render_tonnes":1585.0,"tooltip_text":"Walnut \u2192 India: 1,585 t (2025)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"All","country":"India","lon":77.2,"lat":28.6,"render_tonnes":21388,"tooltip_text":"21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"Almond","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12284.0,"tooltip_text":"Almond \u2192 Turkey: 12,284 t (2024)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"Walnut","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":538.0,"tooltip_text":"Walnut \u2192 Turkey: 538 t (2025)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"All","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12822,"tooltip_text":"12,822 t total (Almond 12,284t '24, Walnut 538t '25)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"Almond","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":8514.0,"tooltip_text":"Almond \u2192 Vietnam: 8,514 t (2024)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Macadamia","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":2609.0,"tooltip_text":"Macadamia \u2192 Vietnam: 2,609 t (2024)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Pistachio","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":126.0,"tooltip_text":"Pistachio \u2192 Vietnam: 126 t (2025)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"All","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":11249,"tooltip_text":"11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Almond","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":4685.0,"tooltip_text":"Almond \u2192 Germany: 4,685 t (2024)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"Walnut","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":1424.0,"tooltip_text":"Walnut \u2192 Germany: 1,424 t (2025)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"All","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":6109,"tooltip_text":"6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"Macadamia","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465.0,"tooltip_text":"Macadamia \u2192 South Korea: 1,465 t (2024)","label_lon":136.98000000000002,"label_lat":43.57,"align":"left"},{"nut":"All","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465,"tooltip_text":"1,465 t total (Macadamia 1,465t '24)","label_lon":136.98000000000002,"label_lat":43.57,"align":"left"},{"nut":"Macadamia","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253.0,"tooltip_text":"Macadamia \u2192 Japan: 1,253 t (2024)","label_lon":149.69,"label_lat":29.689999999999998,"align":"left"},{"nut":"All","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253,"tooltip_text":"1,253 t total (Macadamia 1,253t '24)","label_lon":149.69,"label_lat":29.689999999999998,"align":"left"},{"nut":"Macadamia","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":690.0,"tooltip_text":"Macadamia \u2192 United States: 690 t (2024)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"Pecan","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":46.0,"tooltip_text":"Pecan \u2192 United States: 46 t (2025)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"All","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":736,"tooltip_text":"736 t total (Macadamia 690t '24, Pecan 46t '25)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"Walnut","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472.0,"tooltip_text":"Walnut \u2192 France: 472 t (2025)","label_lon":-7.65,"label_lat":41.86,"align":"right"},{"nut":"All","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472,"tooltip_text":"472 t total (Walnut 472t '25)","label_lon":-7.65,"label_lat":41.86,"align":"right"},{"nut":"Walnut","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":362.0,"tooltip_text":"Walnut \u2192 Belgium: 362 t (2025)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"Pecan","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":47.0,"tooltip_text":"Pecan \u2192 Belgium: 47 t (2025)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"All","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":409,"tooltip_text":"409 t total (Walnut 362t '25, Pecan 47t '25)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"Pistachio","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88.0,"tooltip_text":"Pistachio \u2192 Spain: 88 t (2025)","label_lon":-13.7,"label_lat":34.42,"align":"right"},{"nut":"All","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88,"tooltip_text":"88 t total (Pistachio 88t '25)","label_lon":-13.7,"label_lat":34.42,"align":"right"},{"nut":"Pecan","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":53.0,"tooltip_text":"Pecan \u2192 New Zealand: 53 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pistachio","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":7.0,"tooltip_text":"Pistachio \u2192 New Zealand: 7 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Hazelnut","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":3.0,"tooltip_text":"Hazelnut \u2192 New Zealand: 3 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"All","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":63,"tooltip_text":"63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pecan","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8.0,"tooltip_text":"Pecan \u2192 Thailand: 8 t (2025)","label_lon":88.49,"label_lat":10.76,"align":"right"},{"nut":"All","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8,"tooltip_text":"8 t total (Pecan 8t '25)","label_lon":88.49,"label_lat":10.76,"align":"right"},{"nut":"Pistachio","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3.0,"tooltip_text":"Pistachio \u2192 Qatar: 3 t (2025)","label_lon":51.53,"label_lat":17.29,"align":"center"},{"nut":"All","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3,"tooltip_text":"3 t total (Pistachio 3t '25)","label_lon":51.53,"label_lat":17.29,"align":"center"},{"nut":"Pecan","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3.0,"tooltip_text":"Pecan \u2192 Singapore: 3 t (2025)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"Hazelnut","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Singapore: reported as <1 t (2025, exact amount not stated)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"All","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3,"tooltip_text":"3 t total (Pecan 3t '25, Hazelnut <1t '25)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"Hazelnut","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Philippines: reported as <1 t (2025, exact amount not stated)","label_lon":132.98000000000002,"label_lat":16.6,"align":"left"},{"nut":"All","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25)","label_lon":132.98000000000002,"label_lat":16.6,"align":"left"},{"nut":"Hazelnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)","label_lon":157.18,"label_lat":-15.48,"align":"left"},{"nut":"Chestnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Chestnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)","label_lon":157.18,"label_lat":-15.48,"align":"left"},{"nut":"All","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)","label_lon":157.18,"label_lat":-15.48,"align":"left"}]},"transform":[{"filter":"(nut_pick === null && datum.nut === 'All' && (datum.country === 'China' || datum.country === 'India' || datum.country === 'Turkey' || datum.country === 'Vietnam' || datum.country === 'Germany')) || (nut_pick !== null && datum.nut === nut_pick)"}],"mark":{"type":"rule","color":"#93877D","strokeWidth":0.6},"encoding":{"longitude":{"field":"lon","type":"quantitative"},"latitude":{"field":"lat","type":"quantitative"},"longitude2":{"field":"label_lon"},"latitude2":{"field":"label_lat"}}},{"data":{"values":[{"nut":"Almond","country":"China","lon":116.4,"lat":39.9,"render_tonnes":76132.0,"tooltip_text":"Almond \u2192 China: 76,132 t (2024)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Macadamia","country":"China","lon":116.4,"lat":39.9,"render_tonnes":7638.0,"tooltip_text":"Macadamia \u2192 China: 7,638 t (2024)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Pistachio","country":"China","lon":116.4,"lat":39.9,"render_tonnes":2740.0,"tooltip_text":"Pistachio \u2192 China: 2,740 t (2025)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Hazelnut","country":"China","lon":116.4,"lat":39.9,"render_tonnes":71.0,"tooltip_text":"Hazelnut \u2192 China: 71 t (2025)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"All","country":"China","lon":116.4,"lat":39.9,"render_tonnes":86581,"tooltip_text":"86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Almond","country":"India","lon":77.2,"lat":28.6,"render_tonnes":19803.0,"tooltip_text":"Almond \u2192 India: 19,803 t (2024)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"Walnut","country":"India","lon":77.2,"lat":28.6,"render_tonnes":1585.0,"tooltip_text":"Walnut \u2192 India: 1,585 t (2025)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"All","country":"India","lon":77.2,"lat":28.6,"render_tonnes":21388,"tooltip_text":"21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"Almond","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12284.0,"tooltip_text":"Almond \u2192 Turkey: 12,284 t (2024)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"Walnut","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":538.0,"tooltip_text":"Walnut \u2192 Turkey: 538 t (2025)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"All","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12822,"tooltip_text":"12,822 t total (Almond 12,284t '24, Walnut 538t '25)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"Almond","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":8514.0,"tooltip_text":"Almond \u2192 Vietnam: 8,514 t (2024)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Macadamia","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":2609.0,"tooltip_text":"Macadamia \u2192 Vietnam: 2,609 t (2024)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Pistachio","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":126.0,"tooltip_text":"Pistachio \u2192 Vietnam: 126 t (2025)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"All","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":11249,"tooltip_text":"11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Almond","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":4685.0,"tooltip_text":"Almond \u2192 Germany: 4,685 t (2024)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"Walnut","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":1424.0,"tooltip_text":"Walnut \u2192 Germany: 1,424 t (2025)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"All","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":6109,"tooltip_text":"6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"Macadamia","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465.0,"tooltip_text":"Macadamia \u2192 South Korea: 1,465 t (2024)","label_lon":136.98000000000002,"label_lat":43.57,"align":"left"},{"nut":"All","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465,"tooltip_text":"1,465 t total (Macadamia 1,465t '24)","label_lon":136.98000000000002,"label_lat":43.57,"align":"left"},{"nut":"Macadamia","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253.0,"tooltip_text":"Macadamia \u2192 Japan: 1,253 t (2024)","label_lon":149.69,"label_lat":29.689999999999998,"align":"left"},{"nut":"All","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253,"tooltip_text":"1,253 t total (Macadamia 1,253t '24)","label_lon":149.69,"label_lat":29.689999999999998,"align":"left"},{"nut":"Macadamia","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":690.0,"tooltip_text":"Macadamia \u2192 United States: 690 t (2024)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"Pecan","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":46.0,"tooltip_text":"Pecan \u2192 United States: 46 t (2025)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"All","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":736,"tooltip_text":"736 t total (Macadamia 690t '24, Pecan 46t '25)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"Walnut","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472.0,"tooltip_text":"Walnut \u2192 France: 472 t (2025)","label_lon":-7.65,"label_lat":41.86,"align":"right"},{"nut":"All","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472,"tooltip_text":"472 t total (Walnut 472t '25)","label_lon":-7.65,"label_lat":41.86,"align":"right"},{"nut":"Walnut","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":362.0,"tooltip_text":"Walnut \u2192 Belgium: 362 t (2025)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"Pecan","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":47.0,"tooltip_text":"Pecan \u2192 Belgium: 47 t (2025)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"All","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":409,"tooltip_text":"409 t total (Walnut 362t '25, Pecan 47t '25)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"Pistachio","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88.0,"tooltip_text":"Pistachio \u2192 Spain: 88 t (2025)","label_lon":-13.7,"label_lat":34.42,"align":"right"},{"nut":"All","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88,"tooltip_text":"88 t total (Pistachio 88t '25)","label_lon":-13.7,"label_lat":34.42,"align":"right"},{"nut":"Pecan","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":53.0,"tooltip_text":"Pecan \u2192 New Zealand: 53 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pistachio","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":7.0,"tooltip_text":"Pistachio \u2192 New Zealand: 7 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Hazelnut","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":3.0,"tooltip_text":"Hazelnut \u2192 New Zealand: 3 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"All","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":63,"tooltip_text":"63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pecan","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8.0,"tooltip_text":"Pecan \u2192 Thailand: 8 t (2025)","label_lon":88.49,"label_lat":10.76,"align":"right"},{"nut":"All","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8,"tooltip_text":"8 t total (Pecan 8t '25)","label_lon":88.49,"label_lat":10.76,"align":"right"},{"nut":"Pistachio","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3.0,"tooltip_text":"Pistachio \u2192 Qatar: 3 t (2025)","label_lon":51.53,"label_lat":17.29,"align":"center"},{"nut":"All","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3,"tooltip_text":"3 t total (Pistachio 3t '25)","label_lon":51.53,"label_lat":17.29,"align":"center"},{"nut":"Pecan","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3.0,"tooltip_text":"Pecan \u2192 Singapore: 3 t (2025)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"Hazelnut","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Singapore: reported as <1 t (2025, exact amount not stated)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"All","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3,"tooltip_text":"3 t total (Pecan 3t '25, Hazelnut <1t '25)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"Hazelnut","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Philippines: reported as <1 t (2025, exact amount not stated)","label_lon":132.98000000000002,"label_lat":16.6,"align":"left"},{"nut":"All","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25)","label_lon":132.98000000000002,"label_lat":16.6,"align":"left"},{"nut":"Hazelnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)","label_lon":157.18,"label_lat":-15.48,"align":"left"},{"nut":"Chestnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Chestnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)","label_lon":157.18,"label_lat":-15.48,"align":"left"},{"nut":"All","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)","label_lon":157.18,"label_lat":-15.48,"align":"left"}]},"transform":[{"filter":"(nut_pick === null && datum.nut === 'All' && (datum.country === 'China' || datum.country === 'India' || datum.country === 'Turkey' || datum.country === 'Vietnam' || datum.country === 'Germany')) || (nut_pick !== null && datum.nut === nut_pick)"},{"filter":"datum.align === 'left'"}],"mark":{"type":"text","fontSize":11,"color":"#493B33","fontWeight":"bold","align":"left"},"encoding":{"longitude":{"field":"label_lon","type":"quantitative"},"latitude":{"field":"label_lat","type":"quantitative"},"text":{"field":"country","type":"nominal"}}},{"data":{"values":[{"nut":"Almond","country":"China","lon":116.4,"lat":39.9,"render_tonnes":76132.0,"tooltip_text":"Almond \u2192 China: 76,132 t (2024)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Macadamia","country":"China","lon":116.4,"lat":39.9,"render_tonnes":7638.0,"tooltip_text":"Macadamia \u2192 China: 7,638 t (2024)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Pistachio","country":"China","lon":116.4,"lat":39.9,"render_tonnes":2740.0,"tooltip_text":"Pistachio \u2192 China: 2,740 t (2025)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Hazelnut","country":"China","lon":116.4,"lat":39.9,"render_tonnes":71.0,"tooltip_text":"Hazelnut \u2192 China: 71 t (2025)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"All","country":"China","lon":116.4,"lat":39.9,"render_tonnes":86581,"tooltip_text":"86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Almond","country":"India","lon":77.2,"lat":28.6,"render_tonnes":19803.0,"tooltip_text":"Almond \u2192 India: 19,803 t (2024)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"Walnut","country":"India","lon":77.2,"lat":28.6,"render_tonnes":1585.0,"tooltip_text":"Walnut \u2192 India: 1,585 t (2025)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"All","country":"India","lon":77.2,"lat":28.6,"render_tonnes":21388,"tooltip_text":"21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"Almond","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12284.0,"tooltip_text":"Almond \u2192 Turkey: 12,284 t (2024)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"Walnut","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":538.0,"tooltip_text":"Walnut \u2192 Turkey: 538 t (2025)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"All","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12822,"tooltip_text":"12,822 t total (Almond 12,284t '24, Walnut 538t '25)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"Almond","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":8514.0,"tooltip_text":"Almond \u2192 Vietnam: 8,514 t (2024)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Macadamia","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":2609.0,"tooltip_text":"Macadamia \u2192 Vietnam: 2,609 t (2024)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Pistachio","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":126.0,"tooltip_text":"Pistachio \u2192 Vietnam: 126 t (2025)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"All","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":11249,"tooltip_text":"11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Almond","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":4685.0,"tooltip_text":"Almond \u2192 Germany: 4,685 t (2024)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"Walnut","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":1424.0,"tooltip_text":"Walnut \u2192 Germany: 1,424 t (2025)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"All","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":6109,"tooltip_text":"6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"Macadamia","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465.0,"tooltip_text":"Macadamia \u2192 South Korea: 1,465 t (2024)","label_lon":136.98000000000002,"label_lat":43.57,"align":"left"},{"nut":"All","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465,"tooltip_text":"1,465 t total (Macadamia 1,465t '24)","label_lon":136.98000000000002,"label_lat":43.57,"align":"left"},{"nut":"Macadamia","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253.0,"tooltip_text":"Macadamia \u2192 Japan: 1,253 t (2024)","label_lon":149.69,"label_lat":29.689999999999998,"align":"left"},{"nut":"All","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253,"tooltip_text":"1,253 t total (Macadamia 1,253t '24)","label_lon":149.69,"label_lat":29.689999999999998,"align":"left"},{"nut":"Macadamia","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":690.0,"tooltip_text":"Macadamia \u2192 United States: 690 t (2024)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"Pecan","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":46.0,"tooltip_text":"Pecan \u2192 United States: 46 t (2025)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"All","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":736,"tooltip_text":"736 t total (Macadamia 690t '24, Pecan 46t '25)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"Walnut","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472.0,"tooltip_text":"Walnut \u2192 France: 472 t (2025)","label_lon":-7.65,"label_lat":41.86,"align":"right"},{"nut":"All","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472,"tooltip_text":"472 t total (Walnut 472t '25)","label_lon":-7.65,"label_lat":41.86,"align":"right"},{"nut":"Walnut","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":362.0,"tooltip_text":"Walnut \u2192 Belgium: 362 t (2025)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"Pecan","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":47.0,"tooltip_text":"Pecan \u2192 Belgium: 47 t (2025)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"All","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":409,"tooltip_text":"409 t total (Walnut 362t '25, Pecan 47t '25)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"Pistachio","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88.0,"tooltip_text":"Pistachio \u2192 Spain: 88 t (2025)","label_lon":-13.7,"label_lat":34.42,"align":"right"},{"nut":"All","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88,"tooltip_text":"88 t total (Pistachio 88t '25)","label_lon":-13.7,"label_lat":34.42,"align":"right"},{"nut":"Pecan","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":53.0,"tooltip_text":"Pecan \u2192 New Zealand: 53 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pistachio","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":7.0,"tooltip_text":"Pistachio \u2192 New Zealand: 7 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Hazelnut","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":3.0,"tooltip_text":"Hazelnut \u2192 New Zealand: 3 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"All","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":63,"tooltip_text":"63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pecan","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8.0,"tooltip_text":"Pecan \u2192 Thailand: 8 t (2025)","label_lon":88.49,"label_lat":10.76,"align":"right"},{"nut":"All","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8,"tooltip_text":"8 t total (Pecan 8t '25)","label_lon":88.49,"label_lat":10.76,"align":"right"},{"nut":"Pistachio","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3.0,"tooltip_text":"Pistachio \u2192 Qatar: 3 t (2025)","label_lon":51.53,"label_lat":17.29,"align":"center"},{"nut":"All","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3,"tooltip_text":"3 t total (Pistachio 3t '25)","label_lon":51.53,"label_lat":17.29,"align":"center"},{"nut":"Pecan","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3.0,"tooltip_text":"Pecan \u2192 Singapore: 3 t (2025)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"Hazelnut","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Singapore: reported as <1 t (2025, exact amount not stated)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"All","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3,"tooltip_text":"3 t total (Pecan 3t '25, Hazelnut <1t '25)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"Hazelnut","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Philippines: reported as <1 t (2025, exact amount not stated)","label_lon":132.98000000000002,"label_lat":16.6,"align":"left"},{"nut":"All","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25)","label_lon":132.98000000000002,"label_lat":16.6,"align":"left"},{"nut":"Hazelnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)","label_lon":157.18,"label_lat":-15.48,"align":"left"},{"nut":"Chestnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Chestnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)","label_lon":157.18,"label_lat":-15.48,"align":"left"},{"nut":"All","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)","label_lon":157.18,"label_lat":-15.48,"align":"left"}]},"transform":[{"filter":"(nut_pick === null && datum.nut === 'All' && (datum.country === 'China' || datum.country === 'India' || datum.country === 'Turkey' || datum.country === 'Vietnam' || datum.country === 'Germany')) || (nut_pick !== null && datum.nut === nut_pick)"},{"filter":"datum.align === 'right'"}],"mark":{"type":"text","fontSize":11,"color":"#222222","fontWeight":"bold","align":"right"},"encoding":{"longitude":{"field":"label_lon","type":"quantitative"},"latitude":{"field":"label_lat","type":"quantitative"},"text":{"field":"country","type":"nominal"}}},{"data":{"values":[{"nut":"Almond","country":"China","lon":116.4,"lat":39.9,"render_tonnes":76132.0,"tooltip_text":"Almond \u2192 China: 76,132 t (2024)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Macadamia","country":"China","lon":116.4,"lat":39.9,"render_tonnes":7638.0,"tooltip_text":"Macadamia \u2192 China: 7,638 t (2024)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Pistachio","country":"China","lon":116.4,"lat":39.9,"render_tonnes":2740.0,"tooltip_text":"Pistachio \u2192 China: 2,740 t (2025)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Hazelnut","country":"China","lon":116.4,"lat":39.9,"render_tonnes":71.0,"tooltip_text":"Hazelnut \u2192 China: 71 t (2025)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"All","country":"China","lon":116.4,"lat":39.9,"render_tonnes":86581,"tooltip_text":"86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)","label_lon":102.4,"label_lat":45.9,"align":"right"},{"nut":"Almond","country":"India","lon":77.2,"lat":28.6,"render_tonnes":19803.0,"tooltip_text":"Almond \u2192 India: 19,803 t (2024)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"Walnut","country":"India","lon":77.2,"lat":28.6,"render_tonnes":1585.0,"tooltip_text":"Walnut \u2192 India: 1,585 t (2025)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"All","country":"India","lon":77.2,"lat":28.6,"render_tonnes":21388,"tooltip_text":"21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)","label_lon":77.2,"label_lat":20.6,"align":"center"},{"nut":"Almond","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12284.0,"tooltip_text":"Almond \u2192 Turkey: 12,284 t (2024)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"Walnut","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":538.0,"tooltip_text":"Walnut \u2192 Turkey: 538 t (2025)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"All","country":"Turkey","lon":32.85,"lat":39.93,"render_tonnes":12822,"tooltip_text":"12,822 t total (Almond 12,284t '24, Walnut 538t '25)","label_lon":32.85,"label_lat":30.93,"align":"center"},{"nut":"Almond","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":8514.0,"tooltip_text":"Almond \u2192 Vietnam: 8,514 t (2024)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Macadamia","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":2609.0,"tooltip_text":"Macadamia \u2192 Vietnam: 2,609 t (2024)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Pistachio","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":126.0,"tooltip_text":"Pistachio \u2192 Vietnam: 126 t (2025)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"All","country":"Vietnam","lon":105.85,"lat":21.03,"render_tonnes":11249,"tooltip_text":"11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)","label_lon":115.85,"label_lat":25.03,"align":"left"},{"nut":"Almond","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":4685.0,"tooltip_text":"Almond \u2192 Germany: 4,685 t (2024)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"Walnut","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":1424.0,"tooltip_text":"Walnut \u2192 Germany: 1,424 t (2025)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"All","country":"Germany","lon":13.41,"lat":52.52,"render_tonnes":6109,"tooltip_text":"6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)","label_lon":23.41,"label_lat":58.52,"align":"left"},{"nut":"Macadamia","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465.0,"tooltip_text":"Macadamia \u2192 South Korea: 1,465 t (2024)","label_lon":136.98000000000002,"label_lat":43.57,"align":"left"},{"nut":"All","country":"South Korea","lon":126.98,"lat":37.57,"render_tonnes":1465,"tooltip_text":"1,465 t total (Macadamia 1,465t '24)","label_lon":136.98000000000002,"label_lat":43.57,"align":"left"},{"nut":"Macadamia","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253.0,"tooltip_text":"Macadamia \u2192 Japan: 1,253 t (2024)","label_lon":149.69,"label_lat":29.689999999999998,"align":"left"},{"nut":"All","country":"Japan","lon":139.69,"lat":35.69,"render_tonnes":1253,"tooltip_text":"1,253 t total (Macadamia 1,253t '24)","label_lon":149.69,"label_lat":29.689999999999998,"align":"left"},{"nut":"Macadamia","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":690.0,"tooltip_text":"Macadamia \u2192 United States: 690 t (2024)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"Pecan","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":46.0,"tooltip_text":"Pecan \u2192 United States: 46 t (2025)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"All","country":"United States","lon":-77.04,"lat":38.91,"render_tonnes":736,"tooltip_text":"736 t total (Macadamia 690t '24, Pecan 46t '25)","label_lon":-77.04,"label_lat":30.909999999999997,"align":"center"},{"nut":"Walnut","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472.0,"tooltip_text":"Walnut \u2192 France: 472 t (2025)","label_lon":-7.65,"label_lat":41.86,"align":"right"},{"nut":"All","country":"France","lon":2.35,"lat":48.86,"render_tonnes":472,"tooltip_text":"472 t total (Walnut 472t '25)","label_lon":-7.65,"label_lat":41.86,"align":"right"},{"nut":"Walnut","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":362.0,"tooltip_text":"Walnut \u2192 Belgium: 362 t (2025)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"Pecan","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":47.0,"tooltip_text":"Pecan \u2192 Belgium: 47 t (2025)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"All","country":"Belgium","lon":4.35,"lat":50.85,"render_tonnes":409,"tooltip_text":"409 t total (Walnut 362t '25, Pecan 47t '25)","label_lon":0.34999999999999964,"label_lat":59.85,"align":"right"},{"nut":"Pistachio","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88.0,"tooltip_text":"Pistachio \u2192 Spain: 88 t (2025)","label_lon":-13.7,"label_lat":34.42,"align":"right"},{"nut":"All","country":"Spain","lon":-3.7,"lat":40.42,"render_tonnes":88,"tooltip_text":"88 t total (Pistachio 88t '25)","label_lon":-13.7,"label_lat":34.42,"align":"right"},{"nut":"Pecan","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":53.0,"tooltip_text":"Pecan \u2192 New Zealand: 53 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pistachio","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":7.0,"tooltip_text":"Pistachio \u2192 New Zealand: 7 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Hazelnut","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":3.0,"tooltip_text":"Hazelnut \u2192 New Zealand: 3 t (2025)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"All","country":"New Zealand","lon":174.78,"lat":-41.29,"render_tonnes":63,"tooltip_text":"63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)","label_lon":179.78,"label_lat":-51.29,"align":"left"},{"nut":"Pecan","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8.0,"tooltip_text":"Pecan \u2192 Thailand: 8 t (2025)","label_lon":88.49,"label_lat":10.76,"align":"right"},{"nut":"All","country":"Thailand","lon":100.49,"lat":13.76,"render_tonnes":8,"tooltip_text":"8 t total (Pecan 8t '25)","label_lon":88.49,"label_lat":10.76,"align":"right"},{"nut":"Pistachio","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3.0,"tooltip_text":"Pistachio \u2192 Qatar: 3 t (2025)","label_lon":51.53,"label_lat":17.29,"align":"center"},{"nut":"All","country":"Qatar","lon":51.53,"lat":25.29,"render_tonnes":3,"tooltip_text":"3 t total (Pistachio 3t '25)","label_lon":51.53,"label_lat":17.29,"align":"center"},{"nut":"Pecan","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3.0,"tooltip_text":"Pecan \u2192 Singapore: 3 t (2025)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"Hazelnut","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Singapore: reported as <1 t (2025, exact amount not stated)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"All","country":"Singapore","lon":103.82,"lat":1.35,"render_tonnes":3,"tooltip_text":"3 t total (Pecan 3t '25, Hazelnut <1t '25)","label_lon":103.82,"label_lat":-7.65,"align":"center"},{"nut":"Hazelnut","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Philippines: reported as <1 t (2025, exact amount not stated)","label_lon":132.98000000000002,"label_lat":16.6,"align":"left"},{"nut":"All","country":"Philippines","lon":120.98,"lat":14.6,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25)","label_lon":132.98000000000002,"label_lat":16.6,"align":"left"},{"nut":"Hazelnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Hazelnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)","label_lon":157.18,"label_lat":-15.48,"align":"left"},{"nut":"Chestnut","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Chestnut \u2192 Papua New Guinea: reported as <1 t (2025, exact amount not stated)","label_lon":157.18,"label_lat":-15.48,"align":"left"},{"nut":"All","country":"Papua New Guinea","lon":147.18,"lat":-9.48,"render_tonnes":1,"tooltip_text":"Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)","label_lon":157.18,"label_lat":-15.48,"align":"left"}]},"transform":[{"filter":"(nut_pick === null && datum.nut === 'All' && (datum.country === 'China' || datum.country === 'India' || datum.country === 'Turkey' || datum.country === 'Vietnam' || datum.country === 'Germany')) || (nut_pick !== null && datum.nut === nut_pick)"},{"filter":"datum.align === 'center'"}],"mark":{"type":"text","fontSize":11,"color":"#222222","fontWeight":"bold","align":"center"},"encoding":{"longitude":{"field":"label_lon","type":"quantitative"},"latitude":{"field":"label_lat","type":"quantitative"},"text":{"field":"country","type":"nominal"}}},{"data":{"values":[{"label":"Australia"}]},"mark":{"type":"circle","filled":true,"size":80,"color":"#B65C3A"},"encoding":{"longitude":{"datum":149.13,"type":"quantitative"},"latitude":{"datum":-35.28,"type":"quantitative"},"tooltip":[{"field":"label","type":"nominal","title":"Origin"}]}},{"data":{"values":[{"label":"Australia"}]},"mark":{"type":"text","dy":12,"fontSize":11,"color":"#222222","fontWeight":"bold"},"encoding":{"longitude":{"datum":149.13,"type":"quantitative"},"latitude":{"datum":-35.28,"type":"quantitative"},"text":{"field":"label","type":"nominal"}}}],"resolve":{"scale":{"longitude":"shared","latitude":"shared"}}},{"width":140,"height":160,"layer":[{"data":{"values":[{"x":5,"y":0,"text":"Export volume"},{"x":5,"y":13,"text":"(tonnes)"}]},"mark":{"type":"text","align":"left","fontSize":11,"fontWeight":"bold","color":"#222222"},"encoding":{"x":{"field":"x","type":"quantitative","scale":{"domain":[0,140],"range":[0,140]},"axis":null},"y":{"field":"y","type":"quantitative","scale":{"domain":[0,160],"range":[0,160]},"axis":null},"text":{"field":"text","type":"nominal"}}},{"data":{"values":[{"label":"5,000 t","y":30,"x0":10,"x1":50,"width":3.58},{"label":"20,000 t","y":62,"x0":10,"x1":50,"width":6.56},{"label":"40,000 t","y":94,"x0":10,"x1":50,"width":9.03},{"label":"80,000 t","y":126,"x0":10,"x1":50,"width":12.52}]},"mark":{"type":"rule","color":"#0072B2","opacity":0.55},"encoding":{"x":{"field":"x0","type":"quantitative","scale":{"domain":[0,140],"range":[0,140]},"axis":null},"x2":{"field":"x1"},"y":{"field":"y","type":"quantitative","scale":{"domain":[0,160],"range":[0,160]},"axis":null},"strokeWidth":{"field":"width","type":"quantitative","scale":null}}},{"data":{"values":[{"label":"5,000 t","y":30,"x0":10,"x1":50,"width":3.58},{"label":"20,000 t","y":62,"x0":10,"x1":50,"width":6.56},{"label":"40,000 t","y":94,"x0":10,"x1":50,"width":9.03},{"label":"80,000 t","y":126,"x0":10,"x1":50,"width":12.52}]},"mark":{"type":"text","align":"left","dx":10,"baseline":"middle","fontSize":10.5,"color":"#222222"},"encoding":{"x":{"field":"x1","type":"quantitative","scale":{"domain":[0,140],"range":[0,140]},"axis":null},"y":{"field":"y","type":"quantitative","scale":{"domain":[0,160],"range":[0,160]},"axis":null},"text":{"field":"label","type":"nominal"}}}],"config":{"view":{"stroke":null}}}],"config":{"view":{"stroke":null}},"params":[{"name":"nut_pick","value":null,"bind":{"input":"select","options":[null,"Almond","Macadamia","Walnut","Pistachio","Hazelnut","Pecan","Chestnut"],"labels":["All nuts (aggregate)","Almond","Macadamia","Walnut","Pistachio","Hazelnut","Pecan","Chestnut"],"name":"Show destinations for: ","element":"#chart8-controls"}}],"background":"transparent"}
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "hconcat": [
+    {
+      "width": 620,
+      "height": 350,
+      "projection": {
+        "type": "equalEarth"
+      },
+      "layer": [
+        {
+          "data": {
+            "url": "data/geo/world.topojson",
+            "format": {
+              "type": "topojson",
+              "feature": "ne_110m_admin_0_countries"
+            }
+          },
+          "transform": [
+            {
+              "filter": "datum.properties.NAME !== 'Antarctica'"
+            }
+          ],
+          "mark": {
+            "type": "geoshape",
+            "fill": "#D4CEC5",
+            "stroke": "#F7F2E9",
+            "strokeWidth": 0.5,
+            "opacity": 0.9
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "nut": "Almond",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 76132.0,
+                "tooltip_text": "Almond → China: 76,132 t (2024)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 7638.0,
+                "tooltip_text": "Macadamia → China: 7,638 t (2024)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 2740.0,
+                "tooltip_text": "Pistachio → China: 2,740 t (2025)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 71.0,
+                "tooltip_text": "Hazelnut → China: 71 t (2025)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 86581,
+                "tooltip_text": "86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Almond",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 19803.0,
+                "tooltip_text": "Almond → India: 19,803 t (2024)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 1585.0,
+                "tooltip_text": "Walnut → India: 1,585 t (2025)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 21388,
+                "tooltip_text": "21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "Almond",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12284.0,
+                "tooltip_text": "Almond → Turkey: 12,284 t (2024)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 538.0,
+                "tooltip_text": "Walnut → Turkey: 538 t (2025)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12822,
+                "tooltip_text": "12,822 t total (Almond 12,284t '24, Walnut 538t '25)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "Almond",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 8514.0,
+                "tooltip_text": "Almond → Vietnam: 8,514 t (2024)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 2609.0,
+                "tooltip_text": "Macadamia → Vietnam: 2,609 t (2024)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 126.0,
+                "tooltip_text": "Pistachio → Vietnam: 126 t (2025)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 11249,
+                "tooltip_text": "11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Almond",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 4685.0,
+                "tooltip_text": "Almond → Germany: 4,685 t (2024)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 1424.0,
+                "tooltip_text": "Walnut → Germany: 1,424 t (2025)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 6109,
+                "tooltip_text": "6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465.0,
+                "tooltip_text": "Macadamia → South Korea: 1,465 t (2024)",
+                "label_lon": 136.98000000000002,
+                "label_lat": 43.57,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465,
+                "tooltip_text": "1,465 t total (Macadamia 1,465t '24)",
+                "label_lon": 136.98000000000002,
+                "label_lat": 43.57,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253.0,
+                "tooltip_text": "Macadamia → Japan: 1,253 t (2024)",
+                "label_lon": 149.69,
+                "label_lat": 29.689999999999998,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253,
+                "tooltip_text": "1,253 t total (Macadamia 1,253t '24)",
+                "label_lon": 149.69,
+                "label_lat": 29.689999999999998,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 690.0,
+                "tooltip_text": "Macadamia → United States: 690 t (2024)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "Pecan",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 46.0,
+                "tooltip_text": "Pecan → United States: 46 t (2025)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 736,
+                "tooltip_text": "736 t total (Macadamia 690t '24, Pecan 46t '25)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472.0,
+                "tooltip_text": "Walnut → France: 472 t (2025)",
+                "label_lon": -7.65,
+                "label_lat": 41.86,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472,
+                "tooltip_text": "472 t total (Walnut 472t '25)",
+                "label_lon": -7.65,
+                "label_lat": 41.86,
+                "align": "right"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 362.0,
+                "tooltip_text": "Walnut → Belgium: 362 t (2025)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 47.0,
+                "tooltip_text": "Pecan → Belgium: 47 t (2025)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 409,
+                "tooltip_text": "409 t total (Walnut 362t '25, Pecan 47t '25)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88.0,
+                "tooltip_text": "Pistachio → Spain: 88 t (2025)",
+                "label_lon": -13.7,
+                "label_lat": 34.42,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88,
+                "tooltip_text": "88 t total (Pistachio 88t '25)",
+                "label_lon": -13.7,
+                "label_lat": 34.42,
+                "align": "right"
+              },
+              {
+                "nut": "Pecan",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 53.0,
+                "tooltip_text": "Pecan → New Zealand: 53 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 7.0,
+                "tooltip_text": "Pistachio → New Zealand: 7 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Hazelnut → New Zealand: 3 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 63,
+                "tooltip_text": "63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8.0,
+                "tooltip_text": "Pecan → Thailand: 8 t (2025)",
+                "label_lon": 88.49,
+                "label_lat": 10.76,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8,
+                "tooltip_text": "8 t total (Pecan 8t '25)",
+                "label_lon": 88.49,
+                "label_lat": 10.76,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pistachio → Qatar: 3 t (2025)",
+                "label_lon": 51.53,
+                "label_lat": 17.29,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pistachio 3t '25)",
+                "label_lon": 51.53,
+                "label_lat": 17.29,
+                "align": "center"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pecan → Singapore: 3 t (2025)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Singapore: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pecan 3t '25, Hazelnut <1t '25)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Philippines: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 132.98000000000002,
+                "label_lat": 16.6,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25)",
+                "label_lon": 132.98000000000002,
+                "label_lat": 16.6,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              },
+              {
+                "nut": "Chestnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Chestnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "nut_pick === null ? datum.nut === 'All' : datum.nut === nut_pick"
+            }
+          ],
+          "mark": {
+            "type": "rule",
+            "color": "#876b50",
+            "opacity": 0.55
+          },
+          "encoding": {
+            "longitude": {
+              "datum": 149.13,
+              "type": "quantitative"
+            },
+            "latitude": {
+              "datum": -35.28,
+              "type": "quantitative"
+            },
+            "longitude2": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude2": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "strokeWidth": {
+              "field": "render_tonnes",
+              "type": "quantitative",
+              "scale": {
+                "type": "sqrt",
+                "domain": [
+                  0,
+                  86581
+                ],
+                "range": [
+                  0.6,
+                  13
+                ]
+              },
+              "legend": null
+            },
+            "tooltip": [
+              {
+                "field": "country",
+                "type": "nominal",
+                "title": "Destination"
+              },
+              {
+                "field": "tooltip_text",
+                "type": "nominal",
+                "title": "Export volume"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "nut": "Almond",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 76132.0,
+                "tooltip_text": "Almond → China: 76,132 t (2024)"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 7638.0,
+                "tooltip_text": "Macadamia → China: 7,638 t (2024)"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 2740.0,
+                "tooltip_text": "Pistachio → China: 2,740 t (2025)"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 71.0,
+                "tooltip_text": "Hazelnut → China: 71 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 86581,
+                "tooltip_text": "86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)"
+              },
+              {
+                "nut": "Almond",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 19803.0,
+                "tooltip_text": "Almond → India: 19,803 t (2024)"
+              },
+              {
+                "nut": "Walnut",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 1585.0,
+                "tooltip_text": "Walnut → India: 1,585 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 21388,
+                "tooltip_text": "21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)"
+              },
+              {
+                "nut": "Almond",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12284.0,
+                "tooltip_text": "Almond → Turkey: 12,284 t (2024)"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 538.0,
+                "tooltip_text": "Walnut → Turkey: 538 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12822,
+                "tooltip_text": "12,822 t total (Almond 12,284t '24, Walnut 538t '25)"
+              },
+              {
+                "nut": "Almond",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 8514.0,
+                "tooltip_text": "Almond → Vietnam: 8,514 t (2024)"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 2609.0,
+                "tooltip_text": "Macadamia → Vietnam: 2,609 t (2024)"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 126.0,
+                "tooltip_text": "Pistachio → Vietnam: 126 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 11249,
+                "tooltip_text": "11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)"
+              },
+              {
+                "nut": "Almond",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 4685.0,
+                "tooltip_text": "Almond → Germany: 4,685 t (2024)"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 1424.0,
+                "tooltip_text": "Walnut → Germany: 1,424 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 6109,
+                "tooltip_text": "6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465.0,
+                "tooltip_text": "Macadamia → South Korea: 1,465 t (2024)"
+              },
+              {
+                "nut": "All",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465,
+                "tooltip_text": "1,465 t total (Macadamia 1,465t '24)"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253.0,
+                "tooltip_text": "Macadamia → Japan: 1,253 t (2024)"
+              },
+              {
+                "nut": "All",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253,
+                "tooltip_text": "1,253 t total (Macadamia 1,253t '24)"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 690.0,
+                "tooltip_text": "Macadamia → United States: 690 t (2024)"
+              },
+              {
+                "nut": "Pecan",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 46.0,
+                "tooltip_text": "Pecan → United States: 46 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 736,
+                "tooltip_text": "736 t total (Macadamia 690t '24, Pecan 46t '25)"
+              },
+              {
+                "nut": "Walnut",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472.0,
+                "tooltip_text": "Walnut → France: 472 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472,
+                "tooltip_text": "472 t total (Walnut 472t '25)"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 362.0,
+                "tooltip_text": "Walnut → Belgium: 362 t (2025)"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 47.0,
+                "tooltip_text": "Pecan → Belgium: 47 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 409,
+                "tooltip_text": "409 t total (Walnut 362t '25, Pecan 47t '25)"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88.0,
+                "tooltip_text": "Pistachio → Spain: 88 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88,
+                "tooltip_text": "88 t total (Pistachio 88t '25)"
+              },
+              {
+                "nut": "Pecan",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 53.0,
+                "tooltip_text": "Pecan → New Zealand: 53 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 7.0,
+                "tooltip_text": "Pistachio → New Zealand: 7 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Hazelnut → New Zealand: 3 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 63,
+                "tooltip_text": "63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8.0,
+                "tooltip_text": "Pecan → Thailand: 8 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8,
+                "tooltip_text": "8 t total (Pecan 8t '25)"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pistachio → Qatar: 3 t (2025)"
+              },
+              {
+                "nut": "All",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pistachio 3t '25)"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pecan → Singapore: 3 t (2025)"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Singapore: reported as <1 t (2025, exact amount not stated)"
+              },
+              {
+                "nut": "All",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pecan 3t '25, Hazelnut <1t '25)"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Philippines: reported as <1 t (2025, exact amount not stated)"
+              },
+              {
+                "nut": "All",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25)"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)"
+              },
+              {
+                "nut": "Chestnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Chestnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)"
+              },
+              {
+                "nut": "All",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "nut_pick === null ? datum.nut === 'All' : datum.nut === nut_pick"
+            }
+          ],
+          "mark": {
+            "type": "circle",
+            "filled": true,
+            "size": 45,
+            "color": "#876b50"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "country",
+                "type": "nominal",
+                "title": "Destination"
+              },
+              {
+                "field": "tooltip_text",
+                "type": "nominal",
+                "title": "Export volume"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "nut": "Almond",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 76132.0,
+                "tooltip_text": "Almond → China: 76,132 t (2024)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 7638.0,
+                "tooltip_text": "Macadamia → China: 7,638 t (2024)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 2740.0,
+                "tooltip_text": "Pistachio → China: 2,740 t (2025)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 71.0,
+                "tooltip_text": "Hazelnut → China: 71 t (2025)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 86581,
+                "tooltip_text": "86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Almond",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 19803.0,
+                "tooltip_text": "Almond → India: 19,803 t (2024)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 1585.0,
+                "tooltip_text": "Walnut → India: 1,585 t (2025)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 21388,
+                "tooltip_text": "21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "Almond",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12284.0,
+                "tooltip_text": "Almond → Turkey: 12,284 t (2024)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 538.0,
+                "tooltip_text": "Walnut → Turkey: 538 t (2025)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12822,
+                "tooltip_text": "12,822 t total (Almond 12,284t '24, Walnut 538t '25)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "Almond",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 8514.0,
+                "tooltip_text": "Almond → Vietnam: 8,514 t (2024)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 2609.0,
+                "tooltip_text": "Macadamia → Vietnam: 2,609 t (2024)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 126.0,
+                "tooltip_text": "Pistachio → Vietnam: 126 t (2025)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 11249,
+                "tooltip_text": "11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Almond",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 4685.0,
+                "tooltip_text": "Almond → Germany: 4,685 t (2024)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 1424.0,
+                "tooltip_text": "Walnut → Germany: 1,424 t (2025)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 6109,
+                "tooltip_text": "6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465.0,
+                "tooltip_text": "Macadamia → South Korea: 1,465 t (2024)",
+                "label_lon": 136.98000000000002,
+                "label_lat": 43.57,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465,
+                "tooltip_text": "1,465 t total (Macadamia 1,465t '24)",
+                "label_lon": 136.98000000000002,
+                "label_lat": 43.57,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253.0,
+                "tooltip_text": "Macadamia → Japan: 1,253 t (2024)",
+                "label_lon": 149.69,
+                "label_lat": 29.689999999999998,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253,
+                "tooltip_text": "1,253 t total (Macadamia 1,253t '24)",
+                "label_lon": 149.69,
+                "label_lat": 29.689999999999998,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 690.0,
+                "tooltip_text": "Macadamia → United States: 690 t (2024)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "Pecan",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 46.0,
+                "tooltip_text": "Pecan → United States: 46 t (2025)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 736,
+                "tooltip_text": "736 t total (Macadamia 690t '24, Pecan 46t '25)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472.0,
+                "tooltip_text": "Walnut → France: 472 t (2025)",
+                "label_lon": -7.65,
+                "label_lat": 41.86,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472,
+                "tooltip_text": "472 t total (Walnut 472t '25)",
+                "label_lon": -7.65,
+                "label_lat": 41.86,
+                "align": "right"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 362.0,
+                "tooltip_text": "Walnut → Belgium: 362 t (2025)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 47.0,
+                "tooltip_text": "Pecan → Belgium: 47 t (2025)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 409,
+                "tooltip_text": "409 t total (Walnut 362t '25, Pecan 47t '25)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88.0,
+                "tooltip_text": "Pistachio → Spain: 88 t (2025)",
+                "label_lon": -13.7,
+                "label_lat": 34.42,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88,
+                "tooltip_text": "88 t total (Pistachio 88t '25)",
+                "label_lon": -13.7,
+                "label_lat": 34.42,
+                "align": "right"
+              },
+              {
+                "nut": "Pecan",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 53.0,
+                "tooltip_text": "Pecan → New Zealand: 53 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 7.0,
+                "tooltip_text": "Pistachio → New Zealand: 7 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Hazelnut → New Zealand: 3 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 63,
+                "tooltip_text": "63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8.0,
+                "tooltip_text": "Pecan → Thailand: 8 t (2025)",
+                "label_lon": 88.49,
+                "label_lat": 10.76,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8,
+                "tooltip_text": "8 t total (Pecan 8t '25)",
+                "label_lon": 88.49,
+                "label_lat": 10.76,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pistachio → Qatar: 3 t (2025)",
+                "label_lon": 51.53,
+                "label_lat": 17.29,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pistachio 3t '25)",
+                "label_lon": 51.53,
+                "label_lat": 17.29,
+                "align": "center"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pecan → Singapore: 3 t (2025)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Singapore: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pecan 3t '25, Hazelnut <1t '25)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Philippines: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 132.98000000000002,
+                "label_lat": 16.6,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25)",
+                "label_lon": 132.98000000000002,
+                "label_lat": 16.6,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              },
+              {
+                "nut": "Chestnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Chestnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "(nut_pick === null && datum.nut === 'All' && (datum.country === 'China' || datum.country === 'India' || datum.country === 'Turkey' || datum.country === 'Vietnam' || datum.country === 'Germany')) || (nut_pick !== null && datum.nut === nut_pick)"
+            }
+          ],
+          "mark": {
+            "type": "rule",
+            "color": "#93877D",
+            "strokeWidth": 0.6
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "longitude2": {
+              "field": "label_lon"
+            },
+            "latitude2": {
+              "field": "label_lat"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "nut": "Almond",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 76132.0,
+                "tooltip_text": "Almond → China: 76,132 t (2024)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 7638.0,
+                "tooltip_text": "Macadamia → China: 7,638 t (2024)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 2740.0,
+                "tooltip_text": "Pistachio → China: 2,740 t (2025)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 71.0,
+                "tooltip_text": "Hazelnut → China: 71 t (2025)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 86581,
+                "tooltip_text": "86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Almond",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 19803.0,
+                "tooltip_text": "Almond → India: 19,803 t (2024)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 1585.0,
+                "tooltip_text": "Walnut → India: 1,585 t (2025)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 21388,
+                "tooltip_text": "21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "Almond",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12284.0,
+                "tooltip_text": "Almond → Turkey: 12,284 t (2024)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 538.0,
+                "tooltip_text": "Walnut → Turkey: 538 t (2025)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12822,
+                "tooltip_text": "12,822 t total (Almond 12,284t '24, Walnut 538t '25)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "Almond",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 8514.0,
+                "tooltip_text": "Almond → Vietnam: 8,514 t (2024)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 2609.0,
+                "tooltip_text": "Macadamia → Vietnam: 2,609 t (2024)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 126.0,
+                "tooltip_text": "Pistachio → Vietnam: 126 t (2025)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 11249,
+                "tooltip_text": "11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Almond",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 4685.0,
+                "tooltip_text": "Almond → Germany: 4,685 t (2024)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 1424.0,
+                "tooltip_text": "Walnut → Germany: 1,424 t (2025)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 6109,
+                "tooltip_text": "6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465.0,
+                "tooltip_text": "Macadamia → South Korea: 1,465 t (2024)",
+                "label_lon": 136.98000000000002,
+                "label_lat": 43.57,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465,
+                "tooltip_text": "1,465 t total (Macadamia 1,465t '24)",
+                "label_lon": 136.98000000000002,
+                "label_lat": 43.57,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253.0,
+                "tooltip_text": "Macadamia → Japan: 1,253 t (2024)",
+                "label_lon": 149.69,
+                "label_lat": 29.689999999999998,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253,
+                "tooltip_text": "1,253 t total (Macadamia 1,253t '24)",
+                "label_lon": 149.69,
+                "label_lat": 29.689999999999998,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 690.0,
+                "tooltip_text": "Macadamia → United States: 690 t (2024)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "Pecan",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 46.0,
+                "tooltip_text": "Pecan → United States: 46 t (2025)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 736,
+                "tooltip_text": "736 t total (Macadamia 690t '24, Pecan 46t '25)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472.0,
+                "tooltip_text": "Walnut → France: 472 t (2025)",
+                "label_lon": -7.65,
+                "label_lat": 41.86,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472,
+                "tooltip_text": "472 t total (Walnut 472t '25)",
+                "label_lon": -7.65,
+                "label_lat": 41.86,
+                "align": "right"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 362.0,
+                "tooltip_text": "Walnut → Belgium: 362 t (2025)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 47.0,
+                "tooltip_text": "Pecan → Belgium: 47 t (2025)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 409,
+                "tooltip_text": "409 t total (Walnut 362t '25, Pecan 47t '25)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88.0,
+                "tooltip_text": "Pistachio → Spain: 88 t (2025)",
+                "label_lon": -13.7,
+                "label_lat": 34.42,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88,
+                "tooltip_text": "88 t total (Pistachio 88t '25)",
+                "label_lon": -13.7,
+                "label_lat": 34.42,
+                "align": "right"
+              },
+              {
+                "nut": "Pecan",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 53.0,
+                "tooltip_text": "Pecan → New Zealand: 53 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 7.0,
+                "tooltip_text": "Pistachio → New Zealand: 7 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Hazelnut → New Zealand: 3 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 63,
+                "tooltip_text": "63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8.0,
+                "tooltip_text": "Pecan → Thailand: 8 t (2025)",
+                "label_lon": 88.49,
+                "label_lat": 10.76,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8,
+                "tooltip_text": "8 t total (Pecan 8t '25)",
+                "label_lon": 88.49,
+                "label_lat": 10.76,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pistachio → Qatar: 3 t (2025)",
+                "label_lon": 51.53,
+                "label_lat": 17.29,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pistachio 3t '25)",
+                "label_lon": 51.53,
+                "label_lat": 17.29,
+                "align": "center"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pecan → Singapore: 3 t (2025)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Singapore: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pecan 3t '25, Hazelnut <1t '25)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Philippines: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 132.98000000000002,
+                "label_lat": 16.6,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25)",
+                "label_lon": 132.98000000000002,
+                "label_lat": 16.6,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              },
+              {
+                "nut": "Chestnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Chestnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "(nut_pick === null && datum.nut === 'All' && (datum.country === 'China' || datum.country === 'India' || datum.country === 'Turkey' || datum.country === 'Vietnam' || datum.country === 'Germany')) || (nut_pick !== null && datum.nut === nut_pick)"
+            },
+            {
+              "filter": "datum.align === 'left'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 11,
+            "color": "#493B33",
+            "fontWeight": "bold",
+            "align": "left"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "label_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "label_lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "country",
+              "type": "nominal"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "nut": "Almond",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 76132.0,
+                "tooltip_text": "Almond → China: 76,132 t (2024)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 7638.0,
+                "tooltip_text": "Macadamia → China: 7,638 t (2024)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 2740.0,
+                "tooltip_text": "Pistachio → China: 2,740 t (2025)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 71.0,
+                "tooltip_text": "Hazelnut → China: 71 t (2025)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 86581,
+                "tooltip_text": "86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Almond",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 19803.0,
+                "tooltip_text": "Almond → India: 19,803 t (2024)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 1585.0,
+                "tooltip_text": "Walnut → India: 1,585 t (2025)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 21388,
+                "tooltip_text": "21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "Almond",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12284.0,
+                "tooltip_text": "Almond → Turkey: 12,284 t (2024)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 538.0,
+                "tooltip_text": "Walnut → Turkey: 538 t (2025)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12822,
+                "tooltip_text": "12,822 t total (Almond 12,284t '24, Walnut 538t '25)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "Almond",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 8514.0,
+                "tooltip_text": "Almond → Vietnam: 8,514 t (2024)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 2609.0,
+                "tooltip_text": "Macadamia → Vietnam: 2,609 t (2024)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 126.0,
+                "tooltip_text": "Pistachio → Vietnam: 126 t (2025)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 11249,
+                "tooltip_text": "11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Almond",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 4685.0,
+                "tooltip_text": "Almond → Germany: 4,685 t (2024)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 1424.0,
+                "tooltip_text": "Walnut → Germany: 1,424 t (2025)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 6109,
+                "tooltip_text": "6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465.0,
+                "tooltip_text": "Macadamia → South Korea: 1,465 t (2024)",
+                "label_lon": 136.98000000000002,
+                "label_lat": 43.57,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465,
+                "tooltip_text": "1,465 t total (Macadamia 1,465t '24)",
+                "label_lon": 136.98000000000002,
+                "label_lat": 43.57,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253.0,
+                "tooltip_text": "Macadamia → Japan: 1,253 t (2024)",
+                "label_lon": 149.69,
+                "label_lat": 29.689999999999998,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253,
+                "tooltip_text": "1,253 t total (Macadamia 1,253t '24)",
+                "label_lon": 149.69,
+                "label_lat": 29.689999999999998,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 690.0,
+                "tooltip_text": "Macadamia → United States: 690 t (2024)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "Pecan",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 46.0,
+                "tooltip_text": "Pecan → United States: 46 t (2025)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 736,
+                "tooltip_text": "736 t total (Macadamia 690t '24, Pecan 46t '25)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472.0,
+                "tooltip_text": "Walnut → France: 472 t (2025)",
+                "label_lon": -7.65,
+                "label_lat": 41.86,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472,
+                "tooltip_text": "472 t total (Walnut 472t '25)",
+                "label_lon": -7.65,
+                "label_lat": 41.86,
+                "align": "right"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 362.0,
+                "tooltip_text": "Walnut → Belgium: 362 t (2025)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 47.0,
+                "tooltip_text": "Pecan → Belgium: 47 t (2025)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 409,
+                "tooltip_text": "409 t total (Walnut 362t '25, Pecan 47t '25)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88.0,
+                "tooltip_text": "Pistachio → Spain: 88 t (2025)",
+                "label_lon": -13.7,
+                "label_lat": 34.42,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88,
+                "tooltip_text": "88 t total (Pistachio 88t '25)",
+                "label_lon": -13.7,
+                "label_lat": 34.42,
+                "align": "right"
+              },
+              {
+                "nut": "Pecan",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 53.0,
+                "tooltip_text": "Pecan → New Zealand: 53 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 7.0,
+                "tooltip_text": "Pistachio → New Zealand: 7 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Hazelnut → New Zealand: 3 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 63,
+                "tooltip_text": "63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8.0,
+                "tooltip_text": "Pecan → Thailand: 8 t (2025)",
+                "label_lon": 88.49,
+                "label_lat": 10.76,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8,
+                "tooltip_text": "8 t total (Pecan 8t '25)",
+                "label_lon": 88.49,
+                "label_lat": 10.76,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pistachio → Qatar: 3 t (2025)",
+                "label_lon": 51.53,
+                "label_lat": 17.29,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pistachio 3t '25)",
+                "label_lon": 51.53,
+                "label_lat": 17.29,
+                "align": "center"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pecan → Singapore: 3 t (2025)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Singapore: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pecan 3t '25, Hazelnut <1t '25)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Philippines: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 132.98000000000002,
+                "label_lat": 16.6,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25)",
+                "label_lon": 132.98000000000002,
+                "label_lat": 16.6,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              },
+              {
+                "nut": "Chestnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Chestnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "(nut_pick === null && datum.nut === 'All' && (datum.country === 'China' || datum.country === 'India' || datum.country === 'Turkey' || datum.country === 'Vietnam' || datum.country === 'Germany')) || (nut_pick !== null && datum.nut === nut_pick)"
+            },
+            {
+              "filter": "datum.align === 'right'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 11,
+            "color": "#222222",
+            "fontWeight": "bold",
+            "align": "right"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "label_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "label_lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "country",
+              "type": "nominal"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "nut": "Almond",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 76132.0,
+                "tooltip_text": "Almond → China: 76,132 t (2024)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 7638.0,
+                "tooltip_text": "Macadamia → China: 7,638 t (2024)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 2740.0,
+                "tooltip_text": "Pistachio → China: 2,740 t (2025)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 71.0,
+                "tooltip_text": "Hazelnut → China: 71 t (2025)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "China",
+                "lon": 116.4,
+                "lat": 39.9,
+                "render_tonnes": 86581,
+                "tooltip_text": "86,581 t total (Almond 76,132t '24, Macadamia 7,638t '24, Pistachio 2,740t '25, Hazelnut 71t '25)",
+                "label_lon": 102.4,
+                "label_lat": 45.9,
+                "align": "right"
+              },
+              {
+                "nut": "Almond",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 19803.0,
+                "tooltip_text": "Almond → India: 19,803 t (2024)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 1585.0,
+                "tooltip_text": "Walnut → India: 1,585 t (2025)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "India",
+                "lon": 77.2,
+                "lat": 28.6,
+                "render_tonnes": 21388,
+                "tooltip_text": "21,388 t total (Almond 19,803t '24, Walnut 1,585t '25)",
+                "label_lon": 77.2,
+                "label_lat": 20.6,
+                "align": "center"
+              },
+              {
+                "nut": "Almond",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12284.0,
+                "tooltip_text": "Almond → Turkey: 12,284 t (2024)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 538.0,
+                "tooltip_text": "Walnut → Turkey: 538 t (2025)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Turkey",
+                "lon": 32.85,
+                "lat": 39.93,
+                "render_tonnes": 12822,
+                "tooltip_text": "12,822 t total (Almond 12,284t '24, Walnut 538t '25)",
+                "label_lon": 32.85,
+                "label_lat": 30.93,
+                "align": "center"
+              },
+              {
+                "nut": "Almond",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 8514.0,
+                "tooltip_text": "Almond → Vietnam: 8,514 t (2024)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 2609.0,
+                "tooltip_text": "Macadamia → Vietnam: 2,609 t (2024)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 126.0,
+                "tooltip_text": "Pistachio → Vietnam: 126 t (2025)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Vietnam",
+                "lon": 105.85,
+                "lat": 21.03,
+                "render_tonnes": 11249,
+                "tooltip_text": "11,249 t total (Almond 8,514t '24, Macadamia 2,609t '24, Pistachio 126t '25)",
+                "label_lon": 115.85,
+                "label_lat": 25.03,
+                "align": "left"
+              },
+              {
+                "nut": "Almond",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 4685.0,
+                "tooltip_text": "Almond → Germany: 4,685 t (2024)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 1424.0,
+                "tooltip_text": "Walnut → Germany: 1,424 t (2025)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Germany",
+                "lon": 13.41,
+                "lat": 52.52,
+                "render_tonnes": 6109,
+                "tooltip_text": "6,109 t total (Almond 4,685t '24, Walnut 1,424t '25)",
+                "label_lon": 23.41,
+                "label_lat": 58.52,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465.0,
+                "tooltip_text": "Macadamia → South Korea: 1,465 t (2024)",
+                "label_lon": 136.98000000000002,
+                "label_lat": 43.57,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "South Korea",
+                "lon": 126.98,
+                "lat": 37.57,
+                "render_tonnes": 1465,
+                "tooltip_text": "1,465 t total (Macadamia 1,465t '24)",
+                "label_lon": 136.98000000000002,
+                "label_lat": 43.57,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253.0,
+                "tooltip_text": "Macadamia → Japan: 1,253 t (2024)",
+                "label_lon": 149.69,
+                "label_lat": 29.689999999999998,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Japan",
+                "lon": 139.69,
+                "lat": 35.69,
+                "render_tonnes": 1253,
+                "tooltip_text": "1,253 t total (Macadamia 1,253t '24)",
+                "label_lon": 149.69,
+                "label_lat": 29.689999999999998,
+                "align": "left"
+              },
+              {
+                "nut": "Macadamia",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 690.0,
+                "tooltip_text": "Macadamia → United States: 690 t (2024)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "Pecan",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 46.0,
+                "tooltip_text": "Pecan → United States: 46 t (2025)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "United States",
+                "lon": -77.04,
+                "lat": 38.91,
+                "render_tonnes": 736,
+                "tooltip_text": "736 t total (Macadamia 690t '24, Pecan 46t '25)",
+                "label_lon": -77.04,
+                "label_lat": 30.909999999999997,
+                "align": "center"
+              },
+              {
+                "nut": "Walnut",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472.0,
+                "tooltip_text": "Walnut → France: 472 t (2025)",
+                "label_lon": -7.65,
+                "label_lat": 41.86,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "France",
+                "lon": 2.35,
+                "lat": 48.86,
+                "render_tonnes": 472,
+                "tooltip_text": "472 t total (Walnut 472t '25)",
+                "label_lon": -7.65,
+                "label_lat": 41.86,
+                "align": "right"
+              },
+              {
+                "nut": "Walnut",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 362.0,
+                "tooltip_text": "Walnut → Belgium: 362 t (2025)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 47.0,
+                "tooltip_text": "Pecan → Belgium: 47 t (2025)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Belgium",
+                "lon": 4.35,
+                "lat": 50.85,
+                "render_tonnes": 409,
+                "tooltip_text": "409 t total (Walnut 362t '25, Pecan 47t '25)",
+                "label_lon": 0.34999999999999964,
+                "label_lat": 59.85,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88.0,
+                "tooltip_text": "Pistachio → Spain: 88 t (2025)",
+                "label_lon": -13.7,
+                "label_lat": 34.42,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Spain",
+                "lon": -3.7,
+                "lat": 40.42,
+                "render_tonnes": 88,
+                "tooltip_text": "88 t total (Pistachio 88t '25)",
+                "label_lon": -13.7,
+                "label_lat": 34.42,
+                "align": "right"
+              },
+              {
+                "nut": "Pecan",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 53.0,
+                "tooltip_text": "Pecan → New Zealand: 53 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 7.0,
+                "tooltip_text": "Pistachio → New Zealand: 7 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Hazelnut → New Zealand: 3 t (2025)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "New Zealand",
+                "lon": 174.78,
+                "lat": -41.29,
+                "render_tonnes": 63,
+                "tooltip_text": "63 t total (Pecan 53t '25, Pistachio 7t '25, Hazelnut 3t '25)",
+                "label_lon": 179.78,
+                "label_lat": -51.29,
+                "align": "left"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8.0,
+                "tooltip_text": "Pecan → Thailand: 8 t (2025)",
+                "label_lon": 88.49,
+                "label_lat": 10.76,
+                "align": "right"
+              },
+              {
+                "nut": "All",
+                "country": "Thailand",
+                "lon": 100.49,
+                "lat": 13.76,
+                "render_tonnes": 8,
+                "tooltip_text": "8 t total (Pecan 8t '25)",
+                "label_lon": 88.49,
+                "label_lat": 10.76,
+                "align": "right"
+              },
+              {
+                "nut": "Pistachio",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pistachio → Qatar: 3 t (2025)",
+                "label_lon": 51.53,
+                "label_lat": 17.29,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Qatar",
+                "lon": 51.53,
+                "lat": 25.29,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pistachio 3t '25)",
+                "label_lon": 51.53,
+                "label_lat": 17.29,
+                "align": "center"
+              },
+              {
+                "nut": "Pecan",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3.0,
+                "tooltip_text": "Pecan → Singapore: 3 t (2025)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Singapore: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "All",
+                "country": "Singapore",
+                "lon": 103.82,
+                "lat": 1.35,
+                "render_tonnes": 3,
+                "tooltip_text": "3 t total (Pecan 3t '25, Hazelnut <1t '25)",
+                "label_lon": 103.82,
+                "label_lat": -7.65,
+                "align": "center"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Philippines: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 132.98000000000002,
+                "label_lat": 16.6,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Philippines",
+                "lon": 120.98,
+                "lat": 14.6,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25)",
+                "label_lon": 132.98000000000002,
+                "label_lat": 16.6,
+                "align": "left"
+              },
+              {
+                "nut": "Hazelnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Hazelnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              },
+              {
+                "nut": "Chestnut",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Chestnut → Papua New Guinea: reported as <1 t (2025, exact amount not stated)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              },
+              {
+                "nut": "All",
+                "country": "Papua New Guinea",
+                "lon": 147.18,
+                "lat": -9.48,
+                "render_tonnes": 1,
+                "tooltip_text": "Reported as <1 t (Hazelnut <1t '25, Chestnut <1t '25)",
+                "label_lon": 157.18,
+                "label_lat": -15.48,
+                "align": "left"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "(nut_pick === null && datum.nut === 'All' && (datum.country === 'China' || datum.country === 'India' || datum.country === 'Turkey' || datum.country === 'Vietnam' || datum.country === 'Germany')) || (nut_pick !== null && datum.nut === nut_pick)"
+            },
+            {
+              "filter": "datum.align === 'center'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 11,
+            "color": "#222222",
+            "fontWeight": "bold",
+            "align": "center"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "label_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "label_lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "country",
+              "type": "nominal"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "label": "Australia"
+              }
+            ]
+          },
+          "mark": {
+            "type": "circle",
+            "filled": true,
+            "size": 80,
+            "color": "#B65C3A"
+          },
+          "encoding": {
+            "longitude": {
+              "datum": 149.13,
+              "type": "quantitative"
+            },
+            "latitude": {
+              "datum": -35.28,
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "label",
+                "type": "nominal",
+                "title": "Origin"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "label": "Australia"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "dy": 12,
+            "fontSize": 11,
+            "color": "#222222",
+            "fontWeight": "bold"
+          },
+          "encoding": {
+            "longitude": {
+              "datum": 149.13,
+              "type": "quantitative"
+            },
+            "latitude": {
+              "datum": -35.28,
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            }
+          }
+        }
+      ],
+      "resolve": {
+        "scale": {
+          "longitude": "shared",
+          "latitude": "shared"
+        }
+      }
+    },
+    {
+      "width": 140,
+      "height": 160,
+      "layer": [
+        {
+          "data": {
+            "values": [
+              {
+                "x": 5,
+                "y": 0,
+                "text": "Export volume"
+              },
+              {
+                "x": 5,
+                "y": 13,
+                "text": "(tonnes)"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#222222"
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  140
+                ],
+                "range": [
+                  0,
+                  140
+                ]
+              },
+              "axis": null
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  160
+                ],
+                "range": [
+                  0,
+                  160
+                ]
+              },
+              "axis": null
+            },
+            "text": {
+              "field": "text",
+              "type": "nominal"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "label": "5,000 t",
+                "y": 30,
+                "x0": 10,
+                "x1": 50,
+                "width": 3.58
+              },
+              {
+                "label": "20,000 t",
+                "y": 62,
+                "x0": 10,
+                "x1": 50,
+                "width": 6.56
+              },
+              {
+                "label": "40,000 t",
+                "y": 94,
+                "x0": 10,
+                "x1": 50,
+                "width": 9.03
+              },
+              {
+                "label": "80,000 t",
+                "y": 126,
+                "x0": 10,
+                "x1": 50,
+                "width": 12.52
+              }
+            ]
+          },
+          "mark": {
+            "type": "rule",
+            "color": "#876b50",
+            "opacity": 0.55
+          },
+          "encoding": {
+            "x": {
+              "field": "x0",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  140
+                ],
+                "range": [
+                  0,
+                  140
+                ]
+              },
+              "axis": null
+            },
+            "x2": {
+              "field": "x1"
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  160
+                ],
+                "range": [
+                  0,
+                  160
+                ]
+              },
+              "axis": null
+            },
+            "strokeWidth": {
+              "field": "width",
+              "type": "quantitative",
+              "scale": null
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "label": "5,000 t",
+                "y": 30,
+                "x0": 10,
+                "x1": 50,
+                "width": 3.58
+              },
+              {
+                "label": "20,000 t",
+                "y": 62,
+                "x0": 10,
+                "x1": 50,
+                "width": 6.56
+              },
+              {
+                "label": "40,000 t",
+                "y": 94,
+                "x0": 10,
+                "x1": 50,
+                "width": 9.03
+              },
+              {
+                "label": "80,000 t",
+                "y": 126,
+                "x0": 10,
+                "x1": 50,
+                "width": 12.52
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 10,
+            "baseline": "middle",
+            "fontSize": 10.5,
+            "color": "#222222"
+          },
+          "encoding": {
+            "x": {
+              "field": "x1",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  140
+                ],
+                "range": [
+                  0,
+                  140
+                ]
+              },
+              "axis": null
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  160
+                ],
+                "range": [
+                  0,
+                  160
+                ]
+              },
+              "axis": null
+            },
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            }
+          }
+        }
+      ],
+      "config": {
+        "view": {
+          "stroke": null
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#766a60",
+      "titleColor": "#30241e",
+      "gridColor": "#ded4c7",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal"
+    },
+    "legend": {
+      "labelColor": "#30241e",
+      "titleColor": "#30241e",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "font": "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif",
+    "title": {
+      "fontSize": 14,
+      "color": "#30241e"
+    }
+  },
+  "params": [
+    {
+      "name": "nut_pick",
+      "value": "Almond",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Almond",
+          "Macadamia",
+          "Walnut",
+          "Pistachio",
+          "Hazelnut",
+          "Pecan",
+          "Chestnut"
+        ],
+        "labels": [
+          "All nuts (aggregate)",
+          "Almond",
+          "Macadamia",
+          "Walnut",
+          "Pistachio",
+          "Hazelnut",
+          "Pecan",
+          "Chestnut"
+        ],
+        "name": "Show destinations for: ",
+        "element": "#chart8-controls"
+      }
+    }
+  ],
+  "background": "#f4efe6"
+}

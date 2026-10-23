@@ -10,8 +10,15 @@
   },
   "projection": {
     "type": "conicEqualArea",
-    "rotate": [-132, 0, 0],
-    "parallels": [-18, -36]
+    "rotate": [
+      -132,
+      0,
+      0
+    ],
+    "parallels": [
+      -18,
+      -36
+    ]
   },
   "layer": [
     {
@@ -122,7 +129,9 @@
           "name": "nut_select",
           "select": {
             "type": "point",
-            "fields": ["nut_type"]
+            "fields": [
+              "nut_type"
+            ]
           },
           "bind": "legend"
         }
@@ -168,6 +177,20 @@
               "#6B8E23",
               "#CC79A7"
             ]
+          },
+          "legend": {
+            "orient": "none",
+            "columns": 1,
+            "direction": "horizontal",
+            "title": "Nut type",
+            "labelFontSize": 12,
+            "titleFontSize": 12,
+            "titleLimit": 500,
+            "offset": 12,
+            "legendX": {
+              "expr": "width * 0.76"
+            },
+            "legendY": 30
           }
         },
         "opacity": {
@@ -205,20 +228,20 @@
             "text": "Macadamia growing regions\nextend furthest north"
           },
           {
-            "lon": 134,
+            "lon": 132,
             "lat": -31,
-            "text": "The greatest variety appears\nacross southern NSW and Victoria"
+            "text": "Several nut types overlap\nacross southern NSW and Victoria"
           }
         ]
       },
       "mark": {
         "type": "text",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontStyle": "italic",
         "color": "#493B33",
         "align": "center",
         "lineBreak": "\n",
-        "lineHeight": 13
+        "lineHeight": 15
       },
       "encoding": {
         "longitude": {
@@ -236,10 +259,31 @@
       }
     }
   ],
-  "background": "transparent",
+  "background": "#f4efe6",
   "config": {
     "view": {
       "stroke": null
+    },
+    "axis": {
+      "labelColor": "#766a60",
+      "titleColor": "#30241e",
+      "gridColor": "#ded4c7",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal"
+    },
+    "legend": {
+      "labelColor": "#30241e",
+      "titleColor": "#30241e",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleLimit": 500,
+      "title": "Nut type · click to highlight"
+    },
+    "font": "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif",
+    "title": {
+      "fontSize": 14,
+      "color": "#30241e"
     }
   }
 }

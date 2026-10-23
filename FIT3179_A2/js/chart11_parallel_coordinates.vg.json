@@ -1,0 +1,562 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Parallel coordinates with labelled native-unit axes. Production value uses a logarithmic scale; growth and per-capita supply use linear scales.",
+  "width": 680,
+  "height": 310,
+  "padding": {
+    "left": 60,
+    "right": 65,
+    "top": 12,
+    "bottom": 8
+  },
+  "background": "#f4efe6",
+  "autosize": "pad",
+  "signals": [
+    {
+      "name": "focus",
+      "value": "Almond + Macadamia + Pecan",
+      "bind": {
+        "input": "select",
+        "name": "Compare: ",
+        "options": [
+          "Almond + Macadamia + Pecan",
+          "All seven crops",
+          "Almond",
+          "Macadamia",
+          "Walnut",
+          "Pistachio",
+          "Pecan",
+          "Hazelnut",
+          "Chestnut"
+        ],
+        "element": "#chart11-controls"
+      }
+    }
+  ],
+  "data": [
+    {
+      "name": "trend",
+      "url": "data/clean/trend_2021_2025.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "production_value_m": "number"
+        }
+      },
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.year === 2024 && datum.nut_type !== 'All Nuts (Industry Total)'"
+        }
+      ]
+    },
+    {
+      "name": "summary",
+      "url": "data/clean/national_summary.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "production_value_m": "number",
+          "per_capita_supply_kg": "number"
+        }
+      },
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "indexof(['Almond','Macadamia','Walnut','Pistachio','Pecan','Hazelnut','Chestnut'],datum.nut_type)>=0"
+        },
+        {
+          "type": "lookup",
+          "from": "trend",
+          "key": "nut_type",
+          "fields": [
+            "nut_type"
+          ],
+          "values": [
+            "production_value_m"
+          ],
+          "as": [
+            "previous_value"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "100*(datum.production_value_m/datum.previous_value - 1)",
+          "as": "growth_pct"
+        }
+      ]
+    },
+    {
+      "name": "profiles",
+      "source": "summary",
+      "transform": [
+        {
+          "type": "fold",
+          "fields": [
+            "production_value_m",
+            "growth_pct",
+            "per_capita_supply_kg"
+          ],
+          "as": [
+            "metric_name",
+            "metric"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.metric_name === 'production_value_m' ? 'value' : datum.metric_name === 'growth_pct' ? 'growth' : 'supply'",
+          "as": "axis"
+        },
+        {
+          "type": "formula",
+          "expr": "indexof(['value','growth','supply'],datum.axis)",
+          "as": "axis_order"
+        }
+      ]
+    },
+    {
+      "name": "axisData",
+      "values": [
+        {
+          "axis": "value",
+          "label": "Production value (A$m)",
+          "sub": "Log scale: equal gaps = ×10"
+        },
+        {
+          "axis": "growth",
+          "label": "Annual value growth (%)",
+          "sub": "2024 → 2025; 0% = no change"
+        },
+        {
+          "axis": "supply",
+          "label": "Domestic supply (kg/person)",
+          "sub": "Mixed weight bases: compare with caution"
+        }
+      ]
+    },
+    {
+      "name": "ticks",
+      "values": [
+        {
+          "axis": "value",
+          "metric": 10,
+          "label": "10"
+        },
+        {
+          "axis": "value",
+          "metric": 100,
+          "label": "100"
+        },
+        {
+          "axis": "value",
+          "metric": 1000,
+          "label": "1,000"
+        },
+        {
+          "axis": "growth",
+          "metric": -40,
+          "label": "−40%"
+        },
+        {
+          "axis": "growth",
+          "metric": -20,
+          "label": "−20%"
+        },
+        {
+          "axis": "growth",
+          "metric": 0,
+          "label": "0%"
+        },
+        {
+          "axis": "growth",
+          "metric": 20,
+          "label": "20%"
+        },
+        {
+          "axis": "growth",
+          "metric": 40,
+          "label": "40%"
+        },
+        {
+          "axis": "growth",
+          "metric": 60,
+          "label": "60%"
+        },
+        {
+          "axis": "supply",
+          "metric": 0,
+          "label": "0"
+        },
+        {
+          "axis": "supply",
+          "metric": 0.2,
+          "label": "0.2"
+        },
+        {
+          "axis": "supply",
+          "metric": 0.4,
+          "label": "0.4"
+        },
+        {
+          "axis": "supply",
+          "metric": 0.6,
+          "label": "0.6"
+        },
+        {
+          "axis": "supply",
+          "metric": 0.8,
+          "label": "0.8"
+        },
+        {
+          "axis": "supply",
+          "metric": 1,
+          "label": "1"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "point",
+      "domain": [
+        "value",
+        "growth",
+        "supply"
+      ],
+      "range": "width"
+    },
+    {
+      "name": "valueScale",
+      "type": "log",
+      "domain": [
+        5,
+        1500
+      ],
+      "range": [
+        {
+          "signal": "height"
+        },
+        0
+      ],
+      "nice": false
+    },
+    {
+      "name": "growthScale",
+      "type": "linear",
+      "domain": [
+        -40,
+        60
+      ],
+      "range": [
+        {
+          "signal": "height"
+        },
+        0
+      ],
+      "nice": false,
+      "zero": false
+    },
+    {
+      "name": "supplyScale",
+      "type": "linear",
+      "domain": [
+        0,
+        1
+      ],
+      "range": [
+        {
+          "signal": "height"
+        },
+        0
+      ],
+      "nice": false
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": [
+        "Almond",
+        "Macadamia",
+        "Walnut",
+        "Pistachio",
+        "Pecan",
+        "Hazelnut",
+        "Chestnut"
+      ],
+      "range": [
+        "#0072B2",
+        "#009E73",
+        "#CC79A7",
+        "#6B8E23",
+        "#A0522D",
+        "#882255",
+        "#D55E00"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rule",
+      "from": {
+        "data": "axisData"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "axis"
+          },
+          "y": {
+            "value": 0
+          },
+          "y2": {
+            "signal": "height"
+          },
+          "stroke": {
+            "value": "#b9aa98"
+          },
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "from": {
+        "data": "ticks"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "scale('x',datum.axis)-4"
+          },
+          "x2": {
+            "signal": "scale('x',datum.axis)+4"
+          },
+          "y": {
+            "signal": "datum.axis === 'value' ? scale('valueScale',datum.metric) : datum.axis === 'growth' ? scale('growthScale',datum.metric) : scale('supplyScale',datum.metric)"
+          },
+          "stroke": {
+            "value": "#887564"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "ticks"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "scale('x',datum.axis)-9"
+          },
+          "y": {
+            "signal": "datum.axis === 'value' ? scale('valueScale',datum.metric) : datum.axis === 'growth' ? scale('growthScale',datum.metric) : scale('supplyScale',datum.metric)"
+          },
+          "text": {
+            "field": "label"
+          },
+          "align": {
+            "value": "right"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "#62584e"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "axisData"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "axis"
+          },
+          "y": {
+            "value": -35
+          },
+          "text": {
+            "field": "label"
+          },
+          "align": {
+            "signal": "datum.axis === 'value' ? 'left' : datum.axis === 'supply' ? 'right' : 'center'"
+          },
+          "fontSize": {
+            "value": 13
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#30241e"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "axisData"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "axis"
+          },
+          "y": {
+            "value": -16
+          },
+          "text": {
+            "field": "sub"
+          },
+          "align": {
+            "signal": "datum.axis === 'value' ? 'left' : datum.axis === 'supply' ? 'right' : 'center'"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fill": {
+            "value": "#766a60"
+          }
+        }
+      }
+    },
+    {
+      "type": "group",
+      "from": {
+        "facet": {
+          "name": "series",
+          "data": "profiles",
+          "groupby": "nut_type"
+        }
+      },
+      "marks": [
+        {
+          "type": "line",
+          "from": {
+            "data": "series"
+          },
+          "sort": {
+            "field": "datum.axis_order"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "scale": "x",
+                "field": "axis"
+              },
+              "y": {
+                "signal": "datum.axis === 'value' ? scale('valueScale',datum.metric) : datum.axis === 'growth' ? scale('growthScale',datum.metric) : scale('supplyScale',datum.metric)"
+              },
+              "stroke": {
+                "scale": "color",
+                "field": "nut_type"
+              },
+              "strokeWidth": {
+                "value": 2.5
+              },
+              "opacity": {
+                "signal": "(focus === 'All seven crops' || (focus === 'Almond + Macadamia + Pecan' && indexof(['Almond','Macadamia','Pecan'],datum.nut_type)>=0) || focus === datum.nut_type) ? 1 : 0.09"
+              }
+            }
+          }
+        },
+        {
+          "type": "symbol",
+          "from": {
+            "data": "series"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "scale": "x",
+                "field": "axis"
+              },
+              "y": {
+                "signal": "datum.axis === 'value' ? scale('valueScale',datum.metric) : datum.axis === 'growth' ? scale('growthScale',datum.metric) : scale('supplyScale',datum.metric)"
+              },
+              "fill": {
+                "scale": "color",
+                "field": "nut_type"
+              },
+              "size": {
+                "value": 65
+              },
+              "stroke": {
+                "value": "#f4efe6"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "tooltip": {
+                "signal": "{'Nut':datum.nut_type, 'Production value (A$m)':format(datum.production_value_m,',.1f'), 'Annual growth':format(datum.growth_pct,'+.1f')+'%', 'Supply (kg/person)':format(datum.per_capita_supply_kg,'.2f')}"
+              },
+              "opacity": {
+                "signal": "(focus === 'All seven crops' || (focus === 'Almond + Macadamia + Pecan' && indexof(['Almond','Macadamia','Pecan'],datum.nut_type)>=0) || focus === datum.nut_type) ? 1 : 0.09"
+              }
+            },
+            "hover": {
+              "size": {
+                "value": 140
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 0
+          },
+          "y": {
+            "signal": "height + 26"
+          },
+          "text": {
+            "value": "Pecan: +54.5% growth · Almond: $1,327.9m value · Different leaders on different measures"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#493b33"
+          }
+        }
+      }
+    }
+  ],
+  "legends": [
+    {
+      "stroke": "color",
+      "title": null,
+      "orient": "bottom",
+      "direction": "horizontal",
+      "columns": 4,
+      "labelFontSize": 12,
+      "labelColor": "#30241e",
+      "symbolStrokeWidth": 3,
+      "offset": 30
+    }
+  ],
+  "config": {
+    "font": "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+  }
+}

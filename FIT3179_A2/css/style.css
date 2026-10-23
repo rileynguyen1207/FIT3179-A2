@@ -76,7 +76,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--chrome-ink-soft);
     margin: 0 auto 28px;
     max-width: 640px;
@@ -358,7 +358,7 @@ body {
 }
 
 .chart-subtitle {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--ink-soft);
     line-height: 1.55;
     max-width: 760px;
@@ -895,4 +895,155 @@ table.data-table th:not(:first-child) {
     .chapter-nav li {
         padding: 0 8px;
     }
+}
+/* Chart 8 - Dropdown */
+#chart8-controls {
+    margin: 0 0 4px 0;
+    padding: 0;
+}
+
+/* Dropdown label */
+#chart8-controls label {
+    color: #5C5048;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Dropdown selection */
+#chart8-controls select {
+    margin-left: 8px;
+}
+
+/* Interaction instruction */
+.chart-interaction-hint {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #756B63;
+
+    margin: 0 0 12px 0;
+    padding: 0;
+}
+
+/* HOW TO EXPLORE label */
+.chart-interaction-hint .hint-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #A65C42;
+    margin-right: 8px;
+}
+
+/* ========================================
+   FULL-WIDTH CHARTS — CHART 02 & CHART 03
+======================================== */
+
+/* Chart 2 & 3 — single-column layout */
+
+.chart-story-layout--single {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    gap: 0;
+}
+
+.chart-story-layout--single .chart-visual {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Chart 2: full-width container */
+
+#chart2_state_production {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+/* Centre the Vega-Lite output */
+
+#chart2_state_production .vega-embed {
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+}
+
+#chart3_state_heatmap {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+/* Centre the Vega-Lite output */
+
+#chart3_state_heatmap .vega-embed {
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+}
+/* ==========================================
+
+   CHART 09 — FULL WIDTH LAYOUT
+
+========================================== */
+
+.chart9-full-layout {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    margin-top: 28px;
+
+}
+
+.chart9-visual {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    min-width: 0;
+
+}
+
+#chart9_destination_heatmap {
+
+    max-width: 100%;
+
+}
+
+#chart9_destination_heatmap .vega-embed {
+
+    max-width: 100%;
+
+}
+/* Prevent insight boxes from stretching to chart height */
+.chart-story-layout>.chart-insight {
+    align-self: start;
+    height: fit-content;
 }

@@ -1,1 +1,199 @@
-{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":"container","height":300,"padding":{"left":5,"right":95,"top":20,"bottom":5},"data":{"url":"data/clean/trend_2021_2025.csv","format":{"parse":{"production_value_m":"number","year":"number"}}},"transform":[{"filter":"datum.nut_type !== 'All Nuts (Industry Total)'"},{"window":[{"op":"rank","as":"rank"}],"sort":[{"field":"production_value_m","order":"descending"}],"groupby":["year"]},{"calculate":"'$' + format(datum.production_value_m, ',.1f') + 'm'","as":"value_label"},{"calculate":"datum.rank + '  ' + datum.nut_type","as":"endpoint_label"}],"encoding":{"x":{"field":"year","type":"ordinal","title":null,"axis":{"labelAngle":0}},"y":{"field":"rank","type":"quantitative","scale":{"domain":[1,7],"reverse":true},"axis":{"title":"Rank (1 = highest production value)","tickMinStep":1,"grid":true,"gridColor":"#EEEEEE"}},"color":{"field":"nut_type","type":"nominal","scale":{"domain":["Almond","Chestnut","Hazelnut","Macadamia","Pecan","Pistachio","Walnut"],"range":["#0072B2","#D55E00","#882255","#009E73","#A0522D","#6B8E23","#CC79A7"]},"legend":null}},"layer":[{"mark":{"type":"line","strokeWidth":2.5}},{"mark":{"type":"point","filled":true,"size":70},"encoding":{"tooltip":[{"field":"nut_type","type":"nominal","title":"Nut"},{"field":"year","type":"ordinal","title":"Year"},{"field":"rank","type":"quantitative","title":"Rank"},{"field":"value_label","type":"nominal","title":"Production value"}]}},{"transform":[{"filter":"datum.year === 2025"}],"mark":{"type":"text","align":"left","dx":8,"fontSize":10.5,"fontWeight":"bold"},"encoding":{"text":{"field":"endpoint_label","type":"nominal"},"color":{"value":"#222222"}}}],"config":{"view":{"stroke":null}},"background":"transparent"}
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 300,
+  "padding": {
+    "left": 5,
+    "right": 95,
+    "top": 20,
+    "bottom": 5
+  },
+  "data": {
+    "url": "data/clean/trend_2021_2025.csv",
+    "format": {
+      "parse": {
+        "production_value_m": "number",
+        "year": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.nut_type !== 'All Nuts (Industry Total)'"
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "production_value_m",
+          "order": "descending"
+        }
+      ],
+      "groupby": [
+        "year"
+      ]
+    },
+    {
+      "calculate": "'$' + format(datum.production_value_m, ',.1f') + 'm'",
+      "as": "value_label"
+    },
+    {
+      "calculate": "datum.rank + '  ' + datum.nut_type",
+      "as": "endpoint_label"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          1,
+          7
+        ],
+        "reverse": true
+      },
+      "axis": {
+        "title": "Rank (1 = highest production value)",
+        "tickMinStep": 1,
+        "grid": true,
+        "gridColor": "#EEEEEE"
+      }
+    },
+    "color": {
+      "field": "nut_type",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Almond",
+          "Chestnut",
+          "Hazelnut",
+          "Macadamia",
+          "Pecan",
+          "Pistachio",
+          "Walnut"
+        ],
+        "range": [
+          "#0072B2",
+          "#D55E00",
+          "#882255",
+          "#009E73",
+          "#A0522D",
+          "#6B8E23",
+          "#CC79A7"
+        ]
+      },
+      "legend": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "nut_type",
+            "type": "nominal",
+            "title": "Nut"
+          },
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "rank",
+            "type": "quantitative",
+            "title": "Rank"
+          },
+          {
+            "field": "value_label",
+            "type": "nominal",
+            "title": "Production value"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2025"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "endpoint_label",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "#222222"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#766a60",
+      "titleColor": "#30241e",
+      "gridColor": "#ded4c7",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal"
+    },
+    "legend": {
+      "labelColor": "#30241e",
+      "titleColor": "#30241e",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "font": "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif",
+    "title": {
+      "fontSize": 14,
+      "color": "#30241e"
+    }
+  },
+  "background": "#f4efe6",
+  "title": {
+    "text": "Pecan moves from fifth to third in 2025",
+    "subtitle": "Its $35.7m production value narrowly exceeds walnut’s $35.5m.",
+    "anchor": "start",
+    "fontSize": 13,
+    "subtitleFontSize": 12,
+    "color": "#493b33",
+    "subtitleColor": "#62584e",
+    "offset": 16
+  }
+}

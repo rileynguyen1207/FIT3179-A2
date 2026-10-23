@@ -1,0 +1,240 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": {
+    "step": 55
+  },
+  "background": "#f4efe6",
+  "data": {
+    "values": [
+      {
+        "nut": "Almond",
+        "exports": 1332.8,
+        "imports": 11.8,
+        "note": "Export value: $1,332.8m · Import value: $11.8m",
+        "balance_label": "Balance: +$1,321.0m"
+      },
+      {
+        "nut": "Macadamia",
+        "exports": 246.6,
+        "imports": null,
+        "note": "Export value: $246.6m · Import value: –",
+        "balance_label": "Import value: –"
+      },
+      {
+        "nut": "Walnut",
+        "exports": 23.3,
+        "imports": 46.2,
+        "note": "Export value: $23.3m · Import value: $46.2m",
+        "balance_label": "Balance: −$22.9m"
+      },
+      {
+        "nut": "Pistachio",
+        "exports": 32.6,
+        "imports": 42.8,
+        "note": "Export value: $32.6m · Import value: $42.8m",
+        "balance_label": "Balance: −$10.2m"
+      },
+      {
+        "nut": "Pecan",
+        "exports": 2.5,
+        "imports": null,
+        "note": "Export value: $2.5m · Import value: –",
+        "balance_label": "Import value: –"
+      },
+      {
+        "nut": "Hazelnut",
+        "exports": 0.6,
+        "imports": 41.6,
+        "note": "Export value: $0.6m · Import value: $41.6m",
+        "balance_label": "Balance: −$41.0m"
+      },
+      {
+        "nut": "Chestnut",
+        "exports": null,
+        "imports": null,
+        "note": "Export value: – · Import value: <$0.1m",
+        "balance_label": "Export: – · Import: <$0.1m"
+      }
+    ]
+  },
+  "params": [
+    {
+      "name": "show_almond",
+      "value": false,
+      "bind": {
+        "input": "checkbox",
+        "name": "Include almond (expands the scale): ",
+        "element": "#chart9-controls"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "show_almond || datum.nut !== 'Almond'"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "nut",
+      "type": "nominal",
+      "sort": [
+        "Almond",
+        "Macadamia",
+        "Walnut",
+        "Pistachio",
+        "Pecan",
+        "Hazelnut",
+        "Chestnut"
+      ],
+      "title": null,
+      "axis": {
+        "labelPadding": 12
+      }
+    },
+    "x": {
+      "field": "exports",
+      "type": "quantitative",
+      "title": "Reported trade value (A$m) · 2025",
+      "scale": {
+        "domain": {
+          "expr": "show_almond ? [0,1400] : [0,270]"
+        },
+        "nice": false
+      },
+      "axis": {
+        "tickCount": 6
+      }
+    },
+    "tooltip": [
+      {
+        "field": "nut",
+        "title": "Crop"
+      },
+      {
+        "field": "note",
+        "title": "Reported values"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "isValid(datum.exports) && isValid(datum.imports)"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#aaa093"
+      },
+      "encoding": {
+        "x2": {
+          "field": "imports"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "fold": [
+            "exports",
+            "imports"
+          ],
+          "as": [
+            "measure",
+            "value"
+          ]
+        },
+        {
+          "filter": "isValid(datum.value)"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 100
+      },
+      "encoding": {
+        "x": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "measure",
+          "scale": {
+            "domain": [
+              "exports",
+              "imports"
+            ],
+            "range": [
+              "#416f73",
+              "#ae623c"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "top",
+            "labelExpr": "datum.label === 'exports' ? 'Exports' : 'Imports'"
+          }
+        },
+        "shape": {
+          "field": "measure",
+          "scale": {
+            "domain": [
+              "exports",
+              "imports"
+            ],
+            "range": [
+              "circle",
+              "diamond"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dy": 19,
+        "fontSize": 12,
+        "color": "#62584e"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "text": {
+          "field": "balance_label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#62584e",
+      "titleColor": "#30241e",
+      "gridColor": "#ded4c7"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    }
+  },
+  "title": {
+    "text": "Almond surplus: +$1,321m · hidden in the default detail view",
+    "anchor": "start",
+    "fontSize": 13,
+    "color": "#493b33",
+    "offset": 12
+  }
+}

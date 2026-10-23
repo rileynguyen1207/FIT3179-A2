@@ -24,7 +24,8 @@
           "Victoria",
           "Western Australia"
         ],
-        "name": "Highlight state: "
+        "name": "Highlight state: ",
+        "element": "#chart2-controls"
       }
     }
   ],
@@ -39,8 +40,8 @@
             "anchor": "middle",
             "offset": 5
           },
-          "width": 150,
-          "height": 155,
+          "width": 210,
+          "height": 210,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [
@@ -106,30 +107,16 @@
                   "field": "state_share_percent",
                   "type": "quantitative",
                   "scale": {
-                    "scheme": "blues",
                     "domain": [
                       0,
                       100
                     ],
-                    "rangeMin": 0.18,
-                    "rangeMax": 0.95
+                    "range": [
+                      "#f1e4cd",
+                      "#684229"
+                    ]
                   },
-                  "legend": {
-                    "title": [
-                      "Share of national",
-                      "production (%)"
-                    ],
-                    "values": [
-                      0,
-                      50,
-                      100
-                    ],
-                    "gradientLength": 120,
-                    "gradientThickness": 14,
-                    "titleFontSize": 11,
-                    "labelFontSize": 10,
-                    "titleLimit": 140
-                  }
+                  "legend": null
                 },
                 "tooltip": [
                   {
@@ -189,7 +176,7 @@
               ],
               "mark": {
                 "type": "text",
-                "fontSize": 9,
+                "fontSize": 11,
                 "fontWeight": "bold"
               },
               "encoding": {
@@ -232,8 +219,8 @@
             "anchor": "middle",
             "offset": 5
           },
-          "width": 150,
-          "height": 155,
+          "width": 210,
+          "height": 210,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [
@@ -299,30 +286,16 @@
                   "field": "state_share_percent",
                   "type": "quantitative",
                   "scale": {
-                    "scheme": "blues",
                     "domain": [
                       0,
                       100
                     ],
-                    "rangeMin": 0.18,
-                    "rangeMax": 0.95
+                    "range": [
+                      "#f1e4cd",
+                      "#684229"
+                    ]
                   },
-                  "legend": {
-                    "title": [
-                      "Share of national",
-                      "production (%)"
-                    ],
-                    "values": [
-                      0,
-                      50,
-                      100
-                    ],
-                    "gradientLength": 120,
-                    "gradientThickness": 14,
-                    "titleFontSize": 11,
-                    "labelFontSize": 10,
-                    "titleLimit": 140
-                  }
+                  "legend": null
                 },
                 "tooltip": [
                   {
@@ -382,7 +355,7 @@
               ],
               "mark": {
                 "type": "text",
-                "fontSize": 9,
+                "fontSize": 11,
                 "fontWeight": "bold"
               },
               "encoding": {
@@ -425,8 +398,8 @@
             "anchor": "middle",
             "offset": 5
           },
-          "width": 150,
-          "height": 155,
+          "width": 210,
+          "height": 210,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [
@@ -492,30 +465,16 @@
                   "field": "state_share_percent",
                   "type": "quantitative",
                   "scale": {
-                    "scheme": "blues",
                     "domain": [
                       0,
                       100
                     ],
-                    "rangeMin": 0.18,
-                    "rangeMax": 0.95
+                    "range": [
+                      "#f1e4cd",
+                      "#684229"
+                    ]
                   },
-                  "legend": {
-                    "title": [
-                      "Share of national",
-                      "production (%)"
-                    ],
-                    "values": [
-                      0,
-                      50,
-                      100
-                    ],
-                    "gradientLength": 120,
-                    "gradientThickness": 14,
-                    "titleFontSize": 11,
-                    "labelFontSize": 10,
-                    "titleLimit": 140
-                  }
+                  "legend": null
                 },
                 "tooltip": [
                   {
@@ -575,7 +534,7 @@
               ],
               "mark": {
                 "type": "text",
-                "fontSize": 9,
+                "fontSize": 11,
                 "fontWeight": "bold"
               },
               "encoding": {
@@ -618,8 +577,8 @@
             "anchor": "middle",
             "offset": 5
           },
-          "width": 150,
-          "height": 155,
+          "width": 210,
+          "height": 210,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [
@@ -685,30 +644,16 @@
                   "field": "state_share_percent",
                   "type": "quantitative",
                   "scale": {
-                    "scheme": "blues",
                     "domain": [
                       0,
                       100
                     ],
-                    "rangeMin": 0.18,
-                    "rangeMax": 0.95
+                    "range": [
+                      "#f1e4cd",
+                      "#684229"
+                    ]
                   },
-                  "legend": {
-                    "title": [
-                      "Share of national",
-                      "production (%)"
-                    ],
-                    "values": [
-                      0,
-                      50,
-                      100
-                    ],
-                    "gradientLength": 120,
-                    "gradientThickness": 14,
-                    "titleFontSize": 11,
-                    "labelFontSize": 10,
-                    "titleLimit": 140
-                  }
+                  "legend": null
                 },
                 "tooltip": [
                   {
@@ -768,7 +713,7 @@
               ],
               "mark": {
                 "type": "text",
-                "fontSize": 9,
+                "fontSize": 11,
                 "fontWeight": "bold"
               },
               "encoding": {
@@ -814,10 +759,14 @@
             "fontSize": 13,
             "fontWeight": "bold",
             "anchor": "middle",
-            "offset": 5
+            "offset": 5,
+            "subtitle": "QLD supplies 79%",
+            "subtitleFontSize": 12,
+            "subtitleColor": "#62584e",
+            "subtitlePadding": 4
           },
-          "width": 150,
-          "height": 155,
+          "width": 210,
+          "height": 210,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [
@@ -883,30 +832,16 @@
                   "field": "state_share_percent",
                   "type": "quantitative",
                   "scale": {
-                    "scheme": "blues",
                     "domain": [
                       0,
                       100
                     ],
-                    "rangeMin": 0.18,
-                    "rangeMax": 0.95
+                    "range": [
+                      "#f1e4cd",
+                      "#684229"
+                    ]
                   },
-                  "legend": {
-                    "title": [
-                      "Share of national",
-                      "production (%)"
-                    ],
-                    "values": [
-                      0,
-                      50,
-                      100
-                    ],
-                    "gradientLength": 120,
-                    "gradientThickness": 14,
-                    "titleFontSize": 11,
-                    "labelFontSize": 10,
-                    "titleLimit": 140
-                  }
+                  "legend": null
                 },
                 "tooltip": [
                   {
@@ -966,7 +901,7 @@
               ],
               "mark": {
                 "type": "text",
-                "fontSize": 9,
+                "fontSize": 11,
                 "fontWeight": "bold"
               },
               "encoding": {
@@ -1007,10 +942,14 @@
             "fontSize": 13,
             "fontWeight": "bold",
             "anchor": "middle",
-            "offset": 5
+            "offset": 5,
+            "subtitle": "VIC supplies 70.5%",
+            "subtitleFontSize": 12,
+            "subtitleColor": "#62584e",
+            "subtitlePadding": 4
           },
-          "width": 150,
-          "height": 155,
+          "width": 210,
+          "height": 210,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [
@@ -1076,30 +1015,16 @@
                   "field": "state_share_percent",
                   "type": "quantitative",
                   "scale": {
-                    "scheme": "blues",
                     "domain": [
                       0,
                       100
                     ],
-                    "rangeMin": 0.18,
-                    "rangeMax": 0.95
+                    "range": [
+                      "#f1e4cd",
+                      "#684229"
+                    ]
                   },
-                  "legend": {
-                    "title": [
-                      "Share of national",
-                      "production (%)"
-                    ],
-                    "values": [
-                      0,
-                      50,
-                      100
-                    ],
-                    "gradientLength": 120,
-                    "gradientThickness": 14,
-                    "titleFontSize": 11,
-                    "labelFontSize": 10,
-                    "titleLimit": 140
-                  }
+                  "legend": null
                 },
                 "tooltip": [
                   {
@@ -1159,7 +1084,7 @@
               ],
               "mark": {
                 "type": "text",
-                "fontSize": 9,
+                "fontSize": 11,
                 "fontWeight": "bold"
               },
               "encoding": {
@@ -1200,10 +1125,14 @@
             "fontSize": 13,
             "fontWeight": "bold",
             "anchor": "middle",
-            "offset": 5
+            "offset": 5,
+            "subtitle": "NSW supplies 84%",
+            "subtitleFontSize": 12,
+            "subtitleColor": "#62584e",
+            "subtitlePadding": 4
           },
-          "width": 150,
-          "height": 155,
+          "width": 210,
+          "height": 210,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [
@@ -1269,30 +1198,16 @@
                   "field": "state_share_percent",
                   "type": "quantitative",
                   "scale": {
-                    "scheme": "blues",
                     "domain": [
                       0,
                       100
                     ],
-                    "rangeMin": 0.18,
-                    "rangeMax": 0.95
+                    "range": [
+                      "#f1e4cd",
+                      "#684229"
+                    ]
                   },
-                  "legend": {
-                    "title": [
-                      "Share of national",
-                      "production (%)"
-                    ],
-                    "values": [
-                      0,
-                      50,
-                      100
-                    ],
-                    "gradientLength": 120,
-                    "gradientThickness": 14,
-                    "titleFontSize": 11,
-                    "labelFontSize": 10,
-                    "titleLimit": 140
-                  }
+                  "legend": null
                 },
                 "tooltip": [
                   {
@@ -1352,7 +1267,7 @@
               ],
               "mark": {
                 "type": "text",
-                "fontSize": 9,
+                "fontSize": 11,
                 "fontWeight": "bold"
               },
               "encoding": {
@@ -1386,6 +1301,626 @@
               }
             }
           ]
+        },
+        {
+          "width": 210,
+          "height": 210,
+          "layer": [
+            {
+              "data": {
+                "values": [
+                  {
+                    "x": 5,
+                    "y": 12,
+                    "text": "PRODUCTION SHARE"
+                  },
+                  {
+                    "x": 5,
+                    "y": 64,
+                    "text": "0%"
+                  },
+                  {
+                    "x": 5,
+                    "y": 98,
+                    "text": "Grey = no reported value"
+                  },
+                  {
+                    "x": 5,
+                    "y": 138,
+                    "text": "Compare concentration\nwithin each crop.\nSelect a state to highlight it."
+                  },
+                  {
+                    "x": 158,
+                    "y": 64,
+                    "text": "100%"
+                  }
+                ]
+              },
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "top",
+                "fontSize": 12,
+                "color": "#493b33",
+                "lineBreak": "\n",
+                "lineHeight": 18
+              },
+              "encoding": {
+                "x": {
+                  "field": "x",
+                  "type": "quantitative",
+                  "scale": {
+                    "domain": [
+                      0,
+                      210
+                    ]
+                  },
+                  "axis": null
+                },
+                "y": {
+                  "field": "y",
+                  "type": "quantitative",
+                  "scale": {
+                    "domain": [
+                      210,
+                      0
+                    ]
+                  },
+                  "axis": null
+                },
+                "text": {
+                  "field": "text"
+                }
+              }
+            },
+            {
+              "data": {
+                "values": [
+                  {
+                    "x0": 5.0,
+                    "x1": 6.8,
+                    "v": 0
+                  },
+                  {
+                    "x0": 6.8,
+                    "x1": 8.6,
+                    "v": 1
+                  },
+                  {
+                    "x0": 8.6,
+                    "x1": 10.4,
+                    "v": 2
+                  },
+                  {
+                    "x0": 10.4,
+                    "x1": 12.2,
+                    "v": 3
+                  },
+                  {
+                    "x0": 12.2,
+                    "x1": 14.0,
+                    "v": 4
+                  },
+                  {
+                    "x0": 14.0,
+                    "x1": 15.8,
+                    "v": 5
+                  },
+                  {
+                    "x0": 15.8,
+                    "x1": 17.6,
+                    "v": 6
+                  },
+                  {
+                    "x0": 17.6,
+                    "x1": 19.4,
+                    "v": 7
+                  },
+                  {
+                    "x0": 19.4,
+                    "x1": 21.2,
+                    "v": 8
+                  },
+                  {
+                    "x0": 21.2,
+                    "x1": 23.0,
+                    "v": 9
+                  },
+                  {
+                    "x0": 23.0,
+                    "x1": 24.8,
+                    "v": 10
+                  },
+                  {
+                    "x0": 24.8,
+                    "x1": 26.6,
+                    "v": 11
+                  },
+                  {
+                    "x0": 26.6,
+                    "x1": 28.400000000000002,
+                    "v": 12
+                  },
+                  {
+                    "x0": 28.400000000000002,
+                    "x1": 30.2,
+                    "v": 13
+                  },
+                  {
+                    "x0": 30.2,
+                    "x1": 32.0,
+                    "v": 14
+                  },
+                  {
+                    "x0": 32.0,
+                    "x1": 33.8,
+                    "v": 15
+                  },
+                  {
+                    "x0": 33.8,
+                    "x1": 35.6,
+                    "v": 16
+                  },
+                  {
+                    "x0": 35.6,
+                    "x1": 37.4,
+                    "v": 17
+                  },
+                  {
+                    "x0": 37.4,
+                    "x1": 39.2,
+                    "v": 18
+                  },
+                  {
+                    "x0": 39.2,
+                    "x1": 41.0,
+                    "v": 19
+                  },
+                  {
+                    "x0": 41.0,
+                    "x1": 42.800000000000004,
+                    "v": 20
+                  },
+                  {
+                    "x0": 42.800000000000004,
+                    "x1": 44.6,
+                    "v": 21
+                  },
+                  {
+                    "x0": 44.6,
+                    "x1": 46.4,
+                    "v": 22
+                  },
+                  {
+                    "x0": 46.4,
+                    "x1": 48.2,
+                    "v": 23
+                  },
+                  {
+                    "x0": 48.2,
+                    "x1": 50.0,
+                    "v": 24
+                  },
+                  {
+                    "x0": 50.0,
+                    "x1": 51.800000000000004,
+                    "v": 25
+                  },
+                  {
+                    "x0": 51.800000000000004,
+                    "x1": 53.6,
+                    "v": 26
+                  },
+                  {
+                    "x0": 53.6,
+                    "x1": 55.4,
+                    "v": 27
+                  },
+                  {
+                    "x0": 55.4,
+                    "x1": 57.2,
+                    "v": 28
+                  },
+                  {
+                    "x0": 57.2,
+                    "x1": 59.0,
+                    "v": 29
+                  },
+                  {
+                    "x0": 59.0,
+                    "x1": 60.800000000000004,
+                    "v": 30
+                  },
+                  {
+                    "x0": 60.800000000000004,
+                    "x1": 62.6,
+                    "v": 31
+                  },
+                  {
+                    "x0": 62.6,
+                    "x1": 64.4,
+                    "v": 32
+                  },
+                  {
+                    "x0": 64.4,
+                    "x1": 66.2,
+                    "v": 33
+                  },
+                  {
+                    "x0": 66.2,
+                    "x1": 68.0,
+                    "v": 34
+                  },
+                  {
+                    "x0": 68.0,
+                    "x1": 69.8,
+                    "v": 35
+                  },
+                  {
+                    "x0": 69.8,
+                    "x1": 71.60000000000001,
+                    "v": 36
+                  },
+                  {
+                    "x0": 71.60000000000001,
+                    "x1": 73.4,
+                    "v": 37
+                  },
+                  {
+                    "x0": 73.4,
+                    "x1": 75.2,
+                    "v": 38
+                  },
+                  {
+                    "x0": 75.2,
+                    "x1": 77.0,
+                    "v": 39
+                  },
+                  {
+                    "x0": 77.0,
+                    "x1": 78.8,
+                    "v": 40
+                  },
+                  {
+                    "x0": 78.8,
+                    "x1": 80.60000000000001,
+                    "v": 41
+                  },
+                  {
+                    "x0": 80.60000000000001,
+                    "x1": 82.4,
+                    "v": 42
+                  },
+                  {
+                    "x0": 82.4,
+                    "x1": 84.2,
+                    "v": 43
+                  },
+                  {
+                    "x0": 84.2,
+                    "x1": 86.0,
+                    "v": 44
+                  },
+                  {
+                    "x0": 86.0,
+                    "x1": 87.8,
+                    "v": 45
+                  },
+                  {
+                    "x0": 87.8,
+                    "x1": 89.60000000000001,
+                    "v": 46
+                  },
+                  {
+                    "x0": 89.60000000000001,
+                    "x1": 91.4,
+                    "v": 47
+                  },
+                  {
+                    "x0": 91.4,
+                    "x1": 93.2,
+                    "v": 48
+                  },
+                  {
+                    "x0": 93.2,
+                    "x1": 95.0,
+                    "v": 49
+                  },
+                  {
+                    "x0": 95.0,
+                    "x1": 96.8,
+                    "v": 50
+                  },
+                  {
+                    "x0": 96.8,
+                    "x1": 98.60000000000001,
+                    "v": 51
+                  },
+                  {
+                    "x0": 98.60000000000001,
+                    "x1": 100.4,
+                    "v": 52
+                  },
+                  {
+                    "x0": 100.4,
+                    "x1": 102.2,
+                    "v": 53
+                  },
+                  {
+                    "x0": 102.2,
+                    "x1": 104.0,
+                    "v": 54
+                  },
+                  {
+                    "x0": 104.0,
+                    "x1": 105.8,
+                    "v": 55
+                  },
+                  {
+                    "x0": 105.8,
+                    "x1": 107.60000000000001,
+                    "v": 56
+                  },
+                  {
+                    "x0": 107.60000000000001,
+                    "x1": 109.4,
+                    "v": 57
+                  },
+                  {
+                    "x0": 109.4,
+                    "x1": 111.2,
+                    "v": 58
+                  },
+                  {
+                    "x0": 111.2,
+                    "x1": 113.0,
+                    "v": 59
+                  },
+                  {
+                    "x0": 113.0,
+                    "x1": 114.8,
+                    "v": 60
+                  },
+                  {
+                    "x0": 114.8,
+                    "x1": 116.60000000000001,
+                    "v": 61
+                  },
+                  {
+                    "x0": 116.60000000000001,
+                    "x1": 118.4,
+                    "v": 62
+                  },
+                  {
+                    "x0": 118.4,
+                    "x1": 120.2,
+                    "v": 63
+                  },
+                  {
+                    "x0": 120.2,
+                    "x1": 122.0,
+                    "v": 64
+                  },
+                  {
+                    "x0": 122.0,
+                    "x1": 123.8,
+                    "v": 65
+                  },
+                  {
+                    "x0": 123.8,
+                    "x1": 125.60000000000001,
+                    "v": 66
+                  },
+                  {
+                    "x0": 125.60000000000001,
+                    "x1": 127.4,
+                    "v": 67
+                  },
+                  {
+                    "x0": 127.4,
+                    "x1": 129.2,
+                    "v": 68
+                  },
+                  {
+                    "x0": 129.2,
+                    "x1": 131.0,
+                    "v": 69
+                  },
+                  {
+                    "x0": 131.0,
+                    "x1": 132.8,
+                    "v": 70
+                  },
+                  {
+                    "x0": 132.8,
+                    "x1": 134.6,
+                    "v": 71
+                  },
+                  {
+                    "x0": 134.6,
+                    "x1": 136.4,
+                    "v": 72
+                  },
+                  {
+                    "x0": 136.4,
+                    "x1": 138.20000000000002,
+                    "v": 73
+                  },
+                  {
+                    "x0": 138.20000000000002,
+                    "x1": 140.0,
+                    "v": 74
+                  },
+                  {
+                    "x0": 140.0,
+                    "x1": 141.8,
+                    "v": 75
+                  },
+                  {
+                    "x0": 141.8,
+                    "x1": 143.6,
+                    "v": 76
+                  },
+                  {
+                    "x0": 143.6,
+                    "x1": 145.4,
+                    "v": 77
+                  },
+                  {
+                    "x0": 145.4,
+                    "x1": 147.20000000000002,
+                    "v": 78
+                  },
+                  {
+                    "x0": 147.20000000000002,
+                    "x1": 149.0,
+                    "v": 79
+                  },
+                  {
+                    "x0": 149.0,
+                    "x1": 150.8,
+                    "v": 80
+                  },
+                  {
+                    "x0": 150.8,
+                    "x1": 152.6,
+                    "v": 81
+                  },
+                  {
+                    "x0": 152.6,
+                    "x1": 154.4,
+                    "v": 82
+                  },
+                  {
+                    "x0": 154.4,
+                    "x1": 156.20000000000002,
+                    "v": 83
+                  },
+                  {
+                    "x0": 156.20000000000002,
+                    "x1": 158.0,
+                    "v": 84
+                  },
+                  {
+                    "x0": 158.0,
+                    "x1": 159.8,
+                    "v": 85
+                  },
+                  {
+                    "x0": 159.8,
+                    "x1": 161.6,
+                    "v": 86
+                  },
+                  {
+                    "x0": 161.6,
+                    "x1": 163.4,
+                    "v": 87
+                  },
+                  {
+                    "x0": 163.4,
+                    "x1": 165.20000000000002,
+                    "v": 88
+                  },
+                  {
+                    "x0": 165.20000000000002,
+                    "x1": 167.0,
+                    "v": 89
+                  },
+                  {
+                    "x0": 167.0,
+                    "x1": 168.8,
+                    "v": 90
+                  },
+                  {
+                    "x0": 168.8,
+                    "x1": 170.6,
+                    "v": 91
+                  },
+                  {
+                    "x0": 170.6,
+                    "x1": 172.4,
+                    "v": 92
+                  },
+                  {
+                    "x0": 172.4,
+                    "x1": 174.20000000000002,
+                    "v": 93
+                  },
+                  {
+                    "x0": 174.20000000000002,
+                    "x1": 176.0,
+                    "v": 94
+                  },
+                  {
+                    "x0": 176.0,
+                    "x1": 177.8,
+                    "v": 95
+                  },
+                  {
+                    "x0": 177.8,
+                    "x1": 179.6,
+                    "v": 96
+                  },
+                  {
+                    "x0": 179.6,
+                    "x1": 181.4,
+                    "v": 97
+                  },
+                  {
+                    "x0": 181.4,
+                    "x1": 183.20000000000002,
+                    "v": 98
+                  },
+                  {
+                    "x0": 183.20000000000002,
+                    "x1": 185.0,
+                    "v": 99
+                  }
+                ]
+              },
+              "mark": {
+                "type": "rect",
+                "stroke": null
+              },
+              "encoding": {
+                "x": {
+                  "field": "x0",
+                  "type": "quantitative",
+                  "scale": {
+                    "domain": [
+                      0,
+                      210
+                    ]
+                  },
+                  "axis": null
+                },
+                "x2": {
+                  "field": "x1"
+                },
+                "y": {
+                  "value": 43
+                },
+                "y2": {
+                  "value": 57
+                },
+                "color": {
+                  "field": "v",
+                  "type": "quantitative",
+                  "scale": {
+                    "domain": [
+                      0,
+                      100
+                    ],
+                    "range": [
+                      "#f1e4cd",
+                      "#684229"
+                    ]
+                  },
+                  "legend": null
+                }
+              }
+            }
+          ]
         }
       ],
       "spacing": 12
@@ -1402,7 +1937,24 @@
       "stroke": null
     },
     "legend": {
-      "orient": "bottom"
+      "orient": "bottom",
+      "labelColor": "#30241e",
+      "titleColor": "#30241e",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "axis": {
+      "labelColor": "#766a60",
+      "titleColor": "#30241e",
+      "gridColor": "#ded4c7",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal"
+    },
+    "font": "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif",
+    "title": {
+      "fontSize": 14,
+      "color": "#30241e"
     }
   },
   "padding": {
@@ -1411,5 +1963,5 @@
     "top": 5,
     "bottom": 10
   },
-  "background": "transparent"
+  "background": "#f4efe6"
 }

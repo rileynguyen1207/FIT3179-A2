@@ -8,32 +8,28 @@
     <title>Australian Nuts</title>
 
     <!-- Display font (headlines only — body text stays sans-serif) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&display=swap" rel="stylesheet">
 
     <!-- Vega libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="js/vendor/vega.min.js">
+</script>
+    <script src="js/vendor/vega-lite.min.js">
+</script>
+    <script src="js/vendor/vega-embed.min.js">
+</script>
 
     <!-- Our CSS -->
     <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/layout-refinement.css">
 </head>
 
 <body>
 
     <!-- ===================== HERO ===================== -->
     <header class="hero">
-        <p class="hero-eyebrow">Australian nut industry | 2024&ndash;25</p>
+        <p class="hero-eyebrow">Australian nut industry | 2024–25</p>
         <h1>FROM AUSTRALIAN ORCHARDS TO THE WORLD</h1>
-        <p class="hero-subtitle">How geography shapes what Australia grows — and where its nuts go.</p>
-        <p class="hero-abstract">
-            Australia's nut industry is shaped by more than what grows in its orchards. Different
-            crops thrive in different regions, contribute very different amounts to the economy,
-            and reach different markets overseas. Follow seven Australian nuts from their growing
-            regions to their economic and export profiles.
-        </p>
+        <p class="hero-subtitle">Seven crops. Three kinds of concentration. One uneven industry.</p>
+        <p class="hero-abstract">A handful of states grow most of Australia's nuts. One crop produces most of their value. And a few overseas buyers dominate several export markets. Follow the evidence from orchard to export destination to see why a strong industry total can hide very different stories.</p>
 
         <div class="hero-stats">
             <div class="stat-tile">
@@ -53,16 +49,29 @@
             Production values are reported in Australian dollars. Figures refer to the 2024–25
             reporting period unless otherwise stated. <a href="#sources-section">Sources &amp; definitions ↓</a>
         </p>
-    </header>
+    <p class="author-line">By Phuong Minh Nguyen · Updated 23 October 2026</p>
+</header>
 
     <nav class="site-nav">
         <ul class="chapter-nav">
-            <li><a href="#section-01">01 Where it begins</a></li>
-            <li><a href="#section-02">02 What Australia grows</a></li>
-            <li><a href="#section-03">03 An industry in motion</a></li>
-            <li><a href="#section-04">04 Leaving Australia</a></li>
-            <li><a href="#section-05">05 Different nuts, different markets</a></li>
-            <li><a href="#section-06">06 One industry, many profiles</a></li>
+            <li>
+<a href="#section-01">Where it grows</a>
+</li>
+            <li>
+<a href="#section-02">Economic scale</a>
+</li>
+            <li>
+<a href="#section-03">Uneven growth</a>
+</li>
+            <li>
+<a href="#section-04">Export routes</a>
+</li>
+            <li>
+<a href="#section-05">Trade balance</a>
+</li>
+            <li>
+<a href="#section-06">The whole picture</a>
+</li>
         </ul>
     </nav>
 
@@ -70,46 +79,37 @@
 
     <!-- ===================== SECTION 01 ===================== -->
     <section class="story-section" id="section-01">
-        <div class="section-header">
-            <span class="section-number">01</span>
-            <h2 class="section-title">Where it begins</h2>
-        </div>
-        <p class="section-headline">Australia's nut industry begins in very different landscapes.</p>
-        <p class="section-lede">
-            From tropical Queensland to southern Australia's temperate growing regions, the
-            geography of nut production varies substantially by crop.
-        </p>
-
-        <div class="chart-block chart-block--full">
+<div class="section-header">
+<span class="section-number">01</span>
+<h2 class="section-title">Where production concentrates</h2>
+</div>
+<p class="section-headline">Where are the orchards — and where is the output?</p>
+<p class="section-lede">Locations and production shares answer different questions. Start with the growing regions, then compare how concentrated each crop is within Australia.</p>
+<div class="chart-block chart-block--full editorial-card editorial-card--1">
             <p class="chart-tag">Chart 01 / Growing regions</p>
-            <h3 class="chart-headline">Australia's nut-growing regions cluster along the south and east</h3>
-            <p class="chart-subtitle">
-                Almond, pistachio and walnut growing regions concentrate in the south, while
-                macadamia regions extend north along the warmer east coast.
-            </p>
-            <div class="chart-story-layout">
+            <h3 class="chart-headline">The east and south hold most of the reported growing regions</h3>
+            <p class="chart-subtitle">Macadamia extends furthest north. Several southern regions grow more than one nut type.</p>
+            <div class="chart-story-layout editorial-full">
                 <div class="chart-visual">
-                    <div id="chart1_growing_regions"></div>
+                    <div id="chart1_growing_regions">
+</div>
                 </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">The geography behind the crops</p>
-                    <ul class="insight-points">
-                        <li>Macadamia growing regions extend furthest north of any nut type, reaching into tropical Queensland, while every other crop stays within the cooler southern states.</li>
-                        <li>The dataset lists 10 representative chestnut growing regions across 5 states — more locations than any other nut — compared with a single listed region for pecan.</li>
-                        <li>Southern NSW and Victoria host the greatest overlap of growing regions, with most nut types represented across both states.</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">Explore the map</span>
-                        Click a nut type in the legend to highlight its representative growing regions.
-                    </p>
                 </div>
-            </div>
-            <p class="essential-note">
-                Points represent growing regions, not individual orchards. Some nearby points have
-                been slightly displaced to improve visibility.
-            </p>
-            <p class="chart-source">Sources: Nuts for Life; Australian Macadamias; ABS ASGS Edition 3.</p>
-            <details class="chart-methodology">
+            
+            <div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">Growing regions cluster in the east and south.</p>
+<p class="chart-notes-body">Several southern regions grow multiple crops. The next chart shows their shares of production.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Each equal-sized point locates a reported growing region. Click a nut in the legend to highlight it; hover to read the region and state.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Sources: <a href="https://www.nutsforlife.com.au/resource/where-are-nuts-grown/" target="_blank" rel="noopener">Nuts for Life, Where are nuts grown?</a>; Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a> (regional maps). Additional regional context: Australian Macadamias. Boundaries: ABS ASGS Edition 3. Representative coordinates added by the author. <a href="#sources-section">Source details</a></p>
+            <div class="chart-disclosures">
+<details class="chart-methodology">
                 <summary>Data &amp; methodology</summary>
                 <p class="chart-note">
                     Growing regions are based on published descriptions of Australian nut-growing
@@ -134,94 +134,295 @@
                 <summary>Read the exact values</summary>
                 <div class="data-table-wrap">
                 <table class="data-table" id="table-chart1">
-                <thead><tr><th>Nut</th><th>Region</th><th>State</th><th>Role</th></tr></thead>
+                <thead>
+<tr>
+<th>Nut</th>
+<th>Region</th>
+<th>State</th>
+<th>Role</th>
+</tr>
+</thead>
                 <tbody>
-                    <tr><td>Almond</td><td>Swan Region</td><td>WA</td><td>Primary</td></tr>
-                    <tr><td>Almond</td><td>Riverland</td><td>SA</td><td>Primary</td></tr>
-                    <tr><td>Almond</td><td>Adelaide</td><td>SA</td><td>Primary</td></tr>
-                    <tr><td>Almond</td><td>Sunraysia</td><td>VIC</td><td>Primary</td></tr>
-                    <tr><td>Almond</td><td>Riverina</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Macadamia</td><td>Atherton Tablelands</td><td>QLD</td><td>Primary</td></tr>
-                    <tr><td>Macadamia</td><td>Bundaberg</td><td>QLD</td><td>Primary</td></tr>
-                    <tr><td>Macadamia</td><td>Clarence Valley</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Macadamia</td><td>Northern Rivers</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Macadamia</td><td>Port Macquarie</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Macadamia</td><td>South of Perth</td><td>WA</td><td>Secondary</td></tr>
-                    <tr><td>Pecan</td><td>Gwydir Valley</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Pistachio</td><td>Waikerie</td><td>SA</td><td>Primary</td></tr>
-                    <tr><td>Pistachio</td><td>Murray River Valley</td><td>VIC</td><td>Primary</td></tr>
-                    <tr><td>Pistachio</td><td>Central West Victoria</td><td>VIC</td><td>Secondary</td></tr>
-                    <tr><td>Pistachio</td><td>Pinnaroo</td><td>SA</td><td>Secondary</td></tr>
-                    <tr><td>Pistachio</td><td>Riverina</td><td>NSW</td><td>Secondary</td></tr>
-                    <tr><td>Walnut</td><td>Riverina</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Walnut</td><td>Goulburn Valley</td><td>VIC</td><td>Primary</td></tr>
-                    <tr><td>Walnut</td><td>Murray Irrigation</td><td>VIC</td><td>Primary</td></tr>
-                    <tr><td>Walnut</td><td>East Coast Tasmania</td><td>TAS</td><td>Primary</td></tr>
-                    <tr><td>Walnut</td><td>South West Western Australia</td><td>WA</td><td>Secondary</td></tr>
-                    <tr><td>Hazelnut</td><td>Orange</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Hazelnut</td><td>Narrandera</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Hazelnut</td><td>Myrtleford</td><td>VIC</td><td>Primary</td></tr>
-                    <tr><td>Hazelnut</td><td>Central and Eastern Victoria</td><td>VIC</td><td>Primary</td></tr>
-                    <tr><td>Hazelnut</td><td>Adelaide Hills</td><td>SA</td><td>Secondary</td></tr>
-                    <tr><td>Hazelnut</td><td>Northern Tasmania</td><td>TAS</td><td>Primary</td></tr>
-                    <tr><td>Hazelnut</td><td>Manjimup</td><td>WA</td><td>Secondary</td></tr>
-                    <tr><td>Chestnut</td><td>Orange</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Chestnut</td><td>Blue Mountains</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Chestnut</td><td>Batlow</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Chestnut</td><td>Southern Tablelands</td><td>NSW</td><td>Primary</td></tr>
-                    <tr><td>Chestnut</td><td>North East Victoria</td><td>VIC</td><td>Primary</td></tr>
-                    <tr><td>Chestnut</td><td>Central Victoria</td><td>VIC</td><td>Primary</td></tr>
-                    <tr><td>Chestnut</td><td>East of Melbourne</td><td>VIC</td><td>Primary</td></tr>
-                    <tr><td>Chestnut</td><td>Adelaide Hills</td><td>SA</td><td>Primary</td></tr>
-                    <tr><td>Chestnut</td><td>Northern and Central Tasmania</td><td>TAS</td><td>Primary</td></tr>
-                    <tr><td>Chestnut</td><td>South West Western Australia</td><td>WA</td><td>Primary</td></tr>
+                    <tr>
+<td>Almond</td>
+<td>Swan Region</td>
+<td>WA</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Almond</td>
+<td>Riverland</td>
+<td>SA</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Almond</td>
+<td>Adelaide</td>
+<td>SA</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Almond</td>
+<td>Sunraysia</td>
+<td>VIC</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Almond</td>
+<td>Riverina</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Macadamia</td>
+<td>Atherton Tablelands</td>
+<td>QLD</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Macadamia</td>
+<td>Bundaberg</td>
+<td>QLD</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Macadamia</td>
+<td>Clarence Valley</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Macadamia</td>
+<td>Northern Rivers</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Macadamia</td>
+<td>Port Macquarie</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Macadamia</td>
+<td>South of Perth</td>
+<td>WA</td>
+<td>Secondary</td>
+</tr>
+                    <tr>
+<td>Pecan</td>
+<td>Gwydir Valley</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Pistachio</td>
+<td>Waikerie</td>
+<td>SA</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Pistachio</td>
+<td>Murray River Valley</td>
+<td>VIC</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Pistachio</td>
+<td>Central West Victoria</td>
+<td>VIC</td>
+<td>Secondary</td>
+</tr>
+                    <tr>
+<td>Pistachio</td>
+<td>Pinnaroo</td>
+<td>SA</td>
+<td>Secondary</td>
+</tr>
+                    <tr>
+<td>Pistachio</td>
+<td>Riverina</td>
+<td>NSW</td>
+<td>Secondary</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>Riverina</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>Goulburn Valley</td>
+<td>VIC</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>Murray Irrigation</td>
+<td>VIC</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>East Coast Tasmania</td>
+<td>TAS</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>South West Western Australia</td>
+<td>WA</td>
+<td>Secondary</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>Orange</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>Narrandera</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>Myrtleford</td>
+<td>VIC</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>Central and Eastern Victoria</td>
+<td>VIC</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>Adelaide Hills</td>
+<td>SA</td>
+<td>Secondary</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>Northern Tasmania</td>
+<td>TAS</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>Manjimup</td>
+<td>WA</td>
+<td>Secondary</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>Orange</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>Blue Mountains</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>Batlow</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>Southern Tablelands</td>
+<td>NSW</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>North East Victoria</td>
+<td>VIC</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>Central Victoria</td>
+<td>VIC</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>East of Melbourne</td>
+<td>VIC</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>Adelaide Hills</td>
+<td>SA</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>Northern and Central Tasmania</td>
+<td>TAS</td>
+<td>Primary</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>South West Western Australia</td>
+<td>WA</td>
+<td>Primary</td>
+</tr>
                     </tbody>
                 </table>
                 </div>
             </details>
-            <script>
-                vegaEmbed(
-                    "#chart1_growing_regions",
-                    "js/chart1_growing_regions.vg.json?t=" + Date.now(),
-                    { actions: false }
-                )
-                    .then(function (result) {
-                        console.log("Chart 1 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-
-        <div class="chart-block chart-block--full">
-            <p class="chart-tag">Chart 02 / State share choropleth</p>
-            <h3 class="chart-headline">Most Australian nut crops are concentrated in a few states</h3>
-            <p class="chart-subtitle">
-                Pecan, macadamia and chestnut show particularly strong single-state concentration,
-                while almond and pistachio production is distributed more broadly.
-            </p>
-            <div class="chart-story-layout">
-                <div class="chart-visual">
-                    <div id="chart2_state_production"></div>
-                </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">Where production is concentrated</p>
-                    <ul class="insight-points">
-                        <li>New South Wales leads production of three nut types, Victoria leads three, and Queensland leads macadamia.</li>
-                        <li>Pecan has the highest reported single-state share: 84% of national production comes from New South Wales.</li>
-                        <li>Macadamia is concentrated in Queensland (79%), while Victoria accounts for approximately 70% of chestnut production.</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">Explore the maps</span>
-                        Use the dropdown below the maps to highlight one state across all seven panels.
-                    </p>
-                </div>
             </div>
-            <p class="essential-note">
-                Colour shows each state's reported share of national production. Grey means no
-                production was reported for that nut in the source, not necessarily zero production.
-            </p>
-            <p class="chart-source">Source: Hort Innovation Australian Horticulture Statistics Handbook 2024–25; ABS ASGS Edition 3.</p>
-            <details class="chart-methodology">
+</div>
+<div class="chart-block chart-block--full editorial-card editorial-card--2">
+        
+            <p class="chart-tag">Chart 02 / State share choropleth</p>
+        
+            <h3 class="chart-headline">Pecan, macadamia and chestnut each rely heavily on one state</h3>
+        
+            <p class="chart-subtitle">NSW supplies 84% of pecan, Queensland 79% of macadamia and Victoria 70.5% of chestnut.</p>
+        
+            <!-- CHART -->
+        
+            <div class="chart-story-layout chart-story-layout--single editorial-full">
+        
+                <div class="chart-visual">
+        
+                    <div class="editorial-chart-scroll" tabindex="0" role="region" aria-label="Chart; scroll horizontally on small screens">
+<div id="chart2-controls" class="chart-controls">
+</div>
+<div id="chart2_state_production">
+</div>
+        
+                </div>
+</div>
+        
+            </div>
+        
+            
+            <div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">Several crops rely heavily on one state.</p>
+<p class="chart-notes-body">NSW supplies 84% of pecan production, Queensland 79% of macadamia, and Victoria 70.5% of chestnut.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Colour shows each state's reported share of national production. Grey means no production was reported for that nut in the source, not necessarily zero production.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Source: Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a>. Boundaries: ABS ASGS Edition 3. <a href="#sources-section">Source details</a></p>
+            <div class="chart-disclosures">
+<details class="chart-methodology">
                 <summary>Data &amp; methodology</summary>
                 <p class="chart-note">
                     The seven maps use the same 0–100% colour scale to support comparison across nut
@@ -246,196 +447,259 @@
                 <summary>Read the exact values</summary>
                 <div class="data-table-wrap">
                 <table class="data-table" id="table-chart2">
-                <thead><tr><th>Nut</th><th>State</th><th>Share of national production</th><th>Tonnes</th><th>Basis</th></tr></thead>
+                <thead>
+<tr>
+<th>Nut</th>
+<th>State</th>
+<th>Share of national production</th>
+<th>Tonnes</th>
+<th>Basis</th>
+</tr>
+</thead>
                 <tbody>
-                    <tr><td>Almond</td><td>Victoria</td><td>44.9%</td><td>69,833 t</td><td>KWE</td></tr>
-                    <tr><td>Almond</td><td>South Australia</td><td>30.0%</td><td>46,659 t</td><td>KWE</td></tr>
-                    <tr><td>Almond</td><td>New South Wales</td><td>24.6%</td><td>38,261 t</td><td>KWE</td></tr>
-                    <tr><td>Almond</td><td>Western Australia</td><td>0.5%</td><td>778 t</td><td>KWE</td></tr>
-                    <tr><td>Macadamia</td><td>Queensland</td><td>79.0%</td><td>34,602 t</td><td>In-Shell</td></tr>
-                    <tr><td>Macadamia</td><td>New South Wales</td><td>21.0%</td><td>9,198 t</td><td>In-Shell</td></tr>
-                    <tr><td>Pecan</td><td>New South Wales</td><td>84.0%</td><td>1,587 t</td><td>KWE</td></tr>
-                    <tr><td>Pecan</td><td>Queensland</td><td>12.0%</td><td>227 t</td><td>KWE</td></tr>
-                    <tr><td>Pecan</td><td>Western Australia</td><td>3.0%</td><td>57 t</td><td>KWE</td></tr>
-                    <tr><td>Pecan</td><td>South Australia</td><td>1.0%</td><td>19 t</td><td>KWE</td></tr>
-                    <tr><td>Pistachio</td><td>New South Wales</td><td>41.8%</td><td>1,253 t</td><td>In-Shell</td></tr>
-                    <tr><td>Pistachio</td><td>Victoria</td><td>36.8%</td><td>1,103 t</td><td>In-Shell</td></tr>
-                    <tr><td>Pistachio</td><td>South Australia</td><td>20.5%</td><td>615 t</td><td>In-Shell</td></tr>
-                    <tr><td>Pistachio</td><td>Western Australia</td><td>1.0%</td><td>30 t</td><td>In-Shell</td></tr>
-                    <tr><td>Walnut</td><td>New South Wales</td><td>65.0%</td><td>6,500 t</td><td>In-Shell</td></tr>
-                    <tr><td>Walnut</td><td>Tasmania</td><td>22.0%</td><td>2,200 t</td><td>In-Shell</td></tr>
-                    <tr><td>Walnut</td><td>Victoria</td><td>9.0%</td><td>900 t</td><td>In-Shell</td></tr>
-                    <tr><td>Walnut</td><td>Western Australia</td><td>3.0%</td><td>300 t</td><td>In-Shell</td></tr>
-                    <tr><td>Walnut</td><td>South Australia</td><td>1.0%</td><td>100 t</td><td>In-Shell</td></tr>
-                    <tr><td>Hazelnut</td><td>Victoria</td><td>50.0%</td><td>309 t</td><td>KWE</td></tr>
-                    <tr><td>Hazelnut</td><td>New South Wales</td><td>34.0%</td><td>210 t</td><td>KWE</td></tr>
-                    <tr><td>Hazelnut</td><td>Tasmania</td><td>12.0%</td><td>74 t</td><td>KWE</td></tr>
-                    <tr><td>Hazelnut</td><td>South Australia</td><td>2.0%</td><td>12 t</td><td>KWE</td></tr>
-                    <tr><td>Hazelnut</td><td>Western Australia</td><td>2.0%</td><td>12 t</td><td>KWE</td></tr>
-                    <tr><td>Chestnut</td><td>Victoria</td><td>70.5%</td><td>671 t</td><td>KWE</td></tr>
-                    <tr><td>Chestnut</td><td>New South Wales</td><td>15.5%</td><td>148 t</td><td>KWE</td></tr>
-                    <tr><td>Chestnut</td><td>South Australia</td><td>5.0%</td><td>48 t</td><td>KWE</td></tr>
-                    <tr><td>Chestnut</td><td>Tasmania</td><td>5.0%</td><td>48 t</td><td>KWE</td></tr>
-                    <tr><td>Chestnut</td><td>Western Australia</td><td>4.0%</td><td>38 t</td><td>KWE</td></tr>
+                    <tr>
+<td>Almond</td>
+<td>Victoria</td>
+<td>44.9%</td>
+<td>69,833 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Almond</td>
+<td>South Australia</td>
+<td>30.0%</td>
+<td>46,659 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Almond</td>
+<td>New South Wales</td>
+<td>24.6%</td>
+<td>38,261 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Almond</td>
+<td>Western Australia</td>
+<td>0.5%</td>
+<td>778 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Macadamia</td>
+<td>Queensland</td>
+<td>79.0%</td>
+<td>34,602 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Macadamia</td>
+<td>New South Wales</td>
+<td>21.0%</td>
+<td>9,198 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Pecan</td>
+<td>New South Wales</td>
+<td>84.0%</td>
+<td>1,587 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Pecan</td>
+<td>Queensland</td>
+<td>12.0%</td>
+<td>227 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Pecan</td>
+<td>Western Australia</td>
+<td>3.0%</td>
+<td>57 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Pecan</td>
+<td>South Australia</td>
+<td>1.0%</td>
+<td>19 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Pistachio</td>
+<td>New South Wales</td>
+<td>41.8%</td>
+<td>1,253 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Pistachio</td>
+<td>Victoria</td>
+<td>36.8%</td>
+<td>1,103 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Pistachio</td>
+<td>South Australia</td>
+<td>20.5%</td>
+<td>615 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Pistachio</td>
+<td>Western Australia</td>
+<td>1.0%</td>
+<td>30 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>New South Wales</td>
+<td>65.0%</td>
+<td>6,500 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>Tasmania</td>
+<td>22.0%</td>
+<td>2,200 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>Victoria</td>
+<td>9.0%</td>
+<td>900 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>Western Australia</td>
+<td>3.0%</td>
+<td>300 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>South Australia</td>
+<td>1.0%</td>
+<td>100 t</td>
+<td>In-Shell</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>Victoria</td>
+<td>50.0%</td>
+<td>309 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>New South Wales</td>
+<td>34.0%</td>
+<td>210 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>Tasmania</td>
+<td>12.0%</td>
+<td>74 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>South Australia</td>
+<td>2.0%</td>
+<td>12 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>Western Australia</td>
+<td>2.0%</td>
+<td>12 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>Victoria</td>
+<td>70.5%</td>
+<td>671 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>New South Wales</td>
+<td>15.5%</td>
+<td>148 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>South Australia</td>
+<td>5.0%</td>
+<td>48 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>Tasmania</td>
+<td>5.0%</td>
+<td>48 t</td>
+<td>KWE</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>Western Australia</td>
+<td>4.0%</td>
+<td>38 t</td>
+<td>KWE</td>
+</tr>
                     </tbody>
                 </table>
                 </div>
             </details>
-            <script>
-                vegaEmbed(
-                    "#chart2_state_production",
-                    "js/chart2_state_production.vg.json?t=" + Date.now(),
-                    { actions: false }
-                )
-                    .then(function (result) {
-                        console.log("Chart 2 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-
-        <div class="scroll-arrow">↓</div>
-
-        <div class="chart-block chart-block--full">
-            <p class="chart-tag">Chart 03 / State × nut heatmap</p>
-            <h3 class="chart-headline">NSW and Victoria each lead production of three of the seven nuts</h3>
-            <p class="chart-subtitle">
-                Macadamia has reported production in only two states, while almond, pistachio and
-                hazelnut are distributed more broadly across several states.
-            </p>
-            <div class="chart-story-layout">
-                <div class="chart-visual">
-                    <div id="chart3_state_heatmap"></div>
-                </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">A state-by-state split</p>
-                    <ul class="insight-points">
-                        <li>New South Wales leads pecan (84%), walnut (65%) and pistachio (approximately 42%).</li>
-                        <li>Victoria leads chestnut (approximately 71%), hazelnut (50%) and almond (approximately 45%).</li>
-                        <li>Queensland leads macadamia production, accounting for 79% of the national total.</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">Explore the heatmap</span>
-                        Hover over a cell to see its reported production share and tonnage.
-                    </p>
-                </div>
             </div>
-            <p class="essential-note">
-                Each cell shows a state's reported share of national production. Grey cells indicate
-                no production reported in the source, not 0%.
-            </p>
-            <p class="chart-source">Source: Hort Innovation Australian Horticulture Statistics Handbook 2024–25.</p>
-            <details class="chart-methodology">
-                <summary>Data &amp; methodology</summary>
-                <p class="chart-note">
-                    The heatmap displays reported state shares for seven nut types across six
-                    Australian states, using a common 0–100% colour scale.
-                </p>
-                <p class="chart-note">
-                    Missing state–nut combinations are shown in neutral grey rather than assigned a
-                    value of zero. Shares are compared within each nut type, not as absolute
-                    production volumes across different nuts.
-                </p>
-                <p class="chart-note">
-                    Published values are retained as reported, including minor rounding differences
-                    and the pecan state-total discrepancy described under Chart 2.
-                </p>
-            </details>
-            <details class="chart-datatable">
-                <summary>Read the exact values</summary>
-                <div class="data-table-wrap">
-                <table class="data-table" id="table-chart3">
-                <thead><tr><th>Nut</th><th>State</th><th>Share of national production</th><th>Tonnes</th><th>Basis</th></tr></thead>
-                <tbody>
-                    <tr><td>Almond</td><td>Victoria</td><td>44.9%</td><td>69,833 t</td><td>KWE</td></tr>
-                    <tr><td>Almond</td><td>South Australia</td><td>30.0%</td><td>46,659 t</td><td>KWE</td></tr>
-                    <tr><td>Almond</td><td>New South Wales</td><td>24.6%</td><td>38,261 t</td><td>KWE</td></tr>
-                    <tr><td>Almond</td><td>Western Australia</td><td>0.5%</td><td>778 t</td><td>KWE</td></tr>
-                    <tr><td>Macadamia</td><td>Queensland</td><td>79.0%</td><td>34,602 t</td><td>In-Shell</td></tr>
-                    <tr><td>Macadamia</td><td>New South Wales</td><td>21.0%</td><td>9,198 t</td><td>In-Shell</td></tr>
-                    <tr><td>Pecan</td><td>New South Wales</td><td>84.0%</td><td>1,587 t</td><td>KWE</td></tr>
-                    <tr><td>Pecan</td><td>Queensland</td><td>12.0%</td><td>227 t</td><td>KWE</td></tr>
-                    <tr><td>Pecan</td><td>Western Australia</td><td>3.0%</td><td>57 t</td><td>KWE</td></tr>
-                    <tr><td>Pecan</td><td>South Australia</td><td>1.0%</td><td>19 t</td><td>KWE</td></tr>
-                    <tr><td>Pistachio</td><td>New South Wales</td><td>41.8%</td><td>1,253 t</td><td>In-Shell</td></tr>
-                    <tr><td>Pistachio</td><td>Victoria</td><td>36.8%</td><td>1,103 t</td><td>In-Shell</td></tr>
-                    <tr><td>Pistachio</td><td>South Australia</td><td>20.5%</td><td>615 t</td><td>In-Shell</td></tr>
-                    <tr><td>Pistachio</td><td>Western Australia</td><td>1.0%</td><td>30 t</td><td>In-Shell</td></tr>
-                    <tr><td>Walnut</td><td>New South Wales</td><td>65.0%</td><td>6,500 t</td><td>In-Shell</td></tr>
-                    <tr><td>Walnut</td><td>Tasmania</td><td>22.0%</td><td>2,200 t</td><td>In-Shell</td></tr>
-                    <tr><td>Walnut</td><td>Victoria</td><td>9.0%</td><td>900 t</td><td>In-Shell</td></tr>
-                    <tr><td>Walnut</td><td>Western Australia</td><td>3.0%</td><td>300 t</td><td>In-Shell</td></tr>
-                    <tr><td>Walnut</td><td>South Australia</td><td>1.0%</td><td>100 t</td><td>In-Shell</td></tr>
-                    <tr><td>Hazelnut</td><td>Victoria</td><td>50.0%</td><td>309 t</td><td>KWE</td></tr>
-                    <tr><td>Hazelnut</td><td>New South Wales</td><td>34.0%</td><td>210 t</td><td>KWE</td></tr>
-                    <tr><td>Hazelnut</td><td>Tasmania</td><td>12.0%</td><td>74 t</td><td>KWE</td></tr>
-                    <tr><td>Hazelnut</td><td>South Australia</td><td>2.0%</td><td>12 t</td><td>KWE</td></tr>
-                    <tr><td>Hazelnut</td><td>Western Australia</td><td>2.0%</td><td>12 t</td><td>KWE</td></tr>
-                    <tr><td>Chestnut</td><td>Victoria</td><td>70.5%</td><td>671 t</td><td>KWE</td></tr>
-                    <tr><td>Chestnut</td><td>New South Wales</td><td>15.5%</td><td>148 t</td><td>KWE</td></tr>
-                    <tr><td>Chestnut</td><td>South Australia</td><td>5.0%</td><td>48 t</td><td>KWE</td></tr>
-                    <tr><td>Chestnut</td><td>Tasmania</td><td>5.0%</td><td>48 t</td><td>KWE</td></tr>
-                    <tr><td>Chestnut</td><td>Western Australia</td><td>4.0%</td><td>38 t</td><td>KWE</td></tr>
-                    </tbody>
-                </table>
-                </div>
-            </details>
-            <script>
-                vegaEmbed(
-                    "#chart3_state_heatmap",
-                    "js/chart3_state_heatmap.vg.json?t=" + Date.now(),
-                    { actions: false }
-                )
-                    .then(function (result) {
-                        console.log("Chart 3 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-    </section>
-
-    <!-- ===================== SECTION 02 ===================== -->
-    <section class="story-section" id="section-02">
-        <div class="section-header">
-            <span class="section-number">02</span>
-            <h2 class="section-title">What Australia grows</h2>
-        </div>
-        <p class="section-headline">Seven crops. One overwhelmingly dominant industry leader.</p>
-        <p class="section-lede">
-            Australian nut crops differ dramatically in economic scale, with almond production
-            accounting for most of the industry's reported value.
-        </p>
-
-        <div class="chart-block chart-block--full">
-            <p class="chart-tag">Chart 04 / Production value</p>
-            <h3 class="chart-headline">Almond dominates the value of Australia's nut industry</h3>
-            <p class="chart-subtitle">
-                At $1,327.9 million in 2025, almond production was worth more than seven times
-                macadamia and accounted for about 80% of the industry's reported value.
-            </p>
-            <div class="chart-story-layout">
+</div>
+<p class="story-bridge">Geographic spread is only one part of the story. How much economic value does each crop contribute?</p>
+</section>
+<section class="story-section" id="section-02">
+<div class="section-header">
+<span class="section-number">02</span>
+<h2 class="section-title">Where the value concentrates</h2>
+</div>
+<p class="section-headline">Seven crops share the landscape. Almond dominates the value.</p>
+<p class="section-lede">Compare the crops in dollars to put their economic scale on a common basis. Tonnes alone would mix kernel weights with nuts weighed in their shells.</p>
+<div class="chart-block chart-block--full editorial-card editorial-card--4">
+            <p class="chart-tag">Chart 03 / Production value · lollipop</p>
+            <h3 class="chart-headline">Almond contributes about 80 cents of every industry dollar</h3>
+            <p class="chart-subtitle">Its $1,327.9m production value is more than seven times macadamia, the second-largest crop.</p>
+            <div class="chart-story-layout editorial-full">
                 <div class="chart-visual">
-                    <div id="chart4_production_value"></div>
+                    <div id="chart4_production_value">
+</div>
                 </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">A one-crop industry, by value</p>
-                    <ul class="insight-points">
-                        <li>Almond production alone was worth more than the other six displayed nut types combined.</li>
-                        <li>Macadamia ranked second at $181.8 million, more than five times the value of pecan or walnut.</li>
-                        <li>Pecan, walnut and pistachio were close together, each worth approximately $33–36 million.</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">Explore the chart</span>
-                        Hover over a point to see its exact production value.
-                    </p>
                 </div>
-            </div>
-            <p class="essential-note">
-                Production value is used for cross-nut comparison because production volumes are
-                reported on different measurement bases.
-            </p>
-            <p class="chart-source">Source: Hort Innovation Australian Horticulture Statistics Handbook 2024–25.</p>
-            <details class="chart-methodology">
+            
+            <div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">The other six crops together contribute $302.1m.</p>
+<p class="chart-notes-body">Geographic variety does not translate into equal economic weight.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Production value is used for cross-nut comparison because production volumes are reported on different measurement bases.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Source: Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a>. <a href="#sources-section">Source details</a></p>
+            <div class="chart-disclosures">
+<details class="chart-methodology">
                 <summary>Data &amp; methodology</summary>
                 <p class="chart-note">
                     Values represent reported production value for the 2024–25 reporting period.
@@ -454,76 +718,89 @@
                 <summary>Read the exact values</summary>
                 <div class="data-table-wrap">
                 <table class="data-table" id="table-chart4">
-                <thead><tr><th>Nut</th><th>Production value (2025)</th></tr></thead>
+                <thead>
+<tr>
+<th>Nut</th>
+<th>Production value (2025)</th>
+</tr>
+</thead>
                 <tbody>
-                    <tr><td>Almond</td><td>$1,327.9m</td></tr>
-                    <tr><td>Macadamia</td><td>$181.8m</td></tr>
-                    <tr><td>Walnut</td><td>$35.5m</td></tr>
-                    <tr><td>Pistachio</td><td>$33.5m</td></tr>
-                    <tr><td>Pecan</td><td>$35.7m</td></tr>
-                    <tr><td>Hazelnut</td><td>$8.4m</td></tr>
-                    <tr><td>Chestnut</td><td>$7.2m</td></tr>
-                    <tr><td><strong>Sum of the 7 nuts</strong></td><td><strong>$1,630.0m</strong></td></tr>
-                    </tbody>
+<tr>
+<td>Almond</td>
+<td>$1,327.9m</td>
+</tr>
+<tr>
+<td>Macadamia</td>
+<td>$181.8m</td>
+</tr>
+<tr>
+<td>Pecan</td>
+<td>$35.7m</td>
+</tr>
+<tr>
+<td>Walnut</td>
+<td>$35.5m</td>
+</tr>
+<tr>
+<td>Pistachio</td>
+<td>$33.5m</td>
+</tr>
+<tr>
+<td>Hazelnut</td>
+<td>$8.4m</td>
+</tr>
+<tr>
+<td>Chestnut</td>
+<td>$7.2m</td>
+</tr>
+<tr>
+<td>
+<strong>Sum of the 7 nuts</strong>
+</td>
+<td>
+<strong>$1,630.0m</strong>
+</td>
+</tr>
+</tbody>
                 </table>
                 </div>
             </details>
-            <script>
-                vegaEmbed(
-                    "#chart4_production_value",
-                    "js/chart4_production_value.vg.json?t=" + Date.now(),
-                    { actions: false }
-                )
-                    .then(function (result) {
-                        console.log("Chart 4 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-    </section>
-
-    <!-- ===================== SECTION 03 ===================== -->
-    <section class="story-section" id="section-03">
-        <div class="section-header">
-            <span class="section-number">03</span>
-            <h2 class="section-title">An industry in motion</h2>
-        </div>
-        <p class="section-headline">The industry grew. Not every nut moved with it.</p>
-        <p class="section-lede">
-            Australia's nut production value reached a five-year high in 2025, but changes across
-            individual crops were far from equal.
-        </p>
-
-        <div class="chart-block chart-block--full">
-            <p class="chart-tag">Chart 05 / Five-year trend</p>
-            <h3 class="chart-headline">Industry production value dipped sharply in 2023, then rebounded to a five-year high in 2025</h3>
-            <p class="chart-subtitle">
-                Industry-wide production value fell by about 40% from 2022 to 2023 before
-                rebounding to $1,655.7 million in 2025 — about 39% above its 2021 level.
-            </p>
-            <div class="chart-story-layout">
-                <div class="chart-visual">
-                    <div id="chart5_industry_trend"></div>
-                </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">A sharp dip, then recovery</p>
-                    <ul class="insight-points">
-                        <li>The industry's reported production value fell from $1,229.8 million in 2022 to $742.6 million in 2023.</li>
-                        <li>Production value then nearly doubled between 2023 and 2024.</li>
-                        <li>By 2025, the industry reached its highest reported production value within the five-year period.</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">Explore the trend</span>
-                        Hover over a year to see the exact reported value.
-                    </p>
-                </div>
             </div>
-            <p class="essential-note">
-                Values represent the published "All Nuts" industry total, not the sum of the seven
-                categories shown in Chart 04.
-            </p>
-            <p class="chart-source">Source: Hort Innovation Australian Horticulture Statistics Handbook 2024–25.</p>
-            <details class="chart-methodology">
+</div>
+<p class="story-bridge">With almond contributing about four-fifths of industry value, its changes can strongly influence the headline total.</p>
+</section>
+<section class="story-section" id="section-03">
+<div class="section-header">
+<span class="section-number">03</span>
+<h2 class="section-title">Growth hides different outcomes</h2>
+</div>
+<p class="section-headline">A five-year high, with uneven growth across crops.</p>
+<p class="section-lede">Move from the industry total to annual crop changes, changing ranks and the contributions behind the latest increase.</p>
+<div class="chart-block chart-block--full editorial-card editorial-card--5">
+            <p class="chart-tag">Chart 04 / Five-year trend</p>
+            <h3 class="chart-headline">The 2023 downturn became a five-year high by 2025</h3>
+            <p class="chart-subtitle">Reported industry value fell 39.6% in 2023, then recovered to $1,655.7m in 2025.</p>
+            <div class="chart-story-layout editorial-full">
+                <div class="chart-visual">
+                    <div id="chart5_industry_trend">
+</div>
+                </div>
+                </div>
+            
+            <div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">Industry value more than doubled from its 2023 low.</p>
+<p class="chart-notes-body">Industry value rose from $742.6m in 2023 to $1,655.7m in 2025—2.23 times its low. The heatmap below shows which crops shared in the recovery.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Values represent the published "All Nuts" industry total, not the sum of the seven categories shown in Chart 03. Dollar changes alone do not distinguish changing prices, volumes and crop mix.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Source: Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a>. <a href="#sources-section">Source details</a></p>
+            <div class="chart-disclosures">
+<details class="chart-methodology">
                 <summary>Data &amp; methodology</summary>
                 <p class="chart-note">
                     The chart uses the published All Nuts production-value series for 2021–2025.
@@ -540,61 +817,163 @@
                 <summary>Read the exact values</summary>
                 <div class="data-table-wrap">
                 <table class="data-table" id="table-chart5">
-                <thead><tr><th>Year</th><th>All Nuts production value</th></tr></thead>
+                <thead>
+<tr>
+<th>Year</th>
+<th>All Nuts production value</th>
+</tr>
+</thead>
                 <tbody>
-                    <tr><td>2021</td><td>$1,195.0m</td></tr>
-                    <tr><td>2022</td><td>$1,229.8m</td></tr>
-                    <tr><td>2023</td><td>$742.6m</td></tr>
-                    <tr><td>2024</td><td>$1,468.2m</td></tr>
-                    <tr><td>2025</td><td>$1,655.7m</td></tr>
+                    <tr>
+<td>2021</td>
+<td>$1,195.0m</td>
+</tr>
+                    <tr>
+<td>2022</td>
+<td>$1,229.8m</td>
+</tr>
+                    <tr>
+<td>2023</td>
+<td>$742.6m</td>
+</tr>
+                    <tr>
+<td>2024</td>
+<td>$1,468.2m</td>
+</tr>
+                    <tr>
+<td>2025</td>
+<td>$1,655.7m</td>
+</tr>
                     </tbody>
                 </table>
                 </div>
             </details>
-            <script>
-                vegaEmbed(
-                    "#chart5_industry_trend",
-                    "js/chart5_industry_trend.vg.json?t=" + Date.now(),
-                    { actions: false }
-                )
-                    .then(function (result) {
-                        console.log("Chart 5 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-
-        <div class="chart-block chart-block--full">
-            <p class="chart-tag">Chart 06 / Changing ranks</p>
-            <h3 class="chart-headline">Almond and macadamia held the top two positions, while the middle ranks kept changing</h3>
-            <p class="chart-subtitle">
-                Almond remained first and macadamia second throughout 2021–2025, while pecan and
-                pistachio repeatedly moved between third and fifth place.
-            </p>
-            <div class="chart-story-layout">
-                <div class="chart-visual">
-                    <div id="chart6_bump_chart"></div>
-                </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">The race below the top two</p>
-                    <ul class="insight-points">
-                        <li>Almond remained the highest-value nut crop throughout the five-year period.</li>
-                        <li>Macadamia consistently held second place, while the competition below it was less stable.</li>
-                        <li>Pecan rose to third place in 2025, while pistachio finished fifth.</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">Explore the rankings</span>
-                        Hover over a line or point to see the year, nut type, rank and production value.
-                    </p>
-                </div>
             </div>
-            <p class="essential-note">
-                Rank 1 represents the highest production value among the seven individual nut
-                types. The All Nuts industry total is excluded. Ranking shows relative position,
-                not the size of the monetary gap.
-            </p>
-            <p class="chart-source">Source: Hort Innovation Australian Horticulture Statistics Handbook 2024–25.</p>
-            <details class="chart-methodology">
+</div>
+<div class="chart-block chart-block--full editorial-card editorial-card--3">
+<p class="chart-tag">Chart 05 / Annual growth heatmap</p>
+<h3 class="chart-headline">The 2024 rebound was not shared by every crop</h3>
+<p class="chart-subtitle">Annual change in production value, 2022–2025. Outlines mark the three crops that declined during the 2024 industry rebound.</p>
+<div class="chart-story-layout editorial-full">
+<div class="chart-visual">
+<div class="editorial-chart-scroll">
+<div id="chart3_state_heatmap">
+</div>
+</div>
+</div>
+</div>
+<div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">A stronger industry total can hide falling crops.</p>
+<p class="chart-notes-body">In 2024, almond, macadamia, walnut and pistachio recovered, while pecan, hazelnut and chestnut fell.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Each cell compares a crop with its own previous year. Orange means decline; teal means growth. The colour scale is symmetric around zero and saturates at −100% and +100%. Labels retain exact changes, including pistachio’s +213.8%.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Source: Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a>. <a href="#sources-section">Source details</a></p>
+<div class="chart-disclosures">
+<details class="chart-methodology">
+<summary>Data &amp; methodology</summary>
+<p class="chart-note">Annual change = 100 × (current production value / previous production value − 1). The 2021 figures provide the baseline for 2022. All 28 cells are computed from reported values; no missing value is filled with zero.</p>
+<p class="chart-note">Percentages are calculated from the supplied rounded A$m figures, so they may differ slightly from separately published rounded growth percentages. Strong growth can follow a low previous-year base.</p>
+</details>
+<details class="chart-datatable">
+<summary>Read the exact values</summary>
+<div class="data-table-wrap">
+<table class="data-table">
+<thead>
+<tr>
+<th>Nut</th>
+<th>2022</th>
+<th>2023</th>
+<th>2024</th>
+<th>2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Almond</td>
+<td>+13.9%</td>
+<td>−38.4%</td>
+<td>+108.2%</td>
+<td>+19.6%</td>
+</tr>
+<tr>
+<td>Macadamia</td>
+<td>−32.1%</td>
+<td>−48.8%</td>
+<td>+94.1%</td>
+<td>−10.0%</td>
+</tr>
+<tr>
+<td>Walnut</td>
+<td>+18.8%</td>
+<td>−58.9%</td>
+<td>+101.5%</td>
+<td>−13.2%</td>
+</tr>
+<tr>
+<td>Pistachio</td>
+<td>+56.3%</td>
+<td>−57.6%</td>
+<td>+213.8%</td>
+<td>−32.9%</td>
+</tr>
+<tr>
+<td>Pecan</td>
+<td>+18.3%</td>
+<td>−12.6%</td>
+<td>−7.2%</td>
+<td>+54.5%</td>
+</tr>
+<tr>
+<td>Hazelnut</td>
+<td>+18.2%</td>
+<td>+23.1%</td>
+<td>−14.1%</td>
+<td>+52.7%</td>
+</tr>
+<tr>
+<td>Chestnut</td>
+<td>+8.6%</td>
+<td>−5.0%</td>
+<td>−14.6%</td>
+<td>−12.2%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div>
+</div>
+<div class="chart-block chart-block--full editorial-card editorial-card--6">
+            <p class="chart-tag">Chart 06 / Changing ranks</p>
+            <h3 class="chart-headline">The top two stayed fixed. Pecan moved ahead of walnut in 2025.</h3>
+            <p class="chart-subtitle">Almond and macadamia held first and second throughout 2021–2025. Pecan finished third in 2025, only $0.2m ahead of walnut.</p>
+            <div class="chart-story-layout editorial-full">
+                <div class="chart-visual">
+                    <div id="chart6_bump_chart">
+</div>
+                </div>
+                </div>
+            
+            <div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">Ranks show order, not the size of the gap.</p>
+<p class="chart-notes-body">Pecan passed walnut in 2025 by just $0.2m. The waterfall next shows which crops changed the total most.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Rank 1 represents the highest production value among the seven individual nut types. The All Nuts industry total is excluded. Ranking shows relative position, not the size of the monetary gap.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Source: Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a>. <a href="#sources-section">Source details</a></p>
+            <div class="chart-disclosures">
+<details class="chart-methodology">
                 <summary>Data &amp; methodology</summary>
                 <p class="chart-note">
                     The seven nut types are ranked separately for each year from 2021 to 2025
@@ -613,144 +992,210 @@
                 <summary>Read the exact values</summary>
                 <div class="data-table-wrap">
                 <table class="data-table" id="table-chart6">
-                <thead><tr><th>Nut</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+                <thead>
+<tr>
+<th>Nut</th>
+<th>2021</th>
+<th>2022</th>
+<th>2023</th>
+<th>2024</th>
+<th>2025</th>
+</tr>
+</thead>
                 <tbody>
-                    <tr><td>Almond</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
-                    <tr><td>Macadamia</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
-                    <tr><td>Pecan</td><td>4</td><td>5</td><td>3</td><td>5</td><td>3</td></tr>
-                    <tr><td>Pistachio</td><td>5</td><td>4</td><td>5</td><td>3</td><td>5</td></tr>
-                    <tr><td>Walnut</td><td>3</td><td>3</td><td>4</td><td>4</td><td>4</td></tr>
-                    <tr><td>Hazelnut</td><td>7</td><td>7</td><td>7</td><td>7</td><td>6</td></tr>
-                    <tr><td>Chestnut</td><td>6</td><td>6</td><td>6</td><td>6</td><td>7</td></tr>
+                    <tr>
+<td>Almond</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+                    <tr>
+<td>Macadamia</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+                    <tr>
+<td>Pecan</td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+<td>5</td>
+<td>3</td>
+</tr>
+                    <tr>
+<td>Pistachio</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+<td>5</td>
+</tr>
+                    <tr>
+<td>Walnut</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+                    <tr>
+<td>Hazelnut</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td>6</td>
+</tr>
+                    <tr>
+<td>Chestnut</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+<td>7</td>
+</tr>
                     </tbody>
                 </table>
                 </div>
             </details>
-            <script>
-                vegaEmbed(
-                    "#chart6_bump_chart",
-                    "js/chart6_bump_chart.vg.json?t=" + Date.now(),
-                    { actions: false }
-                )
-                    .then(function (result) {
-                        console.log("Chart 6 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-
-        <div class="chart-block chart-block--full">
-            <p class="chart-tag">Chart 07 / 2024–2025 change</p>
-            <h3 class="chart-headline">Almond's year-on-year gain dwarfs every other nut's change</h3>
-            <p class="chart-subtitle">
-                From 2024 to 2025, the other six nuts changed by no more than $20.1 million; Almond
-                alone increased by $217.9 million.
-            </p>
-            <div class="chart-story-layout">
-                <div class="chart-visual">
-                    <div id="chart7_dumbbell_change"></div>
-                </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">Winners and losers, 2024–2025</p>
-                    <ul class="insight-points">
-                        <li>Four of the seven nut types declined in value: macadamia, pistachio, walnut and chestnut.</li>
-                        <li>Pecan recorded the strongest percentage growth, rising from $23.1 million to $35.7 million, an increase of approximately 54%.</li>
-                        <li>Almond gained $217.9 million in production value, more than ten times the magnitude of the next-largest individual change.</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">Explore the change</span>
-                        Hover over either endpoint to see its exact production value for that year.
-                    </p>
-                </div>
             </div>
-            <p class="essential-note">
-                Grey points represent 2024 and blue points represent 2025. Connecting lines show
-                the difference between the two reported production values.
-            </p>
-            <p class="chart-source">Source: Hort Innovation Australian Horticulture Statistics Handbook 2024–25.</p>
-            <details class="chart-methodology">
-                <summary>Data &amp; methodology</summary>
-                <p class="chart-note">
-                    Production values are compared between 2024 and 2025 for seven nut types.
-                    Absolute change is calculated as 2025 production value minus 2024 production
-                    value.
-                </p>
-                <p class="chart-note">
-                    The chart uses a common linear dollar scale so the distances between points
-                    represent actual differences in production value. The chart compares monetary
-                    value rather than physical production volume.
-                </p>
-            </details>
-            <details class="chart-datatable">
-                <summary>Read the exact values</summary>
-                <div class="data-table-wrap">
-                <table class="data-table" id="table-chart7">
-                <thead><tr><th>Nut</th><th>2024 value</th><th>2025 value</th><th>Change</th></tr></thead>
-                <tbody>
-                    <tr><td>Almond</td><td>$1,110.0m</td><td>$1,327.9m</td><td>+$217.9m</td></tr>
-                    <tr><td>Macadamia</td><td>$201.9m</td><td>$181.8m</td><td>−$20.1m</td></tr>
-                    <tr><td>Pecan</td><td>$23.1m</td><td>$35.7m</td><td>+$12.6m</td></tr>
-                    <tr><td>Pistachio</td><td>$49.9m</td><td>$33.5m</td><td>−$16.4m</td></tr>
-                    <tr><td>Walnut</td><td>$40.9m</td><td>$35.5m</td><td>−$5.4m</td></tr>
-                    <tr><td>Hazelnut</td><td>$5.5m</td><td>$8.4m</td><td>+$2.9m</td></tr>
-                    <tr><td>Chestnut</td><td>$8.2m</td><td>$7.2m</td><td>−$1.0m</td></tr>
-                    </tbody>
-                </table>
-                </div>
-            </details>
-            <script>
-                vegaEmbed(
-                    "#chart7_dumbbell_change",
-                    "js/chart7_dumbbell_change.vg.json?t=" + Date.now(),
-                    { actions: false }
-                )
-                    .then(function (result) {
-                        console.log("Chart 7 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-    </section>
+</div>
+<div class="chart-block chart-block--full editorial-card editorial-card--12">
+<p class="chart-tag">Chart 07 / Contributions to growth</p>
+<h3 class="chart-headline">Almond provided more than the entire net increase</h3>
+<p class="chart-subtitle">Across the seven crops, $233.4m of gains outweighed $42.9m of declines, leaving a net increase of $190.5m.</p>
+<div class="editorial-chart-scroll">
+<div id="chart12_growth_waterfall">
+</div>
+</div>
 
-    <!-- ===================== SECTION 04 ===================== -->
-    <section class="story-section" id="section-04">
-        <div class="section-header">
-            <span class="section-number">04</span>
-            <h2 class="section-title">Leaving Australia</h2>
-        </div>
-        <p class="section-headline">Australian nuts travel far — but their markets are far from equal.</p>
-        <p class="section-lede">
-            The latest available country-level export data reveals major differences in where
-            Australian nuts are sold overseas.
-        </p>
-
-        <div class="chart-block chart-block--full">
+<div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">Almond’s gain exceeded the entire net increase.</p>
+<p class="chart-notes-body">Almond added $217.9m; the other six crops combined fell by $27.4m.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Totals cover the seven displayed nut types, not the separately reported industry total. In 2025, their sum is $1,630.0m, compared with the published industry total of $1,655.7m.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Source: Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a>. Changes calculated from the handbook’s 2024–2025 values. <a href="#sources-section">Source details</a></p>
+<div class="chart-disclosures">
+<details class="chart-methodology">
+<summary>Data &amp; methodology</summary>
+<p class="chart-note">Each contribution is the 2025 value minus its 2024 value. Contributions are ordered from largest gain to largest decline. The running total starts at the sum of the seven 2024 values and ends at their 2025 sum. All values are in nominal A$ million. This is an arithmetic breakdown, not a causal explanation.</p>
+</details>
+<details class="chart-datatable">
+<summary>Read the exact values</summary>
+<div class="data-table-wrap">
+<table class="data-table">
+<thead>
+<tr>
+<th>Nut</th>
+<th>2024 (A$m)</th>
+<th>2025 (A$m)</th>
+<th>Change (A$m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Almond</td>
+<td>1,110.0</td>
+<td>1,327.9</td>
+<td>+217.9</td>
+</tr>
+<tr>
+<td>Pecan</td>
+<td>23.1</td>
+<td>35.7</td>
+<td>+12.6</td>
+</tr>
+<tr>
+<td>Hazelnut</td>
+<td>5.5</td>
+<td>8.4</td>
+<td>+2.9</td>
+</tr>
+<tr>
+<td>Chestnut</td>
+<td>8.2</td>
+<td>7.2</td>
+<td>−1.0</td>
+</tr>
+<tr>
+<td>Walnut</td>
+<td>40.9</td>
+<td>35.5</td>
+<td>−5.4</td>
+</tr>
+<tr>
+<td>Pistachio</td>
+<td>49.9</td>
+<td>33.5</td>
+<td>−16.4</td>
+</tr>
+<tr>
+<td>Macadamia</td>
+<td>201.9</td>
+<td>181.8</td>
+<td>−20.1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div>
+</div>
+<p class="story-bridge">Growth explains the changing value of production. The next step follows the crops into overseas markets.</p>
+</section>
+<section class="story-section" id="section-04">
+<div class="section-header">
+<span class="section-number">04</span>
+<h2 class="section-title">Where exports go</h2>
+</div>
+<p class="section-headline">Trade routes show reach; destination shares show concentration.</p>
+<p class="section-lede">Locate the buyers on the map, then compare how evenly exports are distributed within each crop.</p>
+<div class="chart-block chart-block--full editorial-card editorial-card--8">
             <p class="chart-tag">Chart 08 / Global export connections</p>
-            <h3 class="chart-headline">China appears repeatedly among Australia's major reported nut export destinations</h3>
-            <p class="chart-subtitle">
-                Destination patterns vary by crop, with China featuring prominently in several
-                reported export markets.
-            </p>
-            <div class="chart-story-layout">
+            <h3 class="chart-headline">China is a recurring destination, but the routes differ by crop</h3>
+            <p class="chart-subtitle">Start with almond, then select pecan or walnut to see a different geographic pattern.</p>
+            <div class="chart-story-layout editorial-full">
                 <div class="chart-visual">
-                    <div id="chart8-controls" class="chart-controls"></div>
-                    <div id="chart8_export_flow_map"></div>
-                </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">Global export patterns</p>
-                    <ul class="insight-points">
-                        <li>China is the top reported destination for four of the seven nut types: almond, macadamia, pistachio and hazelnut.</li>
-                        <li>Market concentration varies widely by crop — pistachio and hazelnut send the large majority of their reported exports to China, while pecan's exports split across New Zealand, Belgium and the United States.</li>
-                        <li>Walnut is the most geographically spread crop, with India, Germany, Turkey, France and Belgium all receiving meaningful reported volumes.</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">How to explore</span>
-                        Use the dropdown above the map to show one nut type's reported destinations, or keep "All nuts (aggregate)" selected to see every connection together.
+                    <div id="chart8-controls" class="chart-controls">
+</div>
+                    
+                    <p class="chart-interaction-hint">
+                        <span class="hint-label">HOW TO EXPLORE</span>
+                        Select a nut type to explore its reported export destinations.
+                        Line thickness represents export volume.
                     </p>
-            </div>
-            </div>
-                    <p class="chart-source">Source: Hort Innovation Australian Horticulture Statistics Handbook 2024–25. World boundaries: Natural Earth / FIT3179 teaching resources.</p>
-                    <details class="chart-methodology">
+                    
+                    <div class="editorial-chart-scroll" tabindex="0" role="region" aria-label="Chart; scroll horizontally on small screens">
+<div id="chart8_export_flow_map">
+</div>
+                </div>
+</div>
+                </div>
+                    <div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">China leads several crops, but not all.</p>
+<p class="chart-notes-body">Select pecan to see New Zealand lead, or walnut to see India lead. The treemaps next show the destination mix within each crop.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Destination data: almond and macadamia 2024; other crops 2025. “All nuts” is an approximate aggregate across different weight bases. Unspecified “Other” destinations cannot be mapped. Lines connect Australia to representative country locations, not shipping routes.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Source: Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a>. World boundaries: Natural Earth / FIT3179 teaching resources. <a href="#sources-section">Source details</a></p>
+                    <div class="chart-disclosures">
+<details class="chart-methodology">
                         <summary>Data &amp; methodology</summary>
                         <p class="chart-note">
                             The map combines the latest available country-level destination breakdown for
@@ -759,7 +1204,7 @@
                         </p>
                         <p class="chart-note">
                             The all-nuts view aggregates reported export tonnes across different nut types and
-                            measurement bases (mostly Kernel Weight Equivalent; Walnut and Pistachio use a
+                            measurement bases (mostly kernel weight equivalent, meaning shell-free weight; Walnut and Pistachio use a
                             different or unstated basis, together under 6% of the total shown). It should
                             therefore be read as an approximate indication of the geographic distribution of
                             reported exports, not an exact, standardised national export total.
@@ -782,443 +1227,624 @@
                         <summary>Read the exact values</summary>
                         <div class="data-table-wrap">
                         <table class="data-table" id="table-chart8">
-                        <thead><tr><th>Nut</th><th>Destination</th><th>Export tonnes</th></tr></thead>
+                        <thead>
+<tr>
+<th>Nut</th>
+<th>Destination</th>
+<th>Export tonnes</th>
+</tr>
+</thead>
                         <tbody>
-                            <tr><td>Almond</td><td>China</td><td>76,132 t</td></tr>
-                            <tr><td>Almond</td><td>India</td><td>19,803 t</td></tr>
-                            <tr><td>Almond</td><td>Turkey</td><td>12,284 t</td></tr>
-                            <tr><td>Almond</td><td>Vietnam</td><td>8,514 t</td></tr>
-                            <tr><td>Almond</td><td>Germany</td><td>4,685 t</td></tr>
-                            <tr><td>Almond</td><td>Other</td><td>21,915 t</td></tr>
-                            <tr><td>Macadamia</td><td>China</td><td>7,638 t</td></tr>
-                            <tr><td>Macadamia</td><td>Vietnam</td><td>2,609 t</td></tr>
-                            <tr><td>Macadamia</td><td>South Korea</td><td>1,465 t</td></tr>
-                            <tr><td>Macadamia</td><td>Japan</td><td>1,253 t</td></tr>
-                            <tr><td>Macadamia</td><td>United States</td><td>690 t</td></tr>
-                            <tr><td>Macadamia</td><td>Other</td><td>1,737 t</td></tr>
-                            <tr><td>Pecan</td><td>New Zealand</td><td>53 t</td></tr>
-                            <tr><td>Pecan</td><td>Belgium</td><td>47 t</td></tr>
-                            <tr><td>Pecan</td><td>United States</td><td>46 t</td></tr>
-                            <tr><td>Pecan</td><td>Thailand</td><td>8 t</td></tr>
-                            <tr><td>Pecan</td><td>Singapore</td><td>3 t</td></tr>
-                            <tr><td>Pecan</td><td>Other</td><td>2 t</td></tr>
-                            <tr><td>Pistachio</td><td>China</td><td>2,740 t</td></tr>
-                            <tr><td>Pistachio</td><td>Vietnam</td><td>126 t</td></tr>
-                            <tr><td>Pistachio</td><td>Spain</td><td>88 t</td></tr>
-                            <tr><td>Pistachio</td><td>New Zealand</td><td>7 t</td></tr>
-                            <tr><td>Pistachio</td><td>Qatar</td><td>3 t</td></tr>
-                            <tr><td>Pistachio</td><td>Other</td><td>5 t</td></tr>
-                            <tr><td>Walnut</td><td>India</td><td>1,585 t</td></tr>
-                            <tr><td>Walnut</td><td>Germany</td><td>1,424 t</td></tr>
-                            <tr><td>Walnut</td><td>Turkey</td><td>538 t</td></tr>
-                            <tr><td>Walnut</td><td>France</td><td>472 t</td></tr>
-                            <tr><td>Walnut</td><td>Belgium</td><td>362 t</td></tr>
-                            <tr><td>Walnut</td><td>Other</td><td>705 t</td></tr>
-                            <tr><td>Hazelnut</td><td>China</td><td>71 t</td></tr>
-                            <tr><td>Hazelnut</td><td>New Zealand</td><td>3 t</td></tr>
-                            <tr><td>Hazelnut</td><td>Philippines</td><td>&lt;1 t *</td></tr>
-                            <tr><td>Hazelnut</td><td>Papua New Guinea</td><td>&lt;1 t *</td></tr>
-                            <tr><td>Hazelnut</td><td>Singapore</td><td>&lt;1 t *</td></tr>
-                            <tr><td>Chestnut</td><td>Papua New Guinea</td><td>&lt;1 t *</td></tr>
+                            <tr>
+<td>Almond</td>
+<td>China</td>
+<td>76,132 t</td>
+</tr>
+                            <tr>
+<td>Almond</td>
+<td>India</td>
+<td>19,803 t</td>
+</tr>
+                            <tr>
+<td>Almond</td>
+<td>Turkey</td>
+<td>12,284 t</td>
+</tr>
+                            <tr>
+<td>Almond</td>
+<td>Vietnam</td>
+<td>8,514 t</td>
+</tr>
+                            <tr>
+<td>Almond</td>
+<td>Germany</td>
+<td>4,685 t</td>
+</tr>
+                            <tr>
+<td>Almond</td>
+<td>Other</td>
+<td>21,915 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>China</td>
+<td>7,638 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>Vietnam</td>
+<td>2,609 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>South Korea</td>
+<td>1,465 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>Japan</td>
+<td>1,253 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>United States</td>
+<td>690 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>Other</td>
+<td>1,737 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>New Zealand</td>
+<td>53 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>Belgium</td>
+<td>47 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>United States</td>
+<td>46 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>Thailand</td>
+<td>8 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>Singapore</td>
+<td>3 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>Other</td>
+<td>2 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>China</td>
+<td>2,740 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>Vietnam</td>
+<td>126 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>Spain</td>
+<td>88 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>New Zealand</td>
+<td>7 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>Qatar</td>
+<td>3 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>Other</td>
+<td>5 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>India</td>
+<td>1,585 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>Germany</td>
+<td>1,424 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>Turkey</td>
+<td>538 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>France</td>
+<td>472 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>Belgium</td>
+<td>362 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>Other</td>
+<td>705 t</td>
+</tr>
+                            <tr>
+<td>Hazelnut</td>
+<td>China</td>
+<td>71 t</td>
+</tr>
+                            <tr>
+<td>Hazelnut</td>
+<td>New Zealand</td>
+<td>3 t</td>
+</tr>
+                            <tr>
+<td>Hazelnut</td>
+<td>Philippines</td>
+<td>&lt;1 t *</td>
+</tr>
+                            <tr>
+<td>Hazelnut</td>
+<td>Papua New Guinea</td>
+<td>&lt;1 t *</td>
+</tr>
+                            <tr>
+<td>Hazelnut</td>
+<td>Singapore</td>
+<td>&lt;1 t *</td>
+</tr>
+                            <tr>
+<td>Chestnut</td>
+<td>Papua New Guinea</td>
+<td>&lt;1 t *</td>
+</tr>
                             </tbody>
                         </table>
-                        <p class="data-table-footnote">* Source reports this quantity as "&lt;1 tonne" &mdash; a real, unknown positive amount, not exactly 1.</p>
+                        <p class="data-table-footnote">* Source reports this quantity as "&lt;1 tonne" — a real, unknown positive amount, not exactly 1.</p>
                         </div>
                     </details>
-            <script>
-                vegaEmbed(
-                    "#chart8_export_flow_map",
-                    "js/chart8_export_flow_map.vg.json?t=" + Date.now(), { actions: false })
-                    .then(function (result) {
-                        console.log("Chart 8 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-
-        <div class="scroll-arrow">↓</div>
-
-        <div class="chart-block chart-block--full">
-            <p class="chart-tag">Chart 09 / Export destination heatmap</p>
-            <h3 class="chart-headline">China dominates reported exports for several nuts — but not all</h3>
-            <p class="chart-subtitle">
-                China is the largest named destination for almond, macadamia, hazelnut and
-                pistachio, while walnut and pecan have different leading markets.
-            </p>
-            <div class="chart-story-layout">
-                <div class="chart-visual">
-                    <div id="chart9_destination_heatmap"></div>
-                </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">Different nuts, different markets</p>
-                    <ul class="insight-points">
-                        <li>China is the top reported destination for almond (53%), macadamia (50%), hazelnut (94%) and pistachio (92%).</li>
-                        <li>Walnut has no single dominant market: India (31%) and Germany (28%) are its two largest reported destinations.</li>
-                        <li>Pecan is the most diversified crop, split across New Zealand (33%), Belgium (30%) and the United States (29%).</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">How to read</span>
-                        Each row shows one nut's reported destinations as a share of that nut's own exports — not a share of the industry overall.
-                    </p>
-                </div>
-            </div>                    
-                            
-                    <p class="essential-note">
-                        Almond and macadamia use 2024 destination data; the other nuts use 2025. Grey
-                        cells mean a destination was not reported for that nut — not a confirmed zero.
-                    </p>
-                    <p class="chart-source">Source: Hort Innovation Australian Horticulture Statistics Handbook 2024–25.</p>
-                    <details class="chart-methodology">
-                        <summary>Data &amp; methodology</summary>
-                        <p class="chart-note">
-                            Export destination shares are calculated within each nut type using its latest
-                            available country-level breakdown. Almond and Macadamia use 2024 data; all other
-                            nuts use 2025.
-                        </p>
-                        <p class="chart-note">
-                            The "Other" category groups destinations that are not individually identified in
-                            the source. Grey cells represent unreported nut–destination combinations, not
-                            confirmed zero exports.
-                        </p>
-                        <p class="chart-note">
-                            Chestnut has only one reported destination, Papua New Guinea, with an export
-                            quantity below one tonne. Its displayed 100% share reflects that very small
-                            reported shipment, not a major export market — it should not be read the same way
-                            as China's 92–94% shares of Hazelnut and Pistachio, which are genuinely large,
-                            concentrated markets. Values reported as less than one tonne are not treated as
-                            exact one-tonne quantities.
-                        </p>
-                    </details>
-                    <details class="chart-datatable">
-                        <summary>Read the exact values</summary>
-                        <div class="data-table-wrap">
-                        <table class="data-table" id="table-chart9">
-                        <thead><tr><th>Nut</th><th>Destination</th><th>Export tonnes</th></tr></thead>
-                        <tbody>
-                            <tr><td>Almond</td><td>China</td><td>76,132 t</td></tr>
-                            <tr><td>Almond</td><td>India</td><td>19,803 t</td></tr>
-                            <tr><td>Almond</td><td>Turkey</td><td>12,284 t</td></tr>
-                            <tr><td>Almond</td><td>Vietnam</td><td>8,514 t</td></tr>
-                            <tr><td>Almond</td><td>Germany</td><td>4,685 t</td></tr>
-                            <tr><td>Almond</td><td>Other</td><td>21,915 t</td></tr>
-                            <tr><td>Macadamia</td><td>China</td><td>7,638 t</td></tr>
-                            <tr><td>Macadamia</td><td>Vietnam</td><td>2,609 t</td></tr>
-                            <tr><td>Macadamia</td><td>South Korea</td><td>1,465 t</td></tr>
-                            <tr><td>Macadamia</td><td>Japan</td><td>1,253 t</td></tr>
-                            <tr><td>Macadamia</td><td>United States</td><td>690 t</td></tr>
-                            <tr><td>Macadamia</td><td>Other</td><td>1,737 t</td></tr>
-                            <tr><td>Pecan</td><td>New Zealand</td><td>53 t</td></tr>
-                            <tr><td>Pecan</td><td>Belgium</td><td>47 t</td></tr>
-                            <tr><td>Pecan</td><td>United States</td><td>46 t</td></tr>
-                            <tr><td>Pecan</td><td>Thailand</td><td>8 t</td></tr>
-                            <tr><td>Pecan</td><td>Singapore</td><td>3 t</td></tr>
-                            <tr><td>Pecan</td><td>Other</td><td>2 t</td></tr>
-                            <tr><td>Pistachio</td><td>China</td><td>2,740 t</td></tr>
-                            <tr><td>Pistachio</td><td>Vietnam</td><td>126 t</td></tr>
-                            <tr><td>Pistachio</td><td>Spain</td><td>88 t</td></tr>
-                            <tr><td>Pistachio</td><td>New Zealand</td><td>7 t</td></tr>
-                            <tr><td>Pistachio</td><td>Qatar</td><td>3 t</td></tr>
-                            <tr><td>Pistachio</td><td>Other</td><td>5 t</td></tr>
-                            <tr><td>Walnut</td><td>India</td><td>1,585 t</td></tr>
-                            <tr><td>Walnut</td><td>Germany</td><td>1,424 t</td></tr>
-                            <tr><td>Walnut</td><td>Turkey</td><td>538 t</td></tr>
-                            <tr><td>Walnut</td><td>France</td><td>472 t</td></tr>
-                            <tr><td>Walnut</td><td>Belgium</td><td>362 t</td></tr>
-                            <tr><td>Walnut</td><td>Other</td><td>705 t</td></tr>
-                            <tr><td>Hazelnut</td><td>China</td><td>71 t</td></tr>
-                            <tr><td>Hazelnut</td><td>New Zealand</td><td>3 t</td></tr>
-                            <tr><td>Hazelnut</td><td>Philippines</td><td>&lt;1 t *</td></tr>
-                            <tr><td>Hazelnut</td><td>Papua New Guinea</td><td>&lt;1 t *</td></tr>
-                            <tr><td>Hazelnut</td><td>Singapore</td><td>&lt;1 t *</td></tr>
-                            <tr><td>Chestnut</td><td>Papua New Guinea</td><td>&lt;1 t *</td></tr>
-                            </tbody>
-                        </table>
-                        <p class="data-table-footnote">* Source reports this quantity as "&lt;1 tonne" &mdash; a real, unknown positive amount, not exactly 1.</p>
-                        </div>
-                    </details>
-            <script>
-                vegaEmbed(
-                    "#chart9_destination_heatmap",
-                    "js/chart9_destination_heatmap.vg.json?t=" + Date.now(), { actions: false })
-                    .then(function (result) {
-                        console.log("Chart 9 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-    </section>
-
-    <!-- ===================== SECTION 05 ===================== -->
-    <section class="story-section" id="section-05">
-        <div class="section-header">
-            <span class="section-number">05</span>
-            <h2 class="section-title">Different nuts, different markets</h2>
-        </div>
-        <p class="section-headline">One export industry. Very different levels of market dependence.</p>
-        <p class="section-lede">
-            Some nuts rely heavily on a single destination, while others distribute their exports
-            across several markets.
-        </p>
-
-        <div class="chart-block chart-block--full">
-            <p class="chart-tag">Chart 10 / Export concentration</p>
-            <h3 class="chart-headline">Some nuts depend heavily on one destination — others have more diversified export profiles</h3>
-            <p class="chart-subtitle">
-                Pistachio and hazelnut rely on a single market for the large majority of their
-                exports, while walnut and pecan spread more evenly across several.
-            </p>
-            <div class="chart-story-layout">
-                <div class="chart-visual">
-                    <div id="chart10_destination_treemap"></div>
-                </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">Market concentration</p>
-                    <ul class="insight-points">
-                        <li>Pistachio (92%) and hazelnut (94%) send the large majority of their reported exports to a single country, China.</li>
-                        <li>Walnut and pecan are the most diversified crops — no single destination takes more than a third of either one's exports.</li>
-                        <li>This shows destination concentration, not observed business risk — a concentrated market is not necessarily a risk that has materialised.</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">How to read</span>
-                        Each treemap shows 100% of one nut’s exports. Equal-sized panels do not mean equal export volumes.
-                    </p>
-                </div>
             </div>
-                    <p class="essential-note">
-                        Almond and macadamia use 2024 destination data; the other nuts use 2025.
-                        Destinations reported as "&lt;1 tonne" are shown as reported, not converted to
-                        an exact figure.
-                    </p>
-                    <p class="chart-source">Source: Hort Innovation Australian Horticulture Statistics Handbook 2024–25.</p>
-                    <details class="chart-methodology">
-                        <summary>Data &amp; methodology</summary>
-                        <p class="chart-note">
-                            Each treemap is independently normalised to 100% of the corresponding nut's
-                            reported country-level export breakdown. Panel areas are not proportional to total
-                            export volume across nut types — Almond's panel and Chestnut's panel are drawn the
-                            same size even though Almond exports almost 300,000× more tonnage.
-                        </p>
-                        <p class="chart-note">
-                            Very small destination shares may be shown without labels to prevent text overlap.
-                            Quantities reported as less than one tonne use a small display-only proxy area to
-                            remain visible; tooltips and labels always show "&lt;1 t", never a fabricated
-                            number.
-                        </p>
-                        <p class="chart-note">
-                            Chestnut is a special case: its only reported destination has an unspecified
-                            quantity below one tonne, so although the box fills 100% of the panel, this
-                            reflects a single negligible shipment, not an established trade relationship.
-                        </p>
-                        <p class="chart-note">
-                            Almond and Macadamia use 2024 destination data; the other nut types use 2025.
-                        </p>
-                    </details>
+</div>
+<div class="chart-block chart-block--full editorial-card editorial-card--10">
+            <p class="chart-tag">Chart 09 / Export concentration</p>
+            <h3 class="chart-headline">Pistachio is concentrated in China; walnut and pecan are more spread</h3>
+            <p class="chart-subtitle">Five crops have numeric destination breakdowns suitable for area comparison. Each panel shows its own destination shares, regardless of its total export volume.</p>
+            <div class="chart-story-layout editorial-full">
+                <div class="chart-visual">
+                    <div class="editorial-chart-scroll" tabindex="0" role="region" aria-label="Chart; scroll horizontally on small screens">
+<div id="chart10_destination_treemap">
+</div>
+                </div>
+</div>
+                </div>
+                    
+                    <div class="small-shipments">
+<p class="chart-notes-label">Small shipments reported separately</p>
+<p>
+<strong>Hazelnut:</strong> China 71 t; New Zealand 3 t; Philippines, Papua New Guinea and Singapore each &lt;1 t. Reported national total: 75 t.</p>
+<p>
+<strong>Chestnut:</strong> a reported shipment below 1 t to Papua New Guinea.</p>
+</div>
+<div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">Concentration differs sharply between crops.</p>
+<p class="chart-notes-body">China takes about 92% of pistachio exports in 2025; pecan’s 2025 exports are split more evenly across its three largest destinations.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Rectangle area shows a destination’s share within its crop. Equal-sized panels compare shares, not total tonnage. Almond and macadamia use 2024 data; other crops use 2025. Headers show the handbook’s reported totals and reference years. Areas use the sum of numeric destination rows; uncertain small shipments are listed separately.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Source: Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a>. <a href="#sources-section">Source details</a></p>
+                    <div class="chart-disclosures">
+<details class="chart-methodology">
+<summary>Data &amp; methodology</summary>
+<p class="chart-note">Rectangle areas show each destination’s share of the sum of numerically reported destination rows within a crop. Almond and macadamia use 2024 destination data; walnut, pistachio and pecan use 2025. Equal panel areas do not imply equal tonnages.</p>
+<p class="chart-note">The macadamia rows sum to 15,392 t compared with the reported total of 15,391 t; pecan rows sum to 159 t compared with the reported 160 t. Component values are retained, and panel shares use those component sums.</p>
+<p class="chart-note">Hazelnut and chestnut are listed separately because quantities below 1 t cannot be assigned exact rectangle areas. No proxy tonnage is used. An absent destination is not assumed to have zero exports.</p>
+</details>
                     <details class="chart-datatable">
                         <summary>Read the exact values</summary>
                         <div class="data-table-wrap">
                         <table class="data-table" id="table-chart10">
-                        <thead><tr><th>Nut</th><th>Destination</th><th>Export tonnes</th></tr></thead>
+                        <thead>
+<tr>
+<th>Nut</th>
+<th>Destination</th>
+<th>Export tonnes</th>
+</tr>
+</thead>
                         <tbody>
-                            <tr><td>Almond</td><td>China</td><td>76,132 t</td></tr>
-                            <tr><td>Almond</td><td>India</td><td>19,803 t</td></tr>
-                            <tr><td>Almond</td><td>Turkey</td><td>12,284 t</td></tr>
-                            <tr><td>Almond</td><td>Vietnam</td><td>8,514 t</td></tr>
-                            <tr><td>Almond</td><td>Germany</td><td>4,685 t</td></tr>
-                            <tr><td>Almond</td><td>Other</td><td>21,915 t</td></tr>
-                            <tr><td>Macadamia</td><td>China</td><td>7,638 t</td></tr>
-                            <tr><td>Macadamia</td><td>Vietnam</td><td>2,609 t</td></tr>
-                            <tr><td>Macadamia</td><td>South Korea</td><td>1,465 t</td></tr>
-                            <tr><td>Macadamia</td><td>Japan</td><td>1,253 t</td></tr>
-                            <tr><td>Macadamia</td><td>United States</td><td>690 t</td></tr>
-                            <tr><td>Macadamia</td><td>Other</td><td>1,737 t</td></tr>
-                            <tr><td>Pecan</td><td>New Zealand</td><td>53 t</td></tr>
-                            <tr><td>Pecan</td><td>Belgium</td><td>47 t</td></tr>
-                            <tr><td>Pecan</td><td>United States</td><td>46 t</td></tr>
-                            <tr><td>Pecan</td><td>Thailand</td><td>8 t</td></tr>
-                            <tr><td>Pecan</td><td>Singapore</td><td>3 t</td></tr>
-                            <tr><td>Pecan</td><td>Other</td><td>2 t</td></tr>
-                            <tr><td>Pistachio</td><td>China</td><td>2,740 t</td></tr>
-                            <tr><td>Pistachio</td><td>Vietnam</td><td>126 t</td></tr>
-                            <tr><td>Pistachio</td><td>Spain</td><td>88 t</td></tr>
-                            <tr><td>Pistachio</td><td>New Zealand</td><td>7 t</td></tr>
-                            <tr><td>Pistachio</td><td>Qatar</td><td>3 t</td></tr>
-                            <tr><td>Pistachio</td><td>Other</td><td>5 t</td></tr>
-                            <tr><td>Walnut</td><td>India</td><td>1,585 t</td></tr>
-                            <tr><td>Walnut</td><td>Germany</td><td>1,424 t</td></tr>
-                            <tr><td>Walnut</td><td>Turkey</td><td>538 t</td></tr>
-                            <tr><td>Walnut</td><td>France</td><td>472 t</td></tr>
-                            <tr><td>Walnut</td><td>Belgium</td><td>362 t</td></tr>
-                            <tr><td>Walnut</td><td>Other</td><td>705 t</td></tr>
-                            <tr><td>Hazelnut</td><td>China</td><td>71 t</td></tr>
-                            <tr><td>Hazelnut</td><td>New Zealand</td><td>3 t</td></tr>
-                            <tr><td>Hazelnut</td><td>Philippines</td><td>&lt;1 t *</td></tr>
-                            <tr><td>Hazelnut</td><td>Papua New Guinea</td><td>&lt;1 t *</td></tr>
-                            <tr><td>Hazelnut</td><td>Singapore</td><td>&lt;1 t *</td></tr>
-                            <tr><td>Chestnut</td><td>Papua New Guinea</td><td>&lt;1 t *</td></tr>
+                            <tr>
+<td>Almond</td>
+<td>China</td>
+<td>76,132 t</td>
+</tr>
+                            <tr>
+<td>Almond</td>
+<td>India</td>
+<td>19,803 t</td>
+</tr>
+                            <tr>
+<td>Almond</td>
+<td>Turkey</td>
+<td>12,284 t</td>
+</tr>
+                            <tr>
+<td>Almond</td>
+<td>Vietnam</td>
+<td>8,514 t</td>
+</tr>
+                            <tr>
+<td>Almond</td>
+<td>Germany</td>
+<td>4,685 t</td>
+</tr>
+                            <tr>
+<td>Almond</td>
+<td>Other</td>
+<td>21,915 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>China</td>
+<td>7,638 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>Vietnam</td>
+<td>2,609 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>South Korea</td>
+<td>1,465 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>Japan</td>
+<td>1,253 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>United States</td>
+<td>690 t</td>
+</tr>
+                            <tr>
+<td>Macadamia</td>
+<td>Other</td>
+<td>1,737 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>New Zealand</td>
+<td>53 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>Belgium</td>
+<td>47 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>United States</td>
+<td>46 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>Thailand</td>
+<td>8 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>Singapore</td>
+<td>3 t</td>
+</tr>
+                            <tr>
+<td>Pecan</td>
+<td>Other</td>
+<td>2 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>China</td>
+<td>2,740 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>Vietnam</td>
+<td>126 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>Spain</td>
+<td>88 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>New Zealand</td>
+<td>7 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>Qatar</td>
+<td>3 t</td>
+</tr>
+                            <tr>
+<td>Pistachio</td>
+<td>Other</td>
+<td>5 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>India</td>
+<td>1,585 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>Germany</td>
+<td>1,424 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>Turkey</td>
+<td>538 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>France</td>
+<td>472 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>Belgium</td>
+<td>362 t</td>
+</tr>
+                            <tr>
+<td>Walnut</td>
+<td>Other</td>
+<td>705 t</td>
+</tr>
+                            <tr>
+<td>Hazelnut</td>
+<td>China</td>
+<td>71 t</td>
+</tr>
+                            <tr>
+<td>Hazelnut</td>
+<td>New Zealand</td>
+<td>3 t</td>
+</tr>
+                            <tr>
+<td>Hazelnut</td>
+<td>Philippines</td>
+<td>&lt;1 t *</td>
+</tr>
+                            <tr>
+<td>Hazelnut</td>
+<td>Papua New Guinea</td>
+<td>&lt;1 t *</td>
+</tr>
+                            <tr>
+<td>Hazelnut</td>
+<td>Singapore</td>
+<td>&lt;1 t *</td>
+</tr>
+                            <tr>
+<td>Chestnut</td>
+<td>Papua New Guinea</td>
+<td>&lt;1 t *</td>
+</tr>
                             </tbody>
                         </table>
-                        <p class="data-table-footnote">* Source reports this quantity as "&lt;1 tonne" &mdash; a real, unknown positive amount, not exactly 1.</p>
+                        <p class="data-table-footnote">* Source reports this quantity as "&lt;1 tonne" — a real, unknown positive amount, not exactly 1.</p>
                         </div>
                     </details>
-            <script>
-                vegaEmbed(
-                    "#chart10_destination_treemap",
-                    "js/chart10_destination_treemap.vg.json?t=" + Date.now(), { actions: false })
-                    .then(function (result) {
-                        console.log("Chart 10 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-    </section>
+            </div>
+</div>
+<p class="story-bridge">Export destinations describe only one side of trade. Australia also buys nuts from overseas.</p>
+</section>
+<section class="story-section" id="section-05">
+<div class="section-header">
+<span class="section-number">05</span>
+<h2 class="section-title">The other side of trade</h2>
+</div>
+<p class="section-headline">An exporter can also be a net importer.</p>
+<p class="section-lede">Comparing export and import values reveals a different picture for several smaller crops.</p>
+<div class="chart-block chart-block--full editorial-card editorial-card--9">
+<p class="chart-tag">Chart 10 / Export–import comparison</p>
+<h3 class="chart-headline">Almond earns a $1.3bn surplus; walnut, pistachio and hazelnut import more than they export</h3>
+<p class="chart-subtitle">Reported export and import values in the handbook, 2025. All seven crops are included; a connector is drawn only where both values are reported.</p>
+<div id="chart9-controls" class="chart-controls">
+</div>
+<div class="chart-story-layout editorial-full">
+<div class="chart-visual">
+<div class="editorial-chart-scroll">
+<div id="chart9_destination_heatmap">
+</div>
+</div>
+</div>
+</div>
+<div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">Exporting a crop does not imply a trade surplus.</p>
+<p class="chart-notes-body">Walnut, pistachio and hazelnut each have higher reported import values than export values. Almond has a $1,321.0m surplus.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Teal circles show exports; brown diamonds show imports. A connecting line shows the monetary gap. The default view excludes almond to reveal smaller gaps. Check the box to include it. Missing endpoints are identified in each row, never positioned at zero.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Source: Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a>. <a href="#sources-section">Source details</a></p>
+<div class="chart-disclosures">
+<details class="chart-methodology">
+<summary>Data &amp; methodology</summary>
+<p class="chart-note">Balance = reported export value − reported import value, in nominal A$ million. It is a monetary trade balance, not a physical production or consumption share.</p>
+<p class="chart-note">Macadamia and pecan remain visible with reported exports of $246.6m and $2.5m. Their import values are printed as “–”; chestnut’s export value is “–” and its import value is reported as &lt;$0.1m. The bounded import value is shown in text rather than plotted as an exact point. Here, “–” means no numeric value reported, not a confirmed zero. Pecan’s supply identity is consistent with zero import tonnage, but does not independently establish a published monetary import value. No balance is calculated for these incomplete pairs.</p>
+</details>
+<details class="chart-datatable">
+<summary>Read the exact values</summary>
+<div class="data-table-wrap">
+<table class="data-table"><thead><tr><th>Crop</th><th>Exports (A$m)</th><th>Imports (A$m)</th><th>Balance (A$m)</th></tr></thead><tbody><tr><td>Almond</td><td>1,332.8</td><td>11.8</td><td>+1,321.0</td></tr><tr><td>Macadamia</td><td>246.6</td><td>–</td><td>Not calculated</td></tr><tr><td>Walnut</td><td>23.3</td><td>46.2</td><td>−22.9</td></tr><tr><td>Pistachio</td><td>32.6</td><td>42.8</td><td>−10.2</td></tr><tr><td>Pecan</td><td>2.5</td><td>–</td><td>Not calculated</td></tr><tr><td>Hazelnut</td><td>0.6</td><td>41.6</td><td>−41.0</td></tr><tr><td>Chestnut</td><td>–</td><td>&lt;0.1</td><td>Not calculated</td></tr></tbody></table>
+</div>
+</details>
+</div>
+</div>
+<p class="story-bridge">Trade balance, production scale and growth describe different things. Bring the measures together to compare crop profiles.</p>
+</section>
+<section class="story-section" id="section-06">
+<div class="section-header">
+<span class="section-number">06</span>
+<h2 class="section-title">Bring the story together</h2>
+</div>
+<p class="section-headline">The biggest crop is not the leader on every measure.</p>
+<p class="section-lede">Compare production value, annual growth and domestic supply per person using clearly labelled axes.</p>
+<div class="chart-block chart-block--full editorial-card editorial-card--11">
+<p class="chart-tag">Chart 11 / Parallel coordinates</p>
+<h3 class="chart-headline">The largest crop is not the fastest-growing crop</h3>
+<p class="chart-subtitle">Follow each coloured line across three measures. Domestic supply per person is the reported amount available in Australia divided by the population; it is not measured individual consumption. The default comparison highlights almond, macadamia and pecan.</p>
+<p class="measure-caution"><strong>Supply-axis caution:</strong> kg/person uses different weight bases: almond, macadamia, pecan, hazelnut and chestnut use kernel weight equivalent; walnut combines kernel and in-shell quantities; pistachio’s basis is unspecified. These values are not directly comparable edible quantities.</p>
+<div id="chart11-controls" class="chart-controls">
+</div>
+<div class="chart-story-layout editorial-full">
+<div class="chart-visual">
+<div class="editorial-chart-scroll">
+<div id="chart11_industry_profile">
+</div>
+</div>
+</div>
+</div>
+<div class="chart-notes-grid">
+<div class="chart-notes-takeaway">
+<p class="chart-notes-label">Key takeaway</p>
+<p class="chart-notes-heading">Scale, growth and domestic supply tell different stories.</p>
+<p class="chart-notes-body">Almond leads on production value; pecan grew faster in percentage terms. Macadamia’s production value fell. Supply figures retain each crop’s reported weight basis.</p>
+</div>
+<div class="chart-notes-context">
+<p class="chart-notes-label">Reading the chart</p>
+<p class="chart-notes-body">Each axis has its own units. Production value uses a log scale: equal steps mean tenfold differences. Growth shows actual percentages, including negatives; 0% means no change. Hover over a point for all three values.</p>
+</div>
+</div>
+<p class="chart-source chart-notes-source">Source: Hort Innovation, <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Australian Horticulture Statistics Handbook 2024–25</a>. <a href="#sources-section">Source details</a></p>
+<div class="chart-disclosures">
+<details class="chart-methodology">
+<summary>Data &amp; methodology</summary>
+<p class="chart-note">Production value and domestic supply per person come from the 2025 national summary. Growth is calculated from 2024 and 2025 production values, consistently with the heatmap.</p>
+<p class="chart-note">The monetary axis uses a logarithmic scale to keep both large and small crops visible. Growth and domestic supply per person use linear scales. Connecting segments show crop profiles, not trends between time points.</p>
+<p class="chart-note">All seven crops remain in the chart. The selector changes emphasis; it does not change the axes. No 0–100 performance score or export-intensity ratio is used.</p>
+</details>
+<details class="chart-datatable">
+<summary>Read the exact values</summary>
+<div class="data-table-wrap">
+<table class="data-table">
+<thead>
+<tr>
+<th>Nut</th>
+<th>Production value (A$m)</th>
+<th>Annual growth</th>
+<th>Supply (kg/person)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Almond</td>
+<td>1,327.9</td>
+<td>+19.6%</td>
+<td>0.91</td>
+</tr>
+<tr>
+<td>Macadamia</td>
+<td>181.8</td>
+<td>−10.0%</td>
+<td>0.15</td>
+</tr>
+<tr>
+<td>Walnut</td>
+<td>35.5</td>
+<td>−13.2%</td>
+<td>0.28</td>
+</tr>
+<tr>
+<td>Pistachio</td>
+<td>33.5</td>
+<td>−32.9%</td>
+<td>0.09</td>
+</tr>
+<tr>
+<td>Pecan</td>
+<td>35.7</td>
+<td>+54.5%</td>
+<td>0.06</td>
+</tr>
+<tr>
+<td>Hazelnut</td>
+<td>8.4</td>
+<td>+52.7%</td>
+<td>0.15</td>
+</tr>
+<tr>
+<td>Chestnut</td>
+<td>7.2</td>
+<td>−12.2%</td>
+<td>0.04</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div>
+</div>
+</section>
+<section class="conclusion">
+<h2>Three things to take away</h2>
+<div class="takeaway-cards">
+<article><h3>Concentrated at home</h3><p>NSW supplies 84% of pecan production, Queensland 79% of macadamia and Victoria 70.5% of chestnut.</p></article>
+<article><h3>Uneven growth</h3><p>Almond added $217.9m in 2025. The other six crops together fell $27.4m, leaving a $190.5m increase across the seven crops.</p></article>
+<article><h3>Different markets</h3><p>China takes 92% of pistachio exports in 2025. Walnut and pecan have a more distributed destination mix.</p></article>
+</div>
+<p class="closing-line">Australia’s nut industry grew, but that headline conceals different crop fortunes—and different exposure to overseas markets.</p>
+</section>
 
-    <!-- ===================== SECTION 06 ===================== -->
-    <section class="story-section" id="section-06">
-        <div class="section-header">
-            <span class="section-number">06</span>
-            <h2 class="section-title">One industry, many profiles</h2>
-        </div>
-        <p class="section-headline">There is no single Australian nut industry profile.</p>
-        <p class="section-lede">
-            Economic scale, export intensity, growth and domestic supply vary across crops — and no
-            single measure tells the whole story.
-        </p>
-
-        <div class="chart-block chart-block--full">
-            <p class="chart-tag">Chart 11 / Industry profile comparison</p>
-            <h3 class="chart-headline">Almond leads on scale and domestic supply, but Macadamia is proportionally more export-intensive</h3>
-            <p class="chart-subtitle">
-                Each axis is independently scaled from the lowest (0) to the highest (100) of the
-                seven nuts — a relative index, not a percentage of the metric itself.
-            </p>
-            <div class="chart-story-layout">
-                <div class="chart-visual">
-                    <div id="chart11_industry_profile"></div>
-                </div>
-                <div class="chart-insight">
-                    <p class="insight-eyebrow">Four profiles, one industry</p>
-                    <ul class="insight-points">
-                        <li>Macadamia's export value is 136% of its own production value — the highest ratio of any nut, reflecting how the two figures are measured rather than more than 100% of output being shipped overseas.</li>
-                        <li>Pecan and Hazelnut have the lowest export intensity, each around 7% — most of their production stays in the domestic market.</li>
-                        <li>Almond leads on per-capita domestic supply at 0.91 kg per person, more than three times the next-highest nut (Walnut, 0.28 kg).</li>
-                    </ul>
-                    <p class="insight-interaction">
-                        <span class="interaction-label">How to explore</span>
-                        Click a nut in the legend to isolate it, or shift-click to compare a different pair.
-                    </p>
-                </div>
-            </div>    
-                    <p class="chart-source">Source: Hort Innovation Australian Horticulture Statistics Handbook 2024–25.</p>
-                    <details class="chart-methodology">
-                        <summary>Data &amp; methodology</summary>
-                        <p class="chart-note">
-                            The radar compares four indicators derived from the latest national nut summary:
-                            production value (A$m), export value intensity, year-on-year production-value
-                            growth (2025 vs 2024), and per-capita domestic supply (kg per person).
-                        </p>
-                        <p class="chart-note">
-                            Export value intensity is calculated as reported export value divided by
-                            production value. It indicates a relationship between two monetary values, not the
-                            physical proportion of production exported — the ratio can exceed 100% since the
-                            two figures can be reported on different value bases.
-                        </p>
-                        <p class="chart-note">
-                            Each indicator is independently normalised across the seven nut types on a 0–100
-                            relative scale (highest = 100, lowest = 0). Because each axis uses its own scale,
-                            the radar compares relative positions rather than absolute magnitudes or
-                            percentages.
-                        </p>
-                        <p class="chart-note">
-                            Export value is not reported in the source for Chestnut. Its export value
-                            intensity is therefore missing, not zero, and the corresponding radar vertex is
-                            omitted rather than plotted at the centre — select Chestnut in the legend to see
-                            this noted directly on the chart.
-                        </p>
-                    </details>
-                    <details class="chart-datatable">
-                        <summary>Read the exact values</summary>
-                        <div class="data-table-wrap">
-                        <table class="data-table" id="table-chart11">
-                        <thead><tr><th>Nut</th><th>Production value</th><th>Export value</th><th>Export value &divide; production value</th><th>YoY production value growth</th><th>Per-capita supply</th></tr></thead>
-                        <tbody>
-                            <tr><td>Almond</td><td>$1,327.9m</td><td>$1,332.8m</td><td>100.4%</td><td>20%</td><td>0.91 kg</td></tr>
-                            <tr><td>Macadamia</td><td>$181.8m</td><td>$246.6m</td><td>135.6%</td><td>-10%</td><td>0.15 kg</td></tr>
-                            <tr><td>Walnut</td><td>$35.5m</td><td>$23.3m</td><td>65.6%</td><td>-13%</td><td>0.28 kg</td></tr>
-                            <tr><td>Pistachio</td><td>$33.5m</td><td>$32.6m</td><td>97.3%</td><td>-33%</td><td>0.09 kg</td></tr>
-                            <tr><td>Pecan</td><td>$35.7m</td><td>$2.5m</td><td>7.0%</td><td>54%</td><td>0.06 kg</td></tr>
-                            <tr><td>Hazelnut</td><td>$8.4m</td><td>$0.6m</td><td>7.1%</td><td>53%</td><td>0.15 kg</td></tr>
-                            <tr><td>Chestnut</td><td>$7.2m</td><td>not reported</td><td>not available</td><td>-12%</td><td>0.04 kg</td></tr>
-                            </tbody>
-                        </table>
-                        </div>
-                    </details>
-            <script>
-                vegaEmbed(
-                    "#chart11_industry_profile",
-                    "js/chart11_industry_profile.vg.json?t=" + Date.now(), { actions: false })
-                    .then(function (result) {
-                        console.log("Chart 11 loaded successfully");
-                    })
-                    .catch(console.error);
-            </script>
-        </div>
-    </section>
-
-    <!-- ===================== CONCLUSION ===================== -->
-    <section class="conclusion">
-        <p class="conclusion-eyebrow">Three things to take away</p>
-
-        <ol class="takeaway-list">
-            <li>
-                <h3><span class="takeaway-num">01</span>Geography shapes production.</h3>
-                <p>
-                    Australia's nut crops have distinct growing regions and different patterns of
-                    state concentration. NSW and Victoria each lead three of the seven nut types,
-                    while Queensland leads macadamia.
-                </p>
-            </li>
-            <li>
-                <h3><span class="takeaway-num">02</span>Almond sets the economic scale.</h3>
-                <p>
-                    Almond accounted for approximately 80% of Australia's reported nut production
-                    value in 2025 and recorded the largest absolute increase from 2024.
-                </p>
-            </li>
-            <li>
-                <h3><span class="takeaway-num">03</span>Export markets are not equally diversified.</h3>
-                <p>
-                    China dominates the reported destinations for several nuts, particularly
-                    hazelnut and pistachio. Walnut and pecan show more distributed leading markets.
-                </p>
-            </li>
-        </ol>
-
-        <p class="conclusion-final">
-            Australia's nut industry is not one uniform story. Its geography, economic value and
-            export relationships change considerably from crop to crop.
-        </p>
-    </section>
-
-    <!-- ===================== FOOTER ===================== -->
     <footer class="page-footer" id="sources-section">
-        <div class="footer-grid pure-g">
+        <p class="publication-meta">Created by Phuong Minh Nguyen · 23 October 2026 · FIT3179 Data Visualisation 2</p>
+<p class="definitions">Reading the numbers: A$m = millions of Australian dollars. A share is measured within one nut type. Kernel weight excludes the shell; in-shell weight includes it. Unless a chart states otherwise, 2025 refers to the handbook’s 2024–25 reporting period.</p>
+<div class="footer-grid pure-g">
             <div class="pure-u-1 pure-u-md-1-2 footer-col">
                 <div class="footer-block">
                     <h3>Sources</h3>
                     <p>
-                        <strong>Primary data:</strong>
-                        <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Hort Innovation Australian Horticulture Statistics Handbook 2024&ndash;25</a>
-                        &mdash; source for all production, value and export figures.
+                        <strong>Statistical dataset:</strong>
+                        <a href="https://www.horticulture.com.au/about-hort-innovation/what-we-do/data-and-insights/australian-horticulture-statistics-handbook" target="_blank" rel="noopener">Hort Innovation Australian Horticulture Statistics Handbook 2024–25</a>
+                        — production, value, trade and supply figures used in Charts 02–11; regional maps also inform Chart 01.
                     </p>
                     <p>
-                        <strong>Supporting references:</strong>
-                        <a href="https://www.nutsforlife.com.au/about/" target="_blank" rel="noopener">Nuts for Life</a>;
+                        <strong>Growing-region dataset (Chart 01):</strong>
+                        <a href="https://www.nutsforlife.com.au/resource/where-are-nuts-grown/" target="_blank" rel="noopener">Nuts for Life, Where are nuts grown?</a> — regional descriptions combined with the handbook to construct the growing-region data. Representative coordinates were added by the author. Additional regional context:
                         <a href="https://www.australian-macadamias.org/" target="_blank" rel="noopener">Australian Macadamias</a>.
                     </p>
                     <p>
                         <strong>Geographic data:</strong> state boundaries from the
                         <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/latest-release" target="_blank" rel="noopener">Australian Bureau of Statistics, ASGS Edition 3</a>
-                        (CC&nbsp;BY&nbsp;4.0); world boundaries from
+                        (CC BY 4.0); world boundaries from
                         <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> / FIT3179 teaching resources.
                     </p>
                     <p>Full chart-by-chart source and methodology notes are given beneath each chart above.</p>
@@ -1228,12 +1854,7 @@
                 <div class="footer-block">
                     <h3>Data &amp; methodology</h3>
                     <p>
-                        Nuts are measured on different bases depending on the crop and how the
-                        source reports it &mdash; e.g. almond, pecan and hazelnut on a Kernel
-                        Weight Equivalent basis; macadamia, walnut and pistachio In-Shell.
-                        Charts that compare volumes across nut types note this directly, and
-                        any total that mixes bases is flagged as an approximation rather than
-                        an exact sum.
+                        Production is measured on a kernel weight equivalent (shell-free) basis for almond, pecan, hazelnut and chestnut, and an in-shell basis for macadamia, walnut and pistachio. Trade and supply may use different bases: macadamia uses kernel weight equivalent; walnut and the industry aggregate mix kernel and in-shell quantities; pistachio’s trade/supply basis is unspecified. Monetary comparisons use Australian dollars; physical quantities retain their reported bases.
                     </p>
                     <p>
                         Each chart uses the most recent year the handbook reports for that
@@ -1247,18 +1868,19 @@
                         production-value sum); these are disclosed individually beneath the
                         relevant chart rather than silently adjusted. Destinations reported as
                         "&lt;1 tonne" are kept as a real, unknown positive quantity below the
-                        table's rounding threshold &mdash; never treated as exactly 1.
+                        table's rounding threshold — never treated as exactly 1.
                     </p>
                 </div>
             </div>
         </div>
         <div class="footer-block" style="margin-top: 6px;">
             <h3>AI acknowledgement</h3>
-            <p class="footer-placeholder">
-            </p>
+            <p class="ai-acknowledgement">ChatGPT (OpenAI, 2026) assisted with layout refinement, HTML/CSS and Vega-Lite code revisions, debugging, narrative and annotation revisions, browser testing, and the waterfall, growth heatmap, trade-balance and parallel-coordinates visualisations. Data sources are listed above.</p>
         </div>
     </footer>
 
+<script src="js/charts.js">
+</script>
 </body>
 
 </html>

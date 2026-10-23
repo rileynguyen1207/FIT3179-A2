@@ -1,1 +1,174 @@
-{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":"container","height":{"step":32},"padding":{"left":5,"right":70,"top":10,"bottom":5},"data":{"url":"data/clean/national_summary.csv","format":{"parse":{"production_value_m":"number"}}},"transform":[{"filter":"datum.nut_type !== 'Industry Total (All Nuts)'"},{"calculate":"'$' + format(datum.production_value_m, ',.1f') + 'm'","as":"value_label"}],"encoding":{"y":{"field":"nut_type","type":"nominal","sort":{"field":"production_value_m","order":"descending"},"title":null,"axis":{"domain":false,"ticks":false,"labelFontSize":12}}},"layer":[{"mark":{"type":"rule","strokeWidth":2.5},"encoding":{"x":{"field":"production_value_m","type":"quantitative","scale":{"domain":[0,1450]},"title":"Production value (A$m)","axis":{"grid":false,"values":[0,400,800,1200,1600]}},"x2":{"datum":0},"color":{"condition":{"test":"datum.nut_type === 'Almond'","value":"#0072B2"},"value":"#B7C7D4"}}},{"mark":{"type":"circle","size":110},"encoding":{"x":{"field":"production_value_m","type":"quantitative"},"color":{"condition":{"test":"datum.nut_type === 'Almond'","value":"#0072B2"},"value":"#B7C7D4"},"tooltip":[{"field":"nut_type","type":"nominal","title":"Nut"},{"field":"value_label","type":"nominal","title":"Production value"}]}},{"mark":{"type":"text","align":"left","dx":10,"fontSize":11.5,"color":"#222222"},"encoding":{"x":{"field":"production_value_m","type":"quantitative"},"text":{"field":"value_label","type":"nominal"}}}],"config":{"view":{"stroke":null}},"background":"transparent"}
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Production value of seven Australian nut crops in 2025.",
+  "width": "container",
+  "height": 300,
+  "background": "#f4efe6",
+  "padding": {
+    "left": 5,
+    "right": 75,
+    "top": 15,
+    "bottom": 5
+  },
+  "data": {
+    "url": "data/clean/national_summary.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "production_value_m": "number",
+        "year": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year === 2025 && indexof(['Almond','Macadamia','Walnut','Pistachio','Pecan','Hazelnut','Chestnut'], datum.nut_type) >= 0"
+    },
+    {
+      "calculate": "'$' + format(datum.production_value_m, ',.1f') + 'm'",
+      "as": "value_label"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "nut_type",
+      "type": "nominal",
+      "sort": {
+        "field": "production_value_m",
+        "order": "descending"
+      },
+      "title": null,
+      "axis": {
+        "labelFontSize": 12,
+        "labelColor": "#222222",
+        "labelPadding": 8,
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "x": {
+      "field": "production_value_m",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          1600
+        ],
+        "nice": false
+      },
+      "title": "Production value (A$m)",
+      "axis": {
+        "values": [
+          0,
+          400,
+          800,
+          1200,
+          1600
+        ],
+        "format": ",.0f",
+        "labelFontSize": 11,
+        "titleFontSize": 12,
+        "titlePadding": 12,
+        "grid": false,
+        "domainColor": "#999999",
+        "tickColor": "#999999"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        },
+        "x2": {
+          "field": "production_value_m"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.nut_type === 'Almond'",
+            "value": "#0072B2"
+          },
+          "value": "#C5CFD8"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 100
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.nut_type === 'Almond'",
+            "value": "#0072B2"
+          },
+          "value": "#C5CFD8"
+        },
+        "tooltip": [
+          {
+            "field": "nut_type",
+            "type": "nominal",
+            "title": "Nut"
+          },
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "value_label",
+            "type": "nominal",
+            "title": "Production value"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 11,
+        "color": "#222222"
+      },
+      "encoding": {
+        "text": {
+          "field": "value_label",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif",
+    "axis": {
+      "labelColor": "#766a60",
+      "titleColor": "#30241e",
+      "gridColor": "#ded4c7",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal"
+    },
+    "legend": {
+      "labelColor": "#30241e",
+      "titleColor": "#30241e",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "title": {
+      "fontSize": 14,
+      "color": "#30241e"
+    }
+  }
+}

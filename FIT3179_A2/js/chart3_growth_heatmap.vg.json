@@ -1,0 +1,217 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": 315,
+  "background": "#f4efe6",
+  "data": {
+    "url": "data/clean/trend_2021_2025.csv",
+    "format": {
+      "parse": {
+        "year": "number",
+        "production_value_m": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "indexof(['Almond','Macadamia','Walnut','Pistachio','Pecan','Hazelnut','Chestnut'],datum.nut_type)>=0"
+    },
+    {
+      "window": [
+        {
+          "op": "lag",
+          "field": "production_value_m",
+          "as": "previous_value"
+        }
+      ],
+      "sort": [
+        {
+          "field": "year",
+          "order": "ascending"
+        }
+      ],
+      "groupby": [
+        "nut_type"
+      ]
+    },
+    {
+      "filter": "isValid(datum.previous_value) && datum.previous_value > 0"
+    },
+    {
+      "calculate": "100 * (datum.production_value_m / datum.previous_value - 1)",
+      "as": "growth_pct"
+    },
+    {
+      "calculate": "format(datum.growth_pct,'+.1f')+'%'",
+      "as": "growth_label"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "orient": "top",
+        "labelAngle": 0,
+        "labelPadding": 10
+      }
+    },
+    "y": {
+      "field": "nut_type",
+      "type": "nominal",
+      "sort": [
+        "Almond",
+        "Macadamia",
+        "Walnut",
+        "Pistachio",
+        "Pecan",
+        "Hazelnut",
+        "Chestnut"
+      ],
+      "title": null,
+      "axis": {
+        "labelPadding": 10
+      }
+    },
+    "tooltip": [
+      {
+        "field": "nut_type",
+        "title": "Nut"
+      },
+      {
+        "field": "year",
+        "title": "Year"
+      },
+      {
+        "field": "previous_value",
+        "type": "quantitative",
+        "format": ",.1f",
+        "title": "Previous year (A$m)"
+      },
+      {
+        "field": "production_value_m",
+        "type": "quantitative",
+        "format": ",.1f",
+        "title": "This year (A$m)"
+      },
+      {
+        "field": "growth_label",
+        "title": "Annual change"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#f4efe6",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "growth_pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -100,
+              0,
+              100
+            ],
+            "range": [
+              "#a74b22",
+              "#f5f1e8",
+              "#416f73"
+            ],
+            "clamp": true,
+            "interpolate": "lab"
+          },
+          "legend": {
+            "title": "Annual change (%)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 390,
+            "values": [
+              -100,
+              -50,
+              0,
+              50,
+              100
+            ],
+            "titleLimit": 400
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "growth_label"
+        },
+        "color": {
+          "condition": {
+            "test": "abs(datum.growth_pct) >= 70",
+            "value": "#ffffff"
+          },
+          "value": "#30241e"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2024 && datum.growth_pct < 0"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "fillOpacity": 0,
+        "stroke": "#8b4e32",
+        "strokeWidth": 2.5
+      }
+    }
+  ],
+  "config": {
+    "font": "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#62584e",
+      "titleColor": "#30241e",
+      "gridColor": "#ded4c7"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "values": [
+        -100,
+        -50,
+        0,
+        50,
+        100
+      ],
+      "title": "Annual change (%) · colour capped at ±100%"
+    }
+  },
+  "title": {
+    "text": "Three crops declined together in 2024",
+    "subtitle": [
+      "Outlined: pecan, hazelnut and chestnut declined in 2024.",
+      "Pistachio +213.8% exceeds the colour cap; labels show uncapped values."
+    ],
+    "anchor": "start",
+    "fontSize": 13,
+    "subtitleFontSize": 12,
+    "offset": 16,
+    "color": "#493b33",
+    "subtitleColor": "#62584e"
+  }
+}
